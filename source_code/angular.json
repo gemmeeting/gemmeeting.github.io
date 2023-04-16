@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nowday-frontend": {
+    "gemmeeting-frontend": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
             "customWebpackConfig": {
               "path": "./extra-webpack.config.js"
             },
-            "outputPath": "dist/nowday-frontend",
+            "outputPath": "dist/gemmeeting-website",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -83,10 +83,10 @@
           "builder": "@angular-builders/custom-webpack:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "nowday-frontend:build:production"
+              "browserTarget": "gemmeeting-frontend:build:production"
             },
             "development": {
-              "browserTarget": "nowday-frontend:build:development"
+              "browserTarget": "gemmeeting-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -94,7 +94,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nowday-frontend:build"
+            "browserTarget": "gemmeeting-frontend:build"
           }
         },
         "test": {
