@@ -114,6 +114,11 @@ body {
     }
 }
 
+.mytable-wrapper {
+    width: 100%;
+    overflow-x: auto !important;
+}
+
 .mytable {
     width: 100%;
     border-radius: 5px;

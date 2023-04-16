@@ -266,22 +266,11 @@ $(document).ready(function() { "use strict";
     hideSidebar();
     window.allowSlide = 1;
 
-    // enable or disable particles if slide is shown or not to save resources - intro video too
-    // let particlesComponent = document.getElementById('particles-js');
     let videoIntroElement = document.getElementById('intro-video');
     if (currenSlideIndex <= 1) {
       if (videoIntroElement) { videoIntroElement.play() }
-      // particlesComponent.classList.add('fadeOut')
-      // setTimeout(() => { // wait a bit for slide transition to finish
-      //   particlesComponent.classList.remove('fadeOut')
-      //   particlesComponent.classList.remove('display-block')
-      //   particlesComponent.classList.add('display-none')
-      // }, 100);
     } else {
       if (videoIntroElement) { videoIntroElement.pause() } // pause when not in view to save resources
-      // particlesComponent.classList.remove('display-none')
-      // particlesComponent.classList.add('fadeIn')
-      // particlesComponent.classList.add('display-block')
     }
     
     //reset 
@@ -809,72 +798,72 @@ $(document).ready(function() { "use strict";
  */
 
 
-  $('.mobile .slides:not(.scroll):not(.simplifiedMobile), .slides.desktopSwipe').swipe({
-    swipeStatus:function(event, phase, direction, distance){
+  // $('.mobile .slides:not(.scroll):not(.simplifiedMobile), .slides.desktopSwipe').swipe({
+  //   swipeStatus:function(event, phase, direction, distance){
       
-      window.allowSwipeUp = 1;
-      window.allowSwipeDown = 1;
+  //     window.allowSwipeUp = 1;
+  //     window.allowSwipeDown = 1;
           
-      //set height for current slide
-      var $currentSection = $('.slide.selected .content'),
-          currentSectionHeight = Math.floor($currentSection.find('.container').outerHeight()),
-          next = "up",
-          prev = "down",
-          minSwipeToSlide = window.minSwipeToSlide,
-          windowHeight = window.innerHeight;
+  //     //set height for current slide
+  //     var $currentSection = $('.slide.selected .content'),
+  //         currentSectionHeight = Math.floor($currentSection.find('.container').outerHeight()),
+  //         next = "up",
+  //         prev = "down",
+  //         minSwipeToSlide = window.minSwipeToSlide,
+  //         windowHeight = window.innerHeight;
           
-      if (window.sidebarShown){
-        $currentSection = $('.sidebar .content');
-      } 
+  //     if (window.sidebarShown){
+  //       $currentSection = $('.sidebar .content');
+  //     } 
       
-      if (window.popupShown){
-        $currentSection = $('.popup .content');
-      }
+  //     if (window.popupShown){
+  //       $currentSection = $('.popup .content');
+  //     }
       
-      if (phase === "start") {
-        window.scrollTop = $currentSection.scrollTop();
-      }
+  //     if (phase === "start") {
+  //       window.scrollTop = $currentSection.scrollTop();
+  //     }
           
-      //horizontal mode
-      if (window.horizontalMode){
-        next = "left";
-        prev = "right";
-      }
+  //     //horizontal mode
+  //     if (window.horizontalMode){
+  //       next = "left";
+  //       prev = "right";
+  //     }
       
-      //lock slide
-      if ( !window.horizontalMode && ( currentSectionHeight > windowHeight) ){
-        if (window.scrollTop + windowHeight < currentSectionHeight){
-          window.allowSwipeUp = 0;
-        }
-        if (window.scrollTop > 0) {
-          window.allowSwipeDown = 0;
-        }
-      } 
+  //     //lock slide
+  //     if ( !window.horizontalMode && ( currentSectionHeight > windowHeight) ){
+  //       if (window.scrollTop + windowHeight < currentSectionHeight){
+  //         window.allowSwipeUp = 0;
+  //       }
+  //       if (window.scrollTop > 0) {
+  //         window.allowSwipeDown = 0;
+  //       }
+  //     } 
       
-      if (!window.sidebarShown && !window.disableOnSwipe) {
-        if (window.horizontalMode){
-          if (direction === next && distance > minSwipeToSlide){
-            window.changeSlide('increase');
-          } else if (direction === prev && distance > minSwipeToSlide){
-            window.changeSlide('decrease');
-          }
-        } else {
-          if (direction === next && distance > minSwipeToSlide && window.allowSwipeUp && window.allowSlide){
-            window.changeSlide('increase');
-          } else if (direction === prev && distance > minSwipeToSlide && window.allowSwipeDown && window.allowSlide){
-            window.changeSlide('decrease');
-          }
-        }
-      }
-    },
-    maxTimeThreshold:0,
-    fingers:'all',
-    allowPageScroll:"vertical"
-  });
+  //     if (!window.sidebarShown && !window.disableOnSwipe) {
+  //       if (window.horizontalMode){
+  //         if (direction === next && distance > minSwipeToSlide){
+  //           window.changeSlide('increase');
+  //         } else if (direction === prev && distance > minSwipeToSlide){
+  //           window.changeSlide('decrease');
+  //         }
+  //       } else {
+  //         if (direction === next && distance > minSwipeToSlide && window.allowSwipeUp && window.allowSlide){
+  //           window.changeSlide('increase');
+  //         } else if (direction === prev && distance > minSwipeToSlide && window.allowSwipeDown && window.allowSlide){
+  //           window.changeSlide('decrease');
+  //         }
+  //       }
+  //     }
+  //   },
+  //   maxTimeThreshold:0,
+  //   fingers:'all',
+  //   allowPageScroll:"vertical"
+  // });
 
-  $('.slides.desktopSwipe *').on('click',function(){
-    $(this).addClass('selectable');
-  });
+  // $('.slides.desktopSwipe *').on('click',function(){
+  //   $(this).addClass('selectable');
+  // });
   
   
   
