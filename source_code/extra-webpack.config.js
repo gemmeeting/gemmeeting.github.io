@@ -1,17 +1,10 @@
 // Quantico Solutions
 // here we define the system environment variables to be used by angular webpack builder. Angular will read these on build time.
-var webpack = require('webpack');
 var JavaScriptObfuscator = require ('webpack-obfuscator'); // tries to obfuscate final javascript code
 
 module.exports = function (config, options) {
 
     if (config.mode === 'production') {
-        config.plugins.push(new webpack.DefinePlugin({
-            $MODD_ENV: {
-                MODD_BACKEND_NODEJS_URL: JSON.stringify(process.env.MODD_BACKEND_NODEJS_URL),
-                E360_BASE_URL: JSON.stringify(process.env.E360_BASE_URL)
-            }
-        }));
 
         // will substancially take much more time to compile!
         // keep it for the production build only
