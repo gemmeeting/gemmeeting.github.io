@@ -1,0 +1,71 @@
+// global app variables
+$app_top_navbar_height: 70px;
+$app_top_navbar_bgcolor: white;
+$app_top_navbar_bgcolor-darkmode: rgb(255, 255, 255, 0.1);
+$usermenu-bgcolor: white;
+$usermenu-bgcolor-darkmode: rgb(30, 30, 30);
+$app_footer_height: 70px;
+$app_sidebar_width: 70px;
+$app-maincontent-maxwidth: 1400px;
+
+// custom global color config
+
+// REGULAR COLORS
+$regular-color-1: white;
+$regular-color-2: #f8f8f9;
+$regular-color-3: #ededed;
+$regular-color-4: #959ba3;
+$regular-color-5: #6d7982;
+$regular-color-6: #4f5966;
+$regular-color-7: #3b414f;
+$regular-color-8: #2e343d;
+$regular-color-9: #002032;
+
+// REGULAR DARKMODE COLORS
+$regular-color-1-darkmode: rgb(30, 30, 30);
+$regular-color-2-darkmode: rgb(75, 75, 75);
+$regular-color-3-darkmode: rgb(120, 120, 120);
+
+// REGULAR TEXT COLORS
+$black-text: #002032;
+$dark-text: #2e343d;
+$grey-text: #4f5966;
+$light-text: #959ba3;
+
+// DARK MODE TEXT COLORS
+$black-text-darkmode: #dedede;
+$dark-text-darkmode: #bababa;
+$grey-text-darkmode: #868686;
+$light-text-darkmode: #ffffff;
+
+// PRIMARY THEME COLORS
+$primary-color: #8702e0;
+$primary-color-darkmode: lighten($primary-color, 20%);
+$primary-color-darkmode-darker: darken($primary-color, 10%);
+$primary-color-dark: #26879a;
+$primary-color-darkest: #344b63;
+$primary-color-light: #bfe1e9;
+$primary-color-accent: #348c93;
+$primary-color-accent-dark: #377570;
+$sidebar-bg-color: rgb(38, 43, 51);
+
+// GLOBAL COLORS
+$selected-color: #e6e7e8;
+$selected-color-darkmode: #3d3d3d;
+$body-color: #ffffff;
+$body-bgcolor: rgb(245, 245, 245);
+$body-bgcolor-darkmode: rgb(30, 30, 30);
+$inactive-color: #d9dee3;
+$inactive-color-accent: #d4ebf0;
+$bgcolor-lightgrey: #ececec;
+$bgcolor-lightgrey-darkmode: rgb(88, 88, 88);
+
+// NOTIFICATION AND ALERTS COLORS
+$notification-color: #67a4d8;
+$warning-color: #faf2cc;
+$warning-strong-color: #f16336;
+$error-color: #c43745;
+$error-color-bright: #ff2222;
+$error-color-darkmode: #ff2222;
+$success-color: #4bbb88;
+$success-color-darkmode: #33e092;

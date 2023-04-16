@@ -1,0 +1,157 @@
+@use 'material-custom-theme';
+@use 'custom-fonts-declarations';
+@import './assets/styles/slides.scss';
+
+body {
+    font-family: 'Montserrat', 'Roboto', 'Tahoma', sans-serif;
+    background-color: white !important;
+}
+
+@keyframes particlesFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomInFadeIn {
+    0% { opacity: 0; transform: scale(0.9) }
+    100% { opacity: 1; transform: scale(1) }
+}
+@keyframes zoomOut {
+    0% { transform: scale(1) }
+    100% { transform: scale(0.9) }
+}
+@keyframes slideUpFadeIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0%); }
+}
+@keyframes slideDownFadeIn {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0px); }
+}
+@keyframes slideRightFadeIn {
+    0% { opacity: 0; transform: translateX(-50px); }
+    100% { opacity: 1; transform: translateX(0px); }
+}
+@keyframes slideLeftFadeIn {
+    0% { opacity: 0; transform: translateX(50px); }
+    100% { opacity: 1; transform: translateX(0px); }
+}
+
+.fadeIn {
+    opacity: 0;
+    animation: 3s particlesFadeIn ease forwards;
+}
+
+.fadeOut {
+    opacity: 1;
+    animation: 0.5s particlesFadeIn ease forwards reverse;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.display-block {
+    display: inline-block !important;
+}
+
+.wait100ms {
+    animation-delay: 0.1s;
+}
+
+.wait200ms {
+    animation-delay: 0.2s;
+}
+
+.wait300ms {
+    animation-delay: 0.3s;
+}
+
+.wait400ms {
+    animation-delay: 0.4s;
+}
+
+.wait500ms {
+    animation-delay: 0.5s;
+}
+
+.animate-div {
+    animation: 0.4s slideRightFadeIn ease forwards !important;
+    
+    &.fromTop {
+        animation: 0.4s slideDownFadeIn ease forwards !important;
+    }
+}
+
+.link-style {
+    text-decoration: none;
+    transition: 0.6s all;
+    position: relative;
+
+    // animate underline
+    &::before {
+        content: "";
+        position: absolute;
+        display: block !important;
+        z-index: 10;
+        width: 0%;
+        height: 2px;
+        border-radius: 10px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffae00;
+        transition: width 0.4s ease;
+    }
+    
+    &:hover::before {
+        // transform: scaleX(1);
+        width: 100%;
+        transition: width 0.2s ease;
+    }
+}
+
+.mytable {
+    width: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-spacing: 0px;
+
+    .slim-title-row,
+    .slim-table-row {
+        height: 35px;
+    }
+    
+    th {
+        text-align: center;
+        outline: 1px solid white;
+        padding: 0px 10px;
+        background-color: #ededed;
+
+        fa-icon {
+            color: #299cb4;
+            font-size: 90%;
+            margin-right: 5px;
+        }
+
+        &.icon-only {
+            width: 1px;
+            fa-icon {
+                margin-right: 0 !important;
+            }
+        }
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    tr {
+        height: 50px;
+        transition: 0.2s background-color;
+    }
+}
