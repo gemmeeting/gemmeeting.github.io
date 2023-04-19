@@ -59,6 +59,15 @@ body {
     display: inline-block !important;
 }
 
+.animate-div,
+.animate-div-opening {
+    animation: 0.4s slideRightFadeIn ease forwards !important;
+    
+    &.fromTop {
+        animation: 0.4s slideDownFadeIn ease forwards !important;
+    }
+}
+
 .wait100ms {
     animation-delay: 0.1s;
 }
@@ -77,14 +86,6 @@ body {
 
 .wait500ms {
     animation-delay: 0.5s;
-}
-
-.animate-div {
-    animation: 0.4s slideRightFadeIn ease forwards !important;
-    
-    &.fromTop {
-        animation: 0.4s slideDownFadeIn ease forwards !important;
-    }
 }
 
 .link-style {
