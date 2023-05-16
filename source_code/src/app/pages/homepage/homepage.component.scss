@@ -57,8 +57,93 @@ span {
 	100% { background-position: 0px 50%; }
 }
 
+.hover-scale {
+  transform: scale(1);
+  transition: 0.4s transform;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    transform: scale(1.15);
+    transition: 0.2s transform;
+  }
+}
+
 .primary-text-color {
   color: #ffae00;
+}
+
+.close-hamburger-animation {
+  animation: 0.3s ease-out slideDownFadeIn reverse forwards !important;
+  
+  .hamburger-content {
+    animation: 0.3s ease-out zoomOut forwards !important;
+  }
+}
+
+// hamburger menu div
+.fullscreen-hamburger-wrapper {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(0,0,0,0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: 0.3s ease-out zoomInFadeIn forwards;
+
+  @media only screen and (max-height: 700px) {
+    align-items: flex-end;
+  }
+  
+  .hamburger-content {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    animation: 0.3s ease-out slideDownFadeIn 0.1s forwards !important;
+
+    .animate-div {
+      width: 100%;
+    }
+
+    .menu-item {
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      margin: 10px 0px;
+      border-radius: 10px;
+      background-color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      color: #4e4e4e;
+      text-align: center;
+      font-size: 16px;
+      cursor: pointer;
+      transform: scale(1);
+      transition: 0.4s all;
+
+      &:hover,
+      &:focus,
+      &:focus-within {
+        background-color: rgba(255,255,255,0.95);
+        text-shadow: 2px 2px 4px rgb(255, 238, 0);
+        color: black;
+        transform: scale(1.03);
+        transition: 0.2s all;
+      }
+    }
+  }
 }
 
 .panel.top {
@@ -77,6 +162,7 @@ span {
     max-width: 150px;
   
     .logo-slideover-div {
+      z-index: 100;
       position: absolute;
       left: 0;
       height: 100%;
@@ -106,25 +192,44 @@ span {
     display: none !important;
     justify-content: flex-end;
     align-items: center;
+    
+    .burger {
+      transform: scale(1);
+      transition: 0.4s all;
+      width: fit-content;
 
-    .burger-icon {
-      width: 50px;
-      height: 50px;
-      padding: 10px;
-      box-sizing: border-box;
-      border-radius: 5px;
-      background-color: transparent;
-      cursor: pointer;
-      transition: 0.6s all;
-
-      &:hover {
-        background-color: rgba(0,0,0,0.1);
+      &:hover,
+      &:focus,
+      &:focus-within {
+        transform: scale(1.1);
         transition: 0.2s all;
+      }
+      
+      &:active {
+        transform: scale(1);
+        transition: 0.2s all;
+      }
+
+      .burger-icon {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: 0.6s all;
+  
+        &:hover,
+        &:focus {
+          background-color: rgba(0,0,0,0.05);
+          transition: 0.2s all;
+        }
       }
     }
   }
   
-  @media screen and (max-width: 920px) {
+  @media screen and (max-width: 1000px) {
     .center {
       display: none !important;
     }
@@ -332,7 +437,7 @@ span {
         }
       }
 
-      @media screen and (max-width: 920px) {
+      @media screen and (max-width: 1000px) {
         h3 {
           font-size: 16px !important;
         }
@@ -391,6 +496,10 @@ span {
       flex-wrap: wrap;
       padding: 20px;
       box-sizing: border-box;
+
+      img {
+        cursor: pointer;
+      }
     }
   }
 }

@@ -1,6 +1,8 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MoveDirection, ClickMode, HoverMode, OutMode, Engine, Container, ISourceOptions } from 'tsparticles-engine';
 import { loadFull } from "tsparticles";
+import { Observable, Subscription, map } from 'rxjs';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 
 @Component({
@@ -8,11 +10,16 @@ import { loadFull } from "tsparticles";
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss'],
 })
-export class HomepageComponent implements OnInit {
+export class HomepageComponent implements OnInit, OnDestroy {
   id = 'tsparticles';
 
   /* Starting from 1.19.0 you can use a remote url (AJAX request) to a JSON with the configuration */
   particlesUrl = 'http://foo.bar/particles.json';
+
+  showMenu = false;
+
+  hamburgerOpen = false;
+  animateHamburgerClosing = false;
 
   /* or the classic JavaScript object */
   particlesOptions: ISourceOptions = {
@@ -92,11 +99,35 @@ export class HomepageComponent implements OnInit {
     detectRetina: true,
   };
 
-  constructor() {
-    
+  observableWidth: Observable<any>;
+
+  subscriptions = new Array();
+
+  constructor(
+    private breakpointObserver: BreakpointObserver
+    ) {
+      this.observableWidth = this.breakpointObserver
+      .observe('(min-width: 1000px)');
   }
   
   ngOnInit(): void {
+    setTimeout(() => {
+      this.showMenu = true;
+    }, 1000);
+
+    this.observableWidth.subscribe(matches => {
+      if (matches && this.hamburgerOpen) {
+        this.closeHamburger();
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    if (this.subscriptions.length > 0) {
+      this.subscriptions.forEach((subscription: Subscription) => {
+        subscription.unsubscribe();
+      });
+    }
   }
 
   playvideo(): void {
@@ -118,5 +149,32 @@ export class HomepageComponent implements OnInit {
 
   openGoogleMapsLink() {
     window.location.href = 'https://goo.gl/maps/kQ6cybC1yVkzgogZ8'
+  }
+
+  openSponsorLink(sponsorLinkString: string): void {
+    if (sponsorLinkString) {
+      window.location.href = sponsorLinkString;
+    }
+  }
+
+  openHamburger(): void {
+    this.hamburgerOpen = true;
+  }
+
+  closeHamburger(): void {
+    this.animateHamburgerClosing = true;
+    setTimeout(() => {
+      this.hamburgerOpen = false;
+      this.animateHamburgerClosing = false;
+    }, 300);
+  }
+
+  menuClick(urlString: string): void {
+    if (urlString) {
+      // only adds the hashtag
+      window.location.href = urlString;
+    }
+
+    this.closeHamburger();
   }
 }

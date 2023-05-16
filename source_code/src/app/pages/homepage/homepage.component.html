@@ -33,42 +33,78 @@
   
 </svg>
 
+<div class="fullscreen-hamburger-wrapper" [ngClass]="{'close-hamburger-animation': animateHamburgerClosing}" *ngIf="hamburgerOpen">
+  <div class="hamburger-content">
+    <div class="animate-div wait100ms">
+      <div class="menu-item" (click)="menuClick('#home'); playvideo();" (keyup.enter)="menuClick('#home'); playvideo();">
+        <span [tabIndex]="3">As Jornadas</span>
+      </div>
+    </div>
+    <div class="animate-div wait200ms">
+      <div class="menu-item" (click)="menuClick('#equipa')" (keyup.enter)="menuClick('#equipa')">
+        <span [tabIndex]="4">A Equipa</span>
+      </div>
+    </div>
+    <div class="animate-div wait300ms">
+      <div class="menu-item" (click)="menuClick('#programa')" (keyup.enter)="menuClick('#programa')">
+        <span [tabIndex]="5">Programa</span>
+      </div>
+    </div>
+    <div class="animate-div wait400ms">
+      <div class="menu-item" (click)="menuClick('#inscricoes')" (keyup.enter)="menuClick('#inscricoes')">
+        <span [tabIndex]="6">Inscrições</span>
+      </div>
+    </div>
+    <div class="animate-div wait500ms">
+      <div class="menu-item" (click)="menuClick('#abstracts')" (keyup.enter)="menuClick('#abstracts')">
+        <span [tabIndex]="7">Resumos</span>
+      </div>
+    </div>
+    <div class="animate-div wait600ms">
+      <div class="menu-item" (click)="menuClick('#sponsors')" (keyup.enter)="menuClick('#sponsors')">
+        <span [tabIndex]="8">Patrocínios</span>
+      </div>
+    </div>
+    <div class="animate-div wait700ms">
+      <div class="menu-item" (click)="menuClick('#contactos')" (keyup.enter)="menuClick('#contactos')">
+        <span [tabIndex]="9">Contactos</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- Panel Top #05 -->
 <nav class="panel top">
   <div class="sections desktop">
     <div class="left" style="display: flex; flex: 1 1 100px; width: auto">
       <div class="logo-div">
         <div class="logo-slideover-div"></div>
-        <img src="./assets/images/gemeeting-logo-only.png" alt="Gemeeting Logo" [routerLink]="" />
+        <img [tabIndex]="1" src="./assets/images/gemeeting-logo-only.png" alt="Gemeeting Logo" style="cursor: pointer;" (click)="menuClick('#home')" (keyup.enter)="menuClick('#home')"/>
       </div>
       <!-- <a href="#" title="NowDay">
         <img class="main-logo" src="./assets/images/logo.png" alt="NowDay Logo">
       </a> -->
     </div>
     <div class="center" style="flex: 2 2 100px">
-      <ul class="menu">
-        <li><a href="#home" (click)="playvideo()">As Jornadas</a></li>
-        <li><a href="#equipa">A Equipa</a></li>
-        <li><a href="#programa">Programa</a></li>
-        <li><a href="#inscricoes">Inscrições</a></li>
-        <li><a href="#abstracts">Resumos</a></li>
-        <li><a href="#sponsors">Patrocínios</a></li>
-        <li><a href="#contactos">Contactos</a></li>
+      <ul class="menu" *ngIf="showMenu">
+        <li class="animate-div wait100ms"><a href="#home" (click)="playvideo()">As Jornadas</a></li>
+        <li class="animate-div wait200ms"><a href="#equipa">A Equipa</a></li>
+        <li class="animate-div wait300ms"><a href="#programa">Programa</a></li>
+        <li class="animate-div wait400ms"><a href="#inscricoes">Inscrições</a></li>
+        <li class="animate-div wait500ms"><a href="#abstracts">Resumos</a></li>
+        <li class="animate-div wait600ms"><a href="#sponsors">Patrocínios</a></li>
+        <li class="animate-div wait700ms"><a href="#contactos">Contactos</a></li>
       </ul>
     </div>
     <div class="center-burger" style="flex: 2 2 50px">
-      <div class="burger-icon" [matMenuTriggerFor]="menu">
-        <fa-icon style="font-size: 25px" icon="bars"></fa-icon>
+      <div class="burger">
+        <div [tabIndex]="2" class="burger-icon animate-div fromTop" *ngIf="!hamburgerOpen" (click)="openHamburger()" (keyup.enter)="openHamburger()">
+          <fa-icon style="font-size: 25px" icon="bars"></fa-icon>
+        </div>    
+        <div [tabIndex]="2" class="burger-icon animate-div fromTop" *ngIf="hamburgerOpen" (click)="closeHamburger()" (keyup.enter)="closeHamburger()">
+          <fa-icon style="font-size: 25px" icon="times"></fa-icon>        
+        </div>
       </div>
-      <mat-menu #menu="matMenu">
-        <a mat-menu-item href="#home" (click)="playvideo()">As Jornadas</a>
-        <a mat-menu-item href="#equipa">A Equipa</a>
-        <a mat-menu-item href="#programa">Programa</a>
-        <a mat-menu-item href="#inscricoes">Inscrições</a>
-        <a mat-menu-item href="#abstracts">Resumos</a>
-        <a mat-menu-item href="#sponsors">Patrocínios</a>
-        <a mat-menu-item href="#contactos">Contactos</a>
-      </mat-menu>
     </div>
   </div>
 </nav>
@@ -531,11 +567,21 @@
                 Patrocínios
               </div>
               <div class="sponsors-images-div">
-                <img class="ae-6" src="../../../assets/images/sponsors/tecnifar.png">
-                <img class="ae-7" src="../../../assets/images/sponsors/materfarma.png">
-                <img class="ae-8" src="../../../assets/images/sponsors/Boehringer_Ingelheim_Logo.png">
-                <img class="ae-9" src="../../../assets/images/sponsors/eli-lilly.png">
-                <img class="ae-10" src="../../../assets/images/sponsors/tecnimede.png">
+                <div class="ae-6">
+                  <img class="hover-scale" src="../../../assets/images/sponsors/tecnifar.png" (click)="openSponsorLink('https://tecnifar.pt/')">
+                </div>
+                <div class="ae-7">
+                  <img class="hover-scale" src="../../../assets/images/sponsors/materfarma.png" (click)="openSponsorLink('https://www.materfarma.pt/')">
+                </div>
+                <div class="ae-8">
+                  <img class="hover-scale" src="../../../assets/images/sponsors/Boehringer_Ingelheim_Logo.png" (click)="openSponsorLink('https://www.boehringer-ingelheim.pt/')">
+                </div>
+                <div class="ae-9">
+                  <img class="hover-scale" src="../../../assets/images/sponsors/eli-lilly.png" (click)="openSponsorLink('https://www.lilly.pt/')">
+                </div>
+                <div class="ae-10">
+                  <img class="hover-scale" src="../../../assets/images/sponsors/tecnimede.png" (click)="openSponsorLink('https://www.tecnimede.com/')">
+                </div>
               </div>
             </div>
             <!-- <div class="ae-5 silver-banner" style="width: 100%; box-shadow: 0px 0px 6px lightgrey; background-color: white; min-height: 100px; padding: 20px; box-sizing: border-box; border-radius: 10px; overflow: hidden; margin: 10px 0px;">

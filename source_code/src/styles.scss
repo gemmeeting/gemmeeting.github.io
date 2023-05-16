@@ -61,6 +61,7 @@ body {
 
 .animate-div,
 .animate-div-opening {
+    opacity: 0;
     animation: 0.4s slideRightFadeIn ease forwards !important;
     
     &.fromTop {
@@ -69,23 +70,31 @@ body {
 }
 
 .wait100ms {
-    animation-delay: 0.1s;
+    animation-delay: 0.1s !important;
 }
 
 .wait200ms {
-    animation-delay: 0.2s;
+    animation-delay: 0.2s !important;
 }
 
 .wait300ms {
-    animation-delay: 0.3s;
+    animation-delay: 0.3s !important;
 }
 
 .wait400ms {
-    animation-delay: 0.4s;
+    animation-delay: 0.4s !important;
 }
 
 .wait500ms {
-    animation-delay: 0.5s;
+    animation-delay: 0.5s !important;
+}
+
+.wait600ms {
+    animation-delay: 0.6s !important;
+}
+
+.wait700ms {
+    animation-delay: 0.7s !important;
 }
 
 .link-style {
