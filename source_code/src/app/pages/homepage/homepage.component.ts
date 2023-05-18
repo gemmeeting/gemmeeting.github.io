@@ -177,4 +177,8 @@ export class HomepageComponent implements OnInit, OnDestroy {
 
     this.closeHamburger();
   }
+
+  openInscricoesLink(): void {
+    window.location.href = 'https://gemmeeting.eventkey.pt/geral/inseririnscricao.aspx?evento=2&formulario=2&chave=0000186665&login=false';
+  }
 }
