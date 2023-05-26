@@ -179,6 +179,10 @@ export class HomepageComponent implements OnInit, OnDestroy {
   }
 
   openInscricoesLink(): void {
-    window.location.href = 'https://gemmeeting.eventkey.pt/geral/inseririnscricao.aspx?evento=2&formulario=2&chave=0000186665&login=false';
+    window.open('https://gemmeeting.eventkey.pt/geral/inseririnscricao.aspx?evento=2&formulario=2&chave=0000186665&login=false', '_blank');
+  }
+
+  openSubmeterResumoLink(): void {
+    window.open('https://gemmeeting.eventkey.pt/geral/inserirresumo.aspx?evento=2&formulario=4&chave=0000283DB8&login=false', '_blank');
   }
 }
