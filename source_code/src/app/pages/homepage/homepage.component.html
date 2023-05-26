@@ -131,7 +131,7 @@
       </div>
     </div>
   </div>
-  <video muted autoplay loop playsinline preload="auto" [controls]="false" id="intro-video" class="background background-video">
+  <video [loop]="true" [muted]="true" [autoplay]="true" preload="auto" [controls]="false" id="intro-video" class="background background-video">
     <source src="./assets/videos/background.mp4" type="video/mp4"/>
   </video>
 </section>
@@ -423,13 +423,13 @@
                   <div class="content-card-title"><fa-icon icon="ticket" style="font-size: 80%; margin-right: 10px; vertical-align: top;" class="primary-text-color"></fa-icon>Inscrições</div>
                   <div class="ae-5 fromBottom" style="font-size: 22px; margin-top: 50px; text-align: center; line-height: 1.4; font-weight: 500;">
                     <br>
-                    <fa-icon icon="circle" style="font-size: 6px; margin-right: 10px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Abertura de Inscrições:</strong> <span style="color: rgb(122, 158, 194)"> 19/05/2023</span> às <span style="color: rgb(122, 158, 194)"> 00h00</span>
+                    <fa-icon icon="circle" style="font-size: 6px; margin-right: 10px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Abertura de Inscrições:</strong> <span style="color: rgb(122, 158, 194)"> 27/05/2023</span> às <span style="color: rgb(122, 158, 194)"> 00h00</span>
                   </div>
                 </div>
                 <div style="width: 100%; margin-top: 60px; display: flex; justify-content: center;" class="ae-6 fromBottom">
                   <div class="words-underlined">
                     <div class="link-style">
-                      <h3 class="ae-7 fromBottom button-style" (click)="openInscricoesLink()" style="cursor: pointer; font-weight: 600; font-size: 26px; margin-bottom: 0;">
+                      <h3 class="ae-7 fromBottom button-style"  matTooltip="Inscrições abrem às 00:00 do dia 27/05/2023" style="cursor: pointer; font-weight: 600; font-size: 26px; margin-bottom: 0;">
                         <fa-icon icon="user-pen" class="primary-text-color" style="margin-right: 5px; font-size: 80%;"></fa-icon>
                         Inscreve-te
                       </h3>
@@ -648,7 +648,7 @@
                 <div style="width: 100%; display: flex; justify-content: center;" class="ae-6 fromBottom">
                   <div class="words-underlined">
                     <div class="link-style">
-                      <h3 class="ae-7 fromBottom button-style" (click)="openInscricoesLink()" style="cursor: pointer; font-weight: 600; font-size: 26px; margin-bottom: 0;">
+                      <h3 class="ae-7 fromBottom button-style" matTooltip="Inscrições abrem às 00:00 do dia 27/05/2023" style="cursor: pointer; font-weight: 600; font-size: 26px; margin-bottom: 0;">
                         <fa-icon icon="user-pen" class="primary-text-color" style="margin-right: 5px; font-size: 80%;"></fa-icon>
                         Inscreve-te
                       </h3>
