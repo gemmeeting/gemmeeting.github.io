@@ -160,7 +160,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
   // }
 
   openGoogleMapsLink() {
-    window.location.href = 'https://goo.gl/maps/kQ6cybC1yVkzgogZ8'
+    window.open('https://goo.gl/maps/kQ6cybC1yVkzgogZ8', '_blank');
   }
 
   openSponsorLink(sponsorLinkString: string): void {

@@ -162,9 +162,8 @@ span {
   transition: 0.6s ease-out all;
   
   &.hidden-by-scroll {
-    // transform: translateY(-80px);
-    // opacity: 0;
-    height: 20px !important;
+    transform: translateY(-80px);
+    opacity: 0;
   }
 
   .logo-div {

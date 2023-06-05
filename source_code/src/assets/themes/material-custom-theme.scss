@@ -401,10 +401,22 @@ $theme-dark: mat-dark-theme($theme-primary-darkmode, $theme-accent-darkmode, $th
             transition: 0.1s all !important;
         }
         .mat-expansion-panel-header {
+            line-height: 1.2 !important;
             transition: 0.4s all !important;
+
+            @media screen and (max-width: 750px) {
+                font-size: 80% !important;
+            }
+
             &:hover,
             &:focus {
                 transition: 0.1s all !important;
+            }
+        }
+
+        .mat-expansion-panel-body > div {
+            @media screen and (max-width: 750px) {
+                font-size: 90% !important;
             }
         }
     }

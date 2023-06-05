@@ -1,6 +1,6 @@
 		
 <!-- SVG Library -->
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<!-- <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   <symbol id="close" viewBox="0 0 30 30"><path d="M15 0c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm5.7 19.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3s-.5-.1-.7-.3l-4.3-4.3-4.3 4.3c-.2.2-.4.3-.7.3s-.5-.1-.7-.3c-.4-.4-.4-1 0-1.4l4.3-4.3-4.3-4.3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l4.3 4.3 4.3-4.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-4.3 4.3 4.3 4.3z"/></symbol>
   
   <symbol id="close-small" viewBox="0 0 11 11"><path d="M6.914 5.5l3.793-3.793c.391-.391.391-1.023 0-1.414s-1.023-.391-1.414 0l-3.793 3.793-3.793-3.793c-.391-.391-1.023-.391-1.414 0s-.391 1.023 0 1.414l3.793 3.793-3.793 3.793c-.391.391-.391 1.023 0 1.414.195.195.451.293.707.293s.512-.098.707-.293l3.793-3.793 3.793 3.793c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023 0-1.414l-3.793-3.793z"/></symbol>
@@ -31,7 +31,7 @@
   
   <symbol id="sound-off" viewBox="0 0 18 18"><path d="M15.9,8l1.8-1.8c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-1.8,1.8l-1.8-1.8c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4L13.1,8l-1.8,1.8 c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.8-1.8l1.8,1.8c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L15.9,8z M8.5,0.1C8.1-0.1,7.7,0,7.4,0.2L3.7,3H2C0.9,3,0,3.9,0,5v6c0,1.1,0.9,2,2,2h1.7l3.7,2.8C7.6,15.9,7.8,16,8,16 c0.2,0,0.3,0,0.4-0.1C8.8,15.7,9,15.4,9,15V1C9,0.6,8.8,0.3,8.5,0.1z M7,13l-2.4-1.8C4.4,11.1,4.2,11,4,11l-2,0l0-6h2 c0.2,0,0.4-0.1,0.6-0.2L7,3V13z"/></symbol>
   
-</svg>
+</svg> -->
 
 <div class="fullscreen-hamburger-wrapper" [ngClass]="{'close-hamburger-animation': animateHamburgerClosing}" *ngIf="hamburgerOpen">
   <div class="hamburger-content">
@@ -598,7 +598,7 @@
                           </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
-                          Poderá consultar o programa <a href="https://gemmeeting.pt/#programa" target="_blank" class="link-style">clicando/tocando aqui</a>.
+                          Poderá consultar o programa <a href="#programa" class="link-style">clicando/tocando aqui</a>.
                         </div>
                       </mat-expansion-panel>
                     </mat-accordion>
@@ -638,13 +638,28 @@
                               <span class="primary-text-color" style="margin-right: 10px">5.</span> Qual o preço da inscrição e o que está incluído?
                           </mat-panel-title>
                         </mat-expansion-panel-header>
-                        <div style="font-size: 16px; line-height: 1.4">
+                        <div style="font-size: 16px; line-height: 1.4;">
                           A inscrição tem um custo único de 30 euros e dá acesso a: <br>
-                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Mesas redondas, sessões plenárias, sessões paralelas, GEMM Talks e apresentações de trabalhos; <br>
-                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Um coffee-wake, dois coffee-breaks e dois almoços contemplados no programa; <br>
-                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Um workshop (WS) à escolha (vagas limitadas a 25 participantes por WS); <br>
-                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Certificado de presença, após validação das presenças; <br>
-                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Oportunidade de apresentação de trabalhos em formato de comunicação oral ou póster, mediante submissão e seleção dos mesmos.
+                          <div style="display: flex; justify-content: flex-start; align-items: center;">
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>
+                            <span>Mesas redondas, sessões plenárias, sessões paralelas, GEMM Talks e apresentações de trabalhos;</span>
+                          </div>
+                          <div style="display: flex; justify-content: flex-start; align-items: center;">
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>
+                            <span>m coffee-wake, dois coffee-breaks e dois almoços contemplados no programa;</span>
+                          </div>
+                          <div style="display: flex; justify-content: flex-start; align-items: center;">
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>
+                            <span>Um workshop (WS) à escolha (vagas limitadas a 25 participantes por WS);</span>
+                          </div>
+                          <div style="display: flex; justify-content: flex-start; align-items: center;">
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>
+                            <span>Certificado de presença, após validação das presenças;</span>
+                          </div>
+                          <div style="display: flex; justify-content: flex-start; align-items: center;">
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>
+                            <span>Oportunidade de apresentação de trabalhos em formato de comunicação oral ou póster, mediante submissão e seleção dos mesmos.</span>
+                          </div>
                         </div>
                       </mat-expansion-panel>
                     </mat-accordion>
@@ -734,6 +749,17 @@
                           O FACE de Espinho é facilmente acessível de carro. Existe estacionamento gratuito no local e nas imediações.
                           Também poderá chegar ao local do evento através de transportes públicos, sendo o ponto de ligação mais próximo a estação de comboios de Espinho, que se encontra a cerca de 10 minutos a pé.
                         </div>
+                        
+                        <div style="display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; margin-bottom: 10px; margin-top: 20px">
+                          <fa-icon icon="location-pin" style="font-size: 20px; margin-right: 10px" class="primary-text-color"></fa-icon>
+                          <a class="link-style" style="cursor: pointer; font-size: 16px;" (click)="openGoogleMapsLink()">Ver o FACE Espinho no Google Maps</a>
+                        </div>
+
+                        <div style="display: flex; width: 100%; justify-content: center; align-items: center; margin-bottom: 20px;">
+                          <img (click)="openGoogleMapsLink()" src="./assets/images/google_maps_face.png" 
+                          alt="Localização do FACE Espinho no Google Maps" style="width: 100%; margin: 20px; border-radius: 10px; box-shadow: 0px 0px 8px lightgrey; object-fit: cover; cursor: pointer"
+                          matTooltip="Ver o FACE Espinho no Google Maps">
+                        </div>
                       </mat-expansion-panel>
                     </mat-accordion>
 
@@ -760,16 +786,16 @@
                         <div style="font-size: 16px; line-height: 1.4">
                           <span>Pode entrar em contacto com a comissão organizadora através de e-mail ou redes sociais:</span>
 
-                          <div class="ae-4" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px; margin-top: 20px">
-                            <img src="../../../assets/images/facebook.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
-                            <a class="link-style" href="https://www.facebook.com/gemmeeting">@gemmeeting</a>
+                          <div style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px; margin-top: 20px">
+                            <img src="./assets/images/facebook.webp" alt="" style="height: 20px; margin-right: 12px; margin-left: 3px;">
+                            <a class="link-style" href="https://www.facebook.com/gemmeeting" target="_blank">@gemmeeting</a>
                           </div>
-                          <div class="ae-5" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
-                            <img src="../../../assets/images/instagram.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
-                            <a class="link-style" href="https://www.instagram.com/gemmeeting23/">@gemmeeting23</a>
+                          <div style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
+                            <img src="./assets/images/instagram.webp" alt="" style="height: 20px; margin-right: 12px; margin-left: 3px;">
+                            <a class="link-style" href="https://www.instagram.com/gemmeeting23/" target="_blank">@gemmeeting23</a>
                           </div>
-                          <div class="ae-6" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
-                            <fa-icon icon="envelope" style="font-size: 24px; margin-right: 10px" class="primary-text-color"></fa-icon>
+                          <div style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
+                            <fa-icon icon="envelope" style="font-size: 20px; margin-right: 10px" class="primary-text-color"></fa-icon>
                             <a class="link-style" href="mailto:gemmeeting@gmail.com">gemmeeting@gmail.com</a>
                           </div>
                         </div>
@@ -910,22 +936,22 @@
               </div>
               <div class="sponsors-images-div">
                 <div class="ae-6 image-div">
-                  <img class="hover-scale" src="../../../assets/images/sponsors/tecnifar.png" (click)="openSponsorLink('https://tecnifar.pt/')">
+                  <img class="hover-scale" src="./assets/images/sponsors/tecnifar.png" (click)="openSponsorLink('https://tecnifar.pt/')">
                 </div>
                 <div class="ae-7 image-div">
-                  <img class="hover-scale" src="../../../assets/images/sponsors/materfarma.png" (click)="openSponsorLink('https://www.materfarma.pt/')">
+                  <img class="hover-scale" src="./assets/images/sponsors/materfarma.png" (click)="openSponsorLink('https://www.materfarma.pt/')">
                 </div>
                 <div class="ae-8 image-div">
-                  <img class="hover-scale" src="../../../assets/images/sponsors/Boehringer_Ingelheim_Logo.png" (click)="openSponsorLink('https://www.boehringer-ingelheim.pt/')">
+                  <img class="hover-scale" src="./assets/images/sponsors/Boehringer_Ingelheim_Logo.png" (click)="openSponsorLink('https://www.boehringer-ingelheim.pt/')">
                 </div>
                 <div class="ae-9 image-div">
-                  <img class="hover-scale" src="../../../assets/images/sponsors/eli-lilly.png" (click)="openSponsorLink('https://www.lilly.pt/')">
+                  <img class="hover-scale" src="./assets/images/sponsors/eli-lilly.png" (click)="openSponsorLink('https://www.lilly.pt/')">
                 </div>
                 <div class="ae-10 image-div">
-                  <img class="hover-scale" src="../../../assets/images/sponsors/tecnimede.png" (click)="openSponsorLink('https://www.tecnimede.com/')">
+                  <img class="hover-scale" src="./assets/images/sponsors/tecnimede.png" (click)="openSponsorLink('https://www.tecnimede.com/')">
                 </div>
                 <div class="ae-10 image-div">
-                  <img class="hover-scale" src="../../../assets/images/sponsors/baldacci.png" (click)="openSponsorLink('https://www.baldacci.pt/')">
+                  <img class="hover-scale" src="./assets/images/sponsors/baldacci.png" (click)="openSponsorLink('https://www.baldacci.pt/')">
                 </div>
               </div>
             </div>
@@ -968,11 +994,11 @@
                   <div class="content-card-title"><fa-icon icon="phone" style="font-size: 80%; margin-right: 10px; vertical-align: top;" class="primary-text-color"></fa-icon>Contactos</div>
                   <div style="font-size: 22px; margin: 80px 0px; text-align: left; line-height: 1.4; font-weight: 500; width: 100%; max-width: 800px">
                     <div class="ae-4" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
-                      <img src="../../../assets/images/facebook.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
+                      <img src="./assets/images/facebook.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
                       <a class="link-style" href="https://www.facebook.com/gemmeeting">@gemmeeting</a>
                     </div>
                     <div class="ae-5" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
-                      <img src="../../../assets/images/instagram.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
+                      <img src="./assets/images/instagram.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
                       <a class="link-style" href="https://www.instagram.com/gemmeeting23/">@gemmeeting23</a>
                     </div>
                     <div class="ae-6" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
