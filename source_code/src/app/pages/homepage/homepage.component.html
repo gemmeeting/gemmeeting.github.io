@@ -61,29 +61,31 @@
       </div>
     </div>
     <div class="animate-div wait600ms">
-      <div class="menu-item" (click)="menuClick('#sponsors')" (keyup.enter)="menuClick('#sponsors')">
-        <span [tabIndex]="8">Patrocínios</span>
+      <div class="menu-item" (click)="menuClick('#faqs')" (keyup.enter)="menuClick('#faqs')">
+        <span [tabIndex]="8">FAQs</span>
       </div>
     </div>
     <div class="animate-div wait700ms">
+      <div class="menu-item" (click)="menuClick('#sponsors')" (keyup.enter)="menuClick('#sponsors')">
+        <span [tabIndex]="9">Patrocínios</span>
+      </div>
+    </div>
+    <div class="animate-div wait800ms">
       <div class="menu-item" (click)="menuClick('#contactos')" (keyup.enter)="menuClick('#contactos')">
-        <span [tabIndex]="9">Contactos</span>
+        <span [tabIndex]="10">Contactos</span>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Panel Top #05 -->
-<nav class="panel top">
+<div class="panel top" [ngClass]="{'hidden-by-scroll': hideTopBar}">
   <div class="sections desktop">
     <div class="left" style="display: flex; flex: 1 1 100px; width: auto">
       <div class="logo-div">
         <div class="logo-slideover-div"></div>
         <img [tabIndex]="1" src="./assets/images/gemeeting-logo-only.png" alt="Gemeeting Logo" style="cursor: pointer;" (click)="menuClick('#home')" (keyup.enter)="menuClick('#home')"/>
       </div>
-      <!-- <a href="#" title="NowDay">
-        <img class="main-logo" src="./assets/images/logo.png" alt="NowDay Logo">
-      </a> -->
     </div>
     <div class="center" style="flex: 2 2 100px">
       <ul class="menu" *ngIf="showMenu">
@@ -92,8 +94,9 @@
         <li class="animate-div wait300ms"><a href="#programa">Programa</a></li>
         <li class="animate-div wait400ms"><a href="#inscricoes">Inscrições</a></li>
         <li class="animate-div wait500ms"><a href="#abstracts">Resumos</a></li>
-        <li class="animate-div wait600ms"><a href="#sponsors">Patrocínios</a></li>
-        <li class="animate-div wait700ms"><a href="#contactos">Contactos</a></li>
+        <li class="animate-div wait600ms"><a href="#faqs">FAQs</a></li>
+        <li class="animate-div wait700ms"><a href="#sponsors">Patrocínios</a></li>
+        <li class="animate-div wait800ms"><a href="#contactos">Contactos</a></li>
       </ul>
     </div>
     <div class="center-burger" style="flex: 2 2 50px">
@@ -107,13 +110,13 @@
       </div>
     </div>
   </div>
-</nav>
+</div>
 
 <!-- Slide 1 (#34) -->
 <section class="slide fade-6 kenBurns" data-name="home">
   <div class="content" (click)="playvideo()">
     <div class="container">
-      <div class="wrap">
+      <div class="wrap" id="content-home">
         <div class="center-content-div ae-1 fromAbove">
           <img src="./assets/images/gemmeeting-logo-full.png" alt="Gemeeting Logo" style="width: 100%; max-width: 450px; margin-bottom: 20px;">
           <div style="width: 100%" class="words-underlined no-underline">
@@ -140,7 +143,7 @@
 <section class="slide fade-6 kenBurns" data-name="equipa">
   <div class="content">
     <div class="container">
-      <div class="wrap">
+      <div class="wrap" id="content-equipa">
         <div class="center-content-div ae-1 fromAbove" style="max-width: 1600px !important; padding-top: 10vh !important;">
           <div class="fix-10-12" style="max-width: 1600px !important">
             <ul class="grid grid-83 noSpaces equal" style="display: flex; justify-content: center; align-items: center;">
@@ -265,7 +268,7 @@
 <section class="slide fade-6 kenBurns" data-name="programa">
   <div class="content">
     <div class="container">
-      <div class="wrap">
+      <div class="wrap" id="content-programa">
         <div class="center-content-div ae-2 fromAbove" style="max-width: 1600px !important;">
           <div class="fix-10-12" style="color: black; max-width: 1600px !important">
             <div class="dual-table-wrapper">
@@ -452,7 +455,7 @@
 <section class="slide fade-6 kenBurns" data-name="abstracts">
   <div class="content">
     <div class="container">
-      <div class="wrap">
+      <div class="wrap" id="content-abstracts">
         <div class="center-content-div ae-2 fromAbove">
           <div class="fix-10-12">
             <ul class="grid grid-83 noSpaces equal ae-3" style="display: flex; justify-content: center; align-items: center;">
@@ -557,10 +560,340 @@
 </section>
 
 <!-- Slide 5 -->
+<section class="slide fade-6 kenBurns" data-name="faqs">
+  <div class="content">
+    <div class="container">
+      <div class="wrap" id="content-faqs">
+        <div class="center-content-div ae-2 fromAbove">
+          <div class="fix-10-12">
+            <ul class="grid grid-83 noSpaces equal ae-3" style="display: flex; justify-content: center; align-items: center;">
+              <li class="col-4-12 ae-3 fromBottom" style="background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%;">
+                <div style="display: flex; flex-direction: column;">
+                  <div class="content-card-title"><fa-icon icon="question-circle" style="margin-right: 10px;" class="primary-text-color"></fa-icon>Perguntas Frequentes (FAQs)</div>
+                  
+                  <div class="ae-9" style="width: 100%; display: flex; justify-content: flex-end; margin-top: 20px; margin-bottom: 10px">
+                    <button *ngIf="!expandAllFaqs" mat-stroked-button (click)="expandRetractAllFaqs()"><fa-icon icon="up-right-and-down-left-from-center" style="margin-right: 10px; color: #a9d3fa;"></fa-icon>Expandir Tudo</button>
+                    <button *ngIf="expandAllFaqs" mat-stroked-button (click)="expandRetractAllFaqs()"><fa-icon icon="down-left-and-up-right-to-center" style="margin-right: 10px; color: #a9d3fa"></fa-icon>Colapsar Tudo</button>
+                  </div>
+
+                  <div class="ae-8 fromBottom" style="text-align: left; font-weight: 500;">
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700;">
+                              <span class="primary-text-color" style="margin-right: 10px">1. </span> Onde e quando vai decorrer o GEMMeeting 2023?
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">
+                          O GEMMeeting 2023 decorrerá nos dias <strong>28 e 29 de setembro de 2023</strong>, em formato <strong>exclusivamente presencial</strong>, no <strong>Fórum de Arte e Cultura (FACE) de Espinho</strong>.
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700;">
+                              <span class="primary-text-color" style="margin-right: 10px">2.</span> Qual é o programa do congresso?
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">
+                          Poderá consultar o programa <a href="https://gemmeeting.pt/#programa" target="_blank" class="link-style">clicando/tocando aqui</a>.
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700;">
+                              <span class="primary-text-color" style="margin-right: 10px">3.</span> A quem se destina?
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">
+                          O evento é direcionado a médicos especialistas e internos de Medicina Geral e Familiar. No entanto, todos os profissionais de saúde são bem-vindos, incluindo médicos especialistas e internos de outras especialidades, 
+                          médicos indiferenciados, internos de formação geral, estudantes de medicina ou enfermeiros.
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700;">
+                              <span class="primary-text-color" style="margin-right: 10px">4.</span> Como me posso inscrever?
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">
+                          Pode inscrever-se <a href="https://gemmeeting.eventkey.pt/geral/detalheformulario.aspx?codigo=2&evento=2" target="_blank" class="link-style">clicando/tocando aqui</a>. Será redirecionado para uma página da Eventkey, 
+                          e deverá preencher o formulário e seguir as instruções. Após inscrição no evento receberá um email de confirmação da mesma.
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700;">
+                              <span class="primary-text-color" style="margin-right: 10px">5.</span> Qual o preço da inscrição e o que está incluído?
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">
+                          A inscrição tem um custo único de 30 euros e dá acesso a: <br>
+                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Mesas redondas, sessões plenárias, sessões paralelas, GEMM Talks e apresentações de trabalhos; <br>
+                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Um coffee-wake, dois coffee-breaks e dois almoços contemplados no programa; <br>
+                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Um workshop (WS) à escolha (vagas limitadas a 25 participantes por WS); <br>
+                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Certificado de presença, após validação das presenças; <br>
+                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Oportunidade de apresentação de trabalhos em formato de comunicação oral ou póster, mediante submissão e seleção dos mesmos.
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700;">
+                              <span class="primary-text-color" style="margin-right: 10px">6.</span> Como é feita a seleção para os workshops?
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">
+                          Cada participante poderá participar em um WS, que será escolhido consoante disponibilidade de vaga no processo de inscrição. 
+                          Há um limite de 25 vagas por WS, que serão preenchidas por ordem de inscrição.
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700;">
+                              <span class="primary-text-color" style="margin-right: 10px">7.</span> Como será realizado o controlo de presenças?
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">
+                          O controlo de presenças será efetuado sempre no secretariado do evento, e decorrerá em quatro momentos: no check-in no evento na manhã do dia 28/09, no início da tarde do dia 28/09, início da manhã do dia 29/09 e início da tarde do dia 29/09. 
+                          Para cada WS, será realizado um controlo de presenças de acordo com a lista dos inscritos no mesmo.
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700;">
+                              <span class="primary-text-color" style="margin-right: 10px">8.</span> Como posso obter o certificado de presença?
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">
+                          Para obter o certificado de presença do GEMMeeting 2023, será necessário presença em pelo menos três dos quatro controlos de presença do evento (ver ponto 7.)
+                          Será emitido um certificado de presença adicional para a participação em WS, conforme as presenças registadas.
+                          Os certificados de presença no GEMMeeting 2023 e no WS serão enviados para o e-mail associado à inscrição, após validação das presenças.
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700;">
+                              <span class="primary-text-color" style="margin-right: 10px">9.</span> Como posso submeter o meu resumo?
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">
+                          Poderá realizar a submissão do seu resumo aqui, onde pode encontrar o nosso regulamento e formulário de submissão dos trabalhos.
+                            Posteriormente será divulgada informação acerca dos prémios para os vencedores nas nossas páginas de Facebook e Instagram. <br> <br>
+                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Início de submissão de resumos:</strong> 26/05/2023 às 21h00. <br>
+                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Data-limite para submissão de resumos:</strong> 09/07/2023 às 23h59. <br>
+                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Comunicação dos resultados aos/às autores/as:</strong> 21/08/2023 até às 23h59, 
+                          divulgados via e-mail para o endereço eletrónico indicado no formulário de submissão.
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700;">
+                              <span class="primary-text-color" style="margin-right: 10px">10.</span> Quando decorrerão as apresentação de trabalhos selecionados?
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">
+                          A apresentação dos posters selecionados será efetuada na manhã do dia 28/09/2023 e a apresentação das comunicações orais na manhã do dia 29/09/2023. Estas serão realizadas presencialmente.
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700;">
+                              <span class="primary-text-color" style="margin-right: 10px">11.</span> Como chegar ao local do evento?
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">
+                          O FACE de Espinho é facilmente acessível de carro. Existe estacionamento gratuito no local e nas imediações.
+                          Também poderá chegar ao local do evento através de transportes públicos, sendo o ponto de ligação mais próximo a estação de comboios de Espinho, que se encontra a cerca de 10 minutos a pé.
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700;">
+                              <span class="primary-text-color" style="margin-right: 10px">12.</span> Como decorrerão os almoços?
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">
+                          O almoço está incluído no valor da inscrição no evento e será servido no espaço do evento. Caso não deseje almoçar no evento, existem também diversos restaurantes nas imediações.
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700;">
+                              <fa-icon icon="question-circle" style="margin-right: 5px;" class="primary-text-color"></fa-icon> Tem outras dúvidas/perguntas não mencionadas?
+                          </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">
+                          <span>Pode entrar em contacto com a comissão organizadora através de e-mail ou redes sociais:</span>
+
+                          <div class="ae-4" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px; margin-top: 20px">
+                            <img src="../../../assets/images/facebook.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
+                            <a class="link-style" href="https://www.facebook.com/gemmeeting">@gemmeeting</a>
+                          </div>
+                          <div class="ae-5" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
+                            <img src="../../../assets/images/instagram.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
+                            <a class="link-style" href="https://www.instagram.com/gemmeeting23/">@gemmeeting23</a>
+                          </div>
+                          <div class="ae-6" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
+                            <fa-icon icon="envelope" style="font-size: 24px; margin-right: 10px" class="primary-text-color"></fa-icon>
+                            <a class="link-style" href="mailto:gemmeeting@gmail.com">gemmeeting@gmail.com</a>
+                          </div>
+                        </div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+                  </div>
+
+                  <!-- <div class="ae-6 fromBottom" style="text-align: left; font-weight: 500;">
+                      <div style="max-height: 50vh; overflow-y: auto; border-radius: 10px; box-shadow: inset 0px 0px 6px lightgrey; padding: 10px; box-sizing: border-box; margin-top: 20px">
+                        
+                        <ol class="list-normas-submissao">
+                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">1.</span> Onde e quando vai decorrer o GEMMeeting 2023?</li>
+                          <li style="margin-left: 16px">O GEMMeeting 2023 decorrerá nos dias <strong>28 e 29 de setembro de 2023</strong>, em formato <strong>exclusivamente presencial</strong>, no <strong>Fórum de Arte e Cultura (FACE) de Espinho</strong>.</li>
+
+                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">2.</span> Qual é o programa do congresso?</li>
+                          <li style="margin-left: 16px">Poderá consultar o programa <a href="https://gemmeeting.pt/#programa" target="_blank" class="link-style">clicando/tocando aqui</a>.</li>
+
+                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">3.</span> A quem se destina?</li>
+                          <li style="margin-left: 16px">
+                            O evento é direcionado a médicos especialistas e internos de Medicina Geral e Familiar. No entanto, todos os profissionais de saúde são bem-vindos, incluindo médicos especialistas e internos de outras especialidades, 
+                            médicos indiferenciados, internos de formação geral, estudantes de medicina ou enfermeiros.
+                          </li>
+
+                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">4.</span> Como me posso inscrever?</li>
+                          <li style="margin-left: 16px">
+                            Pode inscrever-se <a href="https://gemmeeting.eventkey.pt/geral/detalheformulario.aspx?codigo=2&evento=2" target="_blank" class="link-style">clicando/tocando aqui</a>. Será redirecionado para uma página da Eventkey, 
+                            e deverá preencher o formulário e seguir as instruções. Após inscrição no evento receberá um email de confirmação da mesma.
+                          </li>
+
+                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">5.</span> Qual o preço da inscrição e o que está incluído?</li>
+                          <li style="margin-left: 16px">
+                            A inscrição tem um custo único de 30 euros e dá acesso a: <br>
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Mesas redondas, sessões plenárias, sessões paralelas, GEMM Talks e apresentações de trabalhos; <br>
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Um coffee-wake, dois coffee-breaks e dois almoços contemplados no programa; <br>
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Um workshop (WS) à escolha (vagas limitadas a 25 participantes por WS); <br>
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Certificado de presença, após validação das presenças; <br>
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Oportunidade de apresentação de trabalhos em formato de comunicação oral ou póster, mediante submissão e seleção dos mesmos.
+                          </li>
+
+                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">6.</span> Como é feita a seleção para os workshops?</li>
+                          <li style="margin-left: 16px">
+                            Cada participante poderá participar em um WS, que será escolhido consoante disponibilidade de vaga no processo de inscrição. 
+                            Há um limite de 25 vagas por WS, que serão preenchidas por ordem de inscrição.
+                          </li>
+
+                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">7.</span> Como será realizado o controlo de presenças?</li>
+                          <li style="margin-left: 16px">
+                            O controlo de presenças será efetuado sempre no secretariado do evento, e decorrerá em quatro momentos: no check-in no evento na manhã do dia 28/09, no início da tarde do dia 28/09, início da manhã do dia 29/09 e início da tarde do dia 29/09. 
+                            Para cada WS, será realizado um controlo de presenças de acordo com a lista dos inscritos no mesmo.
+                          </li>
+
+                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">8.</span> Como posso obter o certificado de presença?</li>
+                          <li style="margin-left: 16px">
+                            Para obter o certificado de presença do GEMMeeting 2023, será necessário presença em pelo menos três dos quatro controlos de presença do evento (ver ponto 7.)
+                            Será emitido um certificado de presença adicional para a participação em WS, conforme as presenças registadas.
+                            Os certificados de presença no GEMMeeting 2023 e no WS serão enviados para o e-mail associado à inscrição, após validação das presenças.
+                          </li>
+
+                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">9.</span> Como posso submeter o meu resumo?</li>
+                          <li style="margin-left: 16px">
+                            Poderá realizar a submissão do seu resumo aqui, onde pode encontrar o nosso regulamento e formulário de submissão dos trabalhos.
+                            Posteriormente será divulgada informação acerca dos prémios para os vencedores nas nossas páginas de Facebook e Instagram. <br> <br>
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Início de submissão de resumos:</strong> 26/05/2023 às 21h00. <br>
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Data-limite para submissão de resumos:</strong> 09/07/2023 às 23h59. <br>
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Comunicação dos resultados aos/às autores/as:</strong> 21/08/2023 até às 23h59, 
+                            divulgados via e-mail para o endereço eletrónico indicado no formulário de submissão.
+                          </li>
+
+                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">10.</span> Quando decorrerão as apresentação de trabalhos selecionados?</li>
+                          <li style="margin-left: 27px">
+                            A apresentação dos posters selecionados será efetuada na manhã do dia 28/09/2023 e a apresentação das comunicações orais na manhã do dia 29/09/2023. Estas serão realizadas presencialmente.
+                          </li>
+
+                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">11.</span> Como chegar ao local do evento?</li>
+                          <li style="margin-left: 27px">
+                            O FACE de Espinho é facilmente acessível de carro. Existe estacionamento gratuito no local e nas imediações.
+                            Também poderá chegar ao local do evento através de transportes públicos, sendo o ponto de ligação mais próximo a estação de comboios de Espinho, que se encontra a cerca de 10 minutos a pé.
+                          </li>
+
+                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">12.</span> Como decorrerão os almoços?</li>
+                          <li style="margin-left: 25px">
+                            O almoço está incluído no valor da inscrição no evento e será servido no espaço do evento. Caso não deseje almoçar no evento, existem também diversos restaurantes nas imediações.
+                          </li>
+
+                          <li style="font-weight: 700; margin-top: 20px"><fa-icon icon="question-circle" style="margin-right: 5px;" class="primary-text-color"></fa-icon> Tem outras dúvidas/perguntas não mencionadas?</li>
+                          <li style="margin-left: 25px">
+                            <span>Pode entrar em contacto com a comissão organizadora através de e-mail ou redes sociais:</span>
+
+                            <div class="ae-4" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px; margin-top: 20px">
+                              <img src="../../../assets/images/facebook.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
+                              <a class="link-style" href="https://www.facebook.com/gemmeeting">@gemmeeting</a>
+                            </div>
+                            <div class="ae-5" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
+                              <img src="../../../assets/images/instagram.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
+                              <a class="link-style" href="https://www.instagram.com/gemmeeting23/">@gemmeeting23</a>
+                            </div>
+                            <div class="ae-6" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
+                              <fa-icon icon="envelope" style="font-size: 24px; margin-right: 10px" class="primary-text-color"></fa-icon>
+                              <a class="link-style" href="mailto:gemmeeting@gmail.com">gemmeeting@gmail.com</a>
+                            </div>
+
+                          </li>
+                          <br>
+                        </ol>
+                      </div>
+                  </div> -->
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="background">
+    <img src="./assets/images/background/sky_h_azul_1.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
+  </div>
+</section>
+
+<!-- Slide 6 -->
 <section class="slide fade-6 kenBurns" data-name="sponsors">
   <div class="content">
     <div class="container">
-      <div class="wrap spaceWrap">
+      <div class="wrap spaceWrap" id="content-sponsors">
         <div class="center-content-div ae-2 fromAbove" style="max-width: 1400px !important">
           <div class="fix-10-12" style="max-width: 1400px !important">
             <!-- <div class="ae-3 platina-banner" style="width: 100%; box-shadow: 0px 0px 6px lightgrey; background-color: white; min-height: 100px; padding: 20px; box-sizing: border-box; border-radius: 10px; overflow: hidden; margin: 10px 0px;">
@@ -576,20 +909,23 @@
                 Patrocínios
               </div>
               <div class="sponsors-images-div">
-                <div class="ae-6">
+                <div class="ae-6 image-div">
                   <img class="hover-scale" src="../../../assets/images/sponsors/tecnifar.png" (click)="openSponsorLink('https://tecnifar.pt/')">
                 </div>
-                <div class="ae-7">
+                <div class="ae-7 image-div">
                   <img class="hover-scale" src="../../../assets/images/sponsors/materfarma.png" (click)="openSponsorLink('https://www.materfarma.pt/')">
                 </div>
-                <div class="ae-8">
+                <div class="ae-8 image-div">
                   <img class="hover-scale" src="../../../assets/images/sponsors/Boehringer_Ingelheim_Logo.png" (click)="openSponsorLink('https://www.boehringer-ingelheim.pt/')">
                 </div>
-                <div class="ae-9">
+                <div class="ae-9 image-div">
                   <img class="hover-scale" src="../../../assets/images/sponsors/eli-lilly.png" (click)="openSponsorLink('https://www.lilly.pt/')">
                 </div>
-                <div class="ae-10">
+                <div class="ae-10 image-div">
                   <img class="hover-scale" src="../../../assets/images/sponsors/tecnimede.png" (click)="openSponsorLink('https://www.tecnimede.com/')">
+                </div>
+                <div class="ae-10 image-div">
+                  <img class="hover-scale" src="../../../assets/images/sponsors/baldacci.png" (click)="openSponsorLink('https://www.baldacci.pt/')">
                 </div>
               </div>
             </div>
@@ -615,11 +951,11 @@
     </div>
   </div>
   <div class="background">
-    <img src="./assets/images/background/sky_h_azul_1.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
+    <img src="./assets/images/background/sky_h_azul_2.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
   </div>
 </section>
 
-<!-- Slide 6 -->
+<!-- Slide 7 -->
 <section class="slide fade-6 kenBurns" data-name="contactos">
   <div class="content">
     <div class="container" style="flex-direction: column !important;">
@@ -672,7 +1008,7 @@
     </div>
   </div>
   <div class="background">
-    <img src="./assets/images/background/sky_h_azul_2.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
+    <img src="./assets/images/background/sky_h_azul_1.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
   </div>
 </section>
 

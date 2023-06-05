@@ -10,14 +10,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { NgParticlesModule } from "ng-particles";
-import { AnimatedIntroComponent } from './pages/homepage/animated-intro/animated-intro.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    // AnimatedIntroComponent
   ],
   imports: [
     BrowserModule,

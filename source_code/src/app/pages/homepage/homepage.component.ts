@@ -1,8 +1,10 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnDestroy, OnInit, ViewChild, HostListener } from '@angular/core';
 import { MoveDirection, ClickMode, HoverMode, OutMode, Engine, Container, ISourceOptions } from 'tsparticles-engine';
 import { loadFull } from "tsparticles";
 import { Observable, Subscription, map } from 'rxjs';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import { Router } from '@angular/router';
+
 
 
 @Component({
@@ -20,6 +22,13 @@ export class HomepageComponent implements OnInit, OnDestroy {
 
   hamburgerOpen = false;
   animateHamburgerClosing = false;
+
+  expandAllFaqs = false;
+
+  // menu scroll show hide
+  previousScrollY = 0;
+  previousScrollRoute = '';
+  hideTopBar = false;
 
   /* or the classic JavaScript object */
   particlesOptions: ISourceOptions = {
@@ -104,7 +113,8 @@ export class HomepageComponent implements OnInit, OnDestroy {
   subscriptions = new Array();
 
   constructor(
-    private breakpointObserver: BreakpointObserver
+    private breakpointObserver: BreakpointObserver,
+    private router: Router,
     ) {
       this.observableWidth = this.breakpointObserver
       .observe('(min-width: 1000px)');
@@ -120,6 +130,8 @@ export class HomepageComponent implements OnInit, OnDestroy {
         this.closeHamburger();
       }
     });
+
+    this.checkScrollHeight();
   }
 
   ngOnDestroy(): void {
@@ -184,5 +196,68 @@ export class HomepageComponent implements OnInit, OnDestroy {
 
   openSubmeterResumoLink(): void {
     window.open('https://gemmeeting.eventkey.pt/geral/inserirresumo.aspx?evento=2&formulario=4&chave=0000283DB8&login=false', '_blank');
+  }
+
+  expandRetractAllFaqs(): void {
+    this.expandAllFaqs = !this.expandAllFaqs;
+  }
+
+  // verifica o scroll atual do content segundo a route ativa, e da hide/show da topbar
+  checkScrollHeight() {
+
+    const processData = (element: HTMLElement) => {
+      if (element) {
+        if ( element.scrollTop > this.previousScrollY ) {
+          this.hideTopBar = true;
+        } else if ( element.scrollTop < this.previousScrollY ) {
+          this.hideTopBar = false;
+        }
+    
+        this.previousScrollY = element.scrollTop;
+      }
+    }
+    
+    const checkRoute = () => {
+
+      const activeScreenDiv = this.router.url?.replace('/#', '');
+
+      if (this.previousScrollRoute !== activeScreenDiv) {
+        this.previousScrollY = 0;
+        this.hideTopBar = false;
+      } 
+
+      this.previousScrollRoute = activeScreenDiv;
+
+      // algumas rotas nao precisam
+
+      if (activeScreenDiv === 'home') {
+        const element = document.getElementById('content-home');
+        if (element) processData(element);
+      } else if (activeScreenDiv === 'equipa') {
+        const element = document.getElementById('content-equipa');
+        if (element) processData(element);
+      } else if (activeScreenDiv === 'programa') {
+        const element = document.getElementById('content-programa');
+        if (element) processData(element);
+      } else if (activeScreenDiv === 'abstracts') {
+        const element = document.getElementById('content-abstracts');
+        if (element) processData(element);
+      } else if (activeScreenDiv === 'faqs') {
+        const element = document.getElementById('content-faqs');
+        if (element) processData(element);
+      } else if (activeScreenDiv === 'sponsors') {
+        const element = document.getElementById('content-sponsors');
+        if (element) processData(element);
+      }
+
+    }
+
+    window.addEventListener('wheel', (event) => {
+      checkRoute();
+    });
+
+    window.addEventListener('touchmove', (event) => {
+      checkRoute();
+    })
   }
 }

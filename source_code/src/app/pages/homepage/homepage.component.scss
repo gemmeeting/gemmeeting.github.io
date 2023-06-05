@@ -157,12 +157,22 @@ span {
   -webkit-backdrop-filter: blur(20px);
   height: 80px !important;
   color: black;
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.6s ease-out all;
+  
+  &.hidden-by-scroll {
+    // transform: translateY(-80px);
+    // opacity: 0;
+    height: 20px !important;
+  }
 
   .logo-div {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
+    height: 100%;
+    max-height: 50px;
     width: 100%;
     max-width: 150px;
   
@@ -449,9 +459,17 @@ span {
       color: rgb(218, 165, 32);
       font-size: 22px;
 
-      img {
-        width: 180px;
-        margin: 20px 30px;
+      .image-div {
+        flex: 0 1 300px;
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          max-width: 200px;
+        }
       }
     }
 
