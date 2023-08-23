@@ -165,7 +165,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
 
   openSponsorLink(sponsorLinkString: string): void {
     if (sponsorLinkString) {
-      window.location.href = sponsorLinkString;
+      window.open(sponsorLinkString, '_blank');
     }
   }
 
