@@ -36,7 +36,7 @@
 <div class="fullscreen-hamburger-wrapper" [ngClass]="{'close-hamburger-animation': animateHamburgerClosing}" *ngIf="hamburgerOpen">
   <div class="hamburger-content">
     <div class="animate-div wait100ms">
-      <div class="menu-item" (click)="menuClick('#home'); playvideo();" (keyup.enter)="menuClick('#home'); playvideo();">
+      <div class="menu-item" (click)="menuClick('#home')" (keyup.enter)="menuClick('#home')">
         <span [tabIndex]="3">As Jornadas</span>
       </div>
     </div>
@@ -89,7 +89,7 @@
     </div>
     <div class="center" style="flex: 2 2 100px">
       <ul class="menu" *ngIf="showMenu">
-        <li class="animate-div wait100ms"><a href="#home" (click)="playvideo()">As Jornadas</a></li>
+        <li class="animate-div wait100ms"><a href="#home">As Jornadas</a></li>
         <li class="animate-div wait200ms"><a href="#equipa">A Equipa</a></li>
         <li class="animate-div wait300ms"><a href="#programa">Programa</a></li>
         <li class="animate-div wait400ms"><a href="#inscricoes">Inscrições</a></li>
@@ -114,7 +114,7 @@
 
 <!-- Slide 1 (#34) -->
 <section class="slide fade-6 kenBurns" data-name="home">
-  <div class="content" (click)="playvideo()">
+  <div class="content">
     <div class="container">
       <div class="wrap" id="content-home">
         <div class="center-content-div ae-1 fromAbove">
@@ -134,10 +134,7 @@
       </div>
     </div>
   </div>
-  <video *ngIf="!isSafari" [loop]="true" [muted]="true" [autoplay]="true" preload="auto" [controls]="false" id="intro-video" class="background background-video">
-    <source src="./assets/videos/background.mp4" type="video/mp4"/>
-  </video>
-  <div *ngIf="isSafari" class="background" id="intro-background-backup">
+  <div class="background" id="intro-background-backup">
     <img src="./assets/images/background/espinho-above.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
   </div>
 </section>

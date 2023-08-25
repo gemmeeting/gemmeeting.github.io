@@ -28,7 +28,6 @@ export class HomepageComponent implements OnInit, OnDestroy {
   previousScrollY = 0;
   previousScrollRoute = '';
   hideTopBar = false;
-  isSafari = false;
 
   /* or the classic JavaScript object */
   particlesOptions: ISourceOptions = {
@@ -133,8 +132,6 @@ export class HomepageComponent implements OnInit, OnDestroy {
     });
 
     this.checkScrollHeight();
-
-    this.checkIfIsSafari();
   }
 
   ngOnDestroy(): void {
@@ -143,29 +140,6 @@ export class HomepageComponent implements OnInit, OnDestroy {
         subscription.unsubscribe();
       });
     }
-  }
-
-  playvideo(): void {
-    setTimeout(() => { // wait dom to finish loading
-      let videoElement: any = document.getElementById('intro-video');
-      if (videoElement) {
-        videoElement.play();
-      }
-    }, 200);
-  }
-  
-  // particlesLoaded(container: Container): void {
-  //   // console.log(container);
-  // }
-
-  // async particlesInit(engine: Engine): Promise<void> {
-  //   await loadFull(engine);
-  // }
-
-  checkIfIsSafari(): void {
-    var is_safari = navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
-    var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome/') > -1;
-    this.isSafari = (is_safari && !is_chrome); // chrome also includes safari agent
   }
 
   openGoogleMapsLink() {

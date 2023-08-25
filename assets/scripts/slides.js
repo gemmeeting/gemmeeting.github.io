@@ -264,27 +264,6 @@ $(document).ready(function() { "use strict";
     unzoomImage();
     hideSidebar();
     window.allowSlide = 1;
-
-    function isSafari() {
-      var is_safari = navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
-      var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome/') > -1;
-      return (is_safari && !is_chrome); // chrome also includes safari agent
-    }
-
-    let videoIntroElement = document.getElementById('intro-video');
-    let bgĨmageBackup = document.getElementById('intro-background-backup');
-    if (!isSafari()) {
-      if (bgĨmageBackup) bgĨmageBackup.classList.add('display-none');
-      if (videoIntroElement) videoIntroElement.classList.remove('display-none');
-      if (currenSlideIndex <= 1) {
-        if (videoIntroElement) { videoIntroElement.play() }
-      } else {
-        if (videoIntroElement) { videoIntroElement.pause() } // pause when not in view to save resources
-      }
-    } else {
-      videoIntroElement.pause();
-      videoIntroElement.classList.add('display-none'); // safari does not support this video well enough... lol
-    }
     
     //reset 
     $body.removeClass('sidebarShown lastSlide firstSlide hidePanel-top hidePanel-bottom');

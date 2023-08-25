@@ -264,15 +264,6 @@ $(document).ready(function() { "use strict";
     unzoomImage();
     hideSidebar();
     window.allowSlide = 1;
-
-    let videoIntroElement = document.getElementById('intro-video');
-    if (videoIntroElement) {
-      if (currenSlideIndex <= 1) {
-        videoIntroElement.play();
-      } else {
-        ideoIntroElement.pause(); // pause when not in view to save resources
-      }
-    }
     
     //reset 
     $body.removeClass('sidebarShown lastSlide firstSlide hidePanel-top hidePanel-bottom');
