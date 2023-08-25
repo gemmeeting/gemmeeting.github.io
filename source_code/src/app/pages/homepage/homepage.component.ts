@@ -4,6 +4,7 @@ import { loadFull } from "tsparticles";
 import { Observable, Subscription, map } from 'rxjs';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 
@@ -115,12 +116,14 @@ export class HomepageComponent implements OnInit, OnDestroy {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private router: Router,
+    private notifSnackbar: MatSnackBar
     ) {
       this.observableWidth = this.breakpointObserver
       .observe('(min-width: 1000px)');
   }
   
   ngOnInit(): void {
+
     setTimeout(() => {
       this.showMenu = true;
     }, 1000);
@@ -132,6 +135,20 @@ export class HomepageComponent implements OnInit, OnDestroy {
     });
 
     this.checkScrollHeight();
+
+    if (this.isSafari()) {
+      this.notifSnackbar.open(
+        `Detetámos que está a usar o browser Safari.
+O Safari não suporta corretamente certas funcionalidades, como a animação de fundo do nosso website.
+Para suporte total, use outro browser, como o Firefox ou Chrome.`, 
+        'OK',
+        {
+          duration: 10000,
+          horizontalPosition: 'center',
+          verticalPosition: 'top'
+        }
+      );
+    }
   }
 
   ngOnDestroy(): void {
@@ -158,6 +175,12 @@ export class HomepageComponent implements OnInit, OnDestroy {
   // async particlesInit(engine: Engine): Promise<void> {
   //   await loadFull(engine);
   // }
+
+  isSafari(): boolean {
+    var is_safari = navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
+    var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome/') > -1;
+    return (is_safari && !is_chrome); // chrome also includes safari agent
+  }
 
   openGoogleMapsLink() {
     window.open('https://goo.gl/maps/kQ6cybC1yVkzgogZ8', '_blank');

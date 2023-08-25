@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-PT">
 <head>
   <meta charset="utf-8">
   <title>GEMMeeting</title>
@@ -22,6 +22,17 @@
 <body id="top" class="mat-typography slides horizontal animated fast">
   <script src="./assets/scripts/jquery.min.js" type="text/javascript" async=""></script>
   <script src="./assets/scripts/plugins.js" type="text/javascript" async=""></script>
-  <app-root id="content-div"></app-root>
+  <app-root id="content-div">
+
+    <div
+    style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1000; 
+    display: flex; justify-content: center; align-items: center; background: white !important;
+    flex-direction: column;" 
+    class="fadeIn">
+      <img src="./assets/images/gemmeeting-logo-full.png" alt="" style="width: 300px">
+      <!-- <div style="font-weight: 600; color: rgb(120,120,120); font-size: 12px; margin-top: 20px;">A carregar ...</div> -->
+    </div>
+
+  </app-root>
 </body>
 </html>

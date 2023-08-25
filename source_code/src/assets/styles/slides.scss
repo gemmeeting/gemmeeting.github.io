@@ -1925,13 +1925,7 @@ html.mobile .showForMobileInline {
 
   &:hover {
     background-color: #ffee00;
-    transform: scale(1.1);
-    transition: 0.2s all;
-  }
-  
-  &:active {
-    transform: scale(1);
-    transition: 0.1s transform;
+    transition: 0.2s background-color;
   }
 }
 .panel .sections .menu li a {

@@ -242,6 +242,24 @@ $theme-dark: mat-dark-theme($theme-primary-darkmode, $theme-accent-darkmode, $th
     }
 }
 
+.mat-snack-bar-container {
+    background: rgba(255, 255, 255, 0.9) !important;
+
+    .mat-simple-snack-bar-content {
+        font-weight: 600 !important;
+        color: #2c2c2c;
+        white-space: pre-wrap;
+    }
+    
+    .mat-simple-snackbar-action {
+        .mat-button {
+            width: 60px !important;
+            color: orange;
+            margin-right: 10px !important;
+        }
+    }
+}
+
 .mat-checkbox,
 .mat-slide-toggle {
     padding: 3px 8px;

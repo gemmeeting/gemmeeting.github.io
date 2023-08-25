@@ -147,6 +147,11 @@ span {
         transform: scale(1.03);
         transition: 0.2s all;
       }
+
+      &:active {
+        transform: scale(0.97);
+        transition: 0.1s all;
+      }
     }
   }
 }
@@ -184,7 +189,7 @@ span {
       max-width: 400px;
       background-color: #f7e71e;
       animation: 5s animatedLogoDiv forwards;
-      animation-delay: 2s;
+      animation-delay: 1.5s;
     }
   
     img {
@@ -194,7 +199,7 @@ span {
       object-fit: contain;
       opacity: 0;
       animation: 5s fadeInAnimation forwards;
-      animation-delay: 2s;
+      animation-delay: 1.5s;
     }
   }
   
