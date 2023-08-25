@@ -1,10 +1,8 @@
-import { Component, ElementRef, OnDestroy, OnInit, ViewChild, HostListener } from '@angular/core';
-import { MoveDirection, ClickMode, HoverMode, OutMode, Engine, Container, ISourceOptions } from 'tsparticles-engine';
-import { loadFull } from "tsparticles";
-import { Observable, Subscription, map } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { MoveDirection, ClickMode, HoverMode, OutMode, ISourceOptions } from 'tsparticles-engine';
+import { Observable, Subscription } from 'rxjs';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 
@@ -30,6 +28,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
   previousScrollY = 0;
   previousScrollRoute = '';
   hideTopBar = false;
+  isSafari = false;
 
   /* or the classic JavaScript object */
   particlesOptions: ISourceOptions = {
@@ -116,7 +115,6 @@ export class HomepageComponent implements OnInit, OnDestroy {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private router: Router,
-    private notifSnackbar: MatSnackBar
     ) {
       this.observableWidth = this.breakpointObserver
       .observe('(min-width: 1000px)');
@@ -136,19 +134,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
 
     this.checkScrollHeight();
 
-    if (this.isSafari()) {
-      this.notifSnackbar.open(
-        `Detetámos que está a usar o browser Safari.
-O Safari não suporta corretamente certas funcionalidades, como a animação de fundo do nosso website.
-Para suporte total, use outro browser, como o Firefox ou Chrome.`, 
-        'OK',
-        {
-          duration: 10000,
-          horizontalPosition: 'center',
-          verticalPosition: 'top'
-        }
-      );
-    }
+    this.checkIfIsSafari();
   }
 
   ngOnDestroy(): void {
@@ -176,10 +162,10 @@ Para suporte total, use outro browser, como o Firefox ou Chrome.`,
   //   await loadFull(engine);
   // }
 
-  isSafari(): boolean {
+  checkIfIsSafari(): void {
     var is_safari = navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
     var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome/') > -1;
-    return (is_safari && !is_chrome); // chrome also includes safari agent
+    this.isSafari = (is_safari && !is_chrome); // chrome also includes safari agent
   }
 
   openGoogleMapsLink() {

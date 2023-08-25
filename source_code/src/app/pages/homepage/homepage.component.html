@@ -134,11 +134,11 @@
       </div>
     </div>
   </div>
-  <video [loop]="true" [muted]="true" [autoplay]="true" preload="auto" [controls]="false" id="intro-video" class="background background-video display-none">
+  <video *ngIf="!isSafari" [loop]="true" [muted]="true" [autoplay]="true" preload="auto" [controls]="false" id="intro-video" class="background background-video">
     <source src="./assets/videos/background.mp4" type="video/mp4"/>
   </video>
-  <div class="background" id="intro-background-backup">
-    <img src="./assets/images/background/sky_h_azul_1.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
+  <div *ngIf="isSafari" class="background" id="intro-background-backup">
+    <img src="./assets/images/background/espinho-above.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
   </div>
 </section>
 
