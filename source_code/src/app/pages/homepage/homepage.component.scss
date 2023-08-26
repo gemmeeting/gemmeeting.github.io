@@ -299,6 +299,7 @@ span {
     font-weight: 600;
     font-size: 26px;
     text-align: center;
+    color: #202020;
 
     &.subtitle {
       font-size: 22px;
@@ -341,7 +342,8 @@ span {
       &:focus-within {
         z-index: 100;
         transform: scale(1.6);
-        transition: 0.2s all;
+        box-shadow: 8px 8px 18px grey;
+        transition: 0.4s ease all;
       }
 
       .equipa-photo-img {
@@ -469,7 +471,7 @@ span {
 
     .gold-banner {
       box-shadow: 0px 0px 8px rgba(218, 165, 32, 0.712) !important;
-      color: rgb(218, 165, 32);
+      // color: rgb(218, 165, 32);
       font-size: 22px;
 
       .image-div {
