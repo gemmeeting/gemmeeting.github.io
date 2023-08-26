@@ -15,15 +15,15 @@ span {
 @keyframes animatedLogoDiv {
   0% {
     width: 5px;
-    transform: translateX(0px)
+    transform: translateX(0px);
   }
   10% {
     width: 5px;
-    transform: translateX(300px)
+    transform: translateX(300px);
   }
   20% {
     width: 300px;
-    transform: translateX(0px)
+    transform: translateX(0px);
   }
   30% {
     width: 0px;
@@ -52,14 +52,24 @@ span {
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes animated_text_gradient {
-	0% { background-position: 0px 50%; }
-	50% { background-position: 100% 50%; }
-	100% { background-position: 0px 50%; }
+  0% {
+    background-position: 0px 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0px 50%;
+  }
 }
 
 .hover-scale {
@@ -80,7 +90,7 @@ span {
 
 .close-hamburger-animation {
   animation: 0.3s ease-out slideDownFadeIn reverse forwards !important;
-  
+
   .hamburger-content {
     animation: 0.3s ease-out zoomOut forwards !important;
   }
@@ -94,7 +104,7 @@ span {
   width: 100vw;
   height: 100vh;
   z-index: 100;
-  background-color: rgba(0,0,0,0.15);
+  background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   display: flex;
@@ -106,7 +116,7 @@ span {
   @media only screen and (max-height: 700px) {
     align-items: flex-end;
   }
-  
+
   .hamburger-content {
     width: 100%;
     max-width: 600px;
@@ -129,7 +139,7 @@ span {
       box-sizing: border-box;
       margin: 10px 0px;
       border-radius: 10px;
-      background-color: rgba(255,255,255,0.8);
+      background-color: rgba(255, 255, 255, 0.8);
       font-weight: 600;
       color: #4e4e4e;
       text-align: center;
@@ -141,7 +151,7 @@ span {
       &:hover,
       &:focus,
       &:focus-within {
-        background-color: rgba(255,255,255,0.95);
+        background-color: rgba(255, 255, 255, 0.95);
         text-shadow: 2px 2px 4px rgb(255, 238, 0);
         color: black;
         transform: scale(1.03);
@@ -157,7 +167,7 @@ span {
 }
 
 .panel.top {
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   height: 80px !important;
@@ -165,7 +175,7 @@ span {
   transform: translateY(0);
   opacity: 1;
   transition: 0.6s ease-out all;
-  
+
   &.hidden-by-scroll {
     transform: translateY(-80px);
     opacity: 0;
@@ -179,7 +189,7 @@ span {
     max-height: 50px;
     width: 100%;
     max-width: 150px;
-  
+
     .logo-slideover-div {
       z-index: 100;
       position: absolute;
@@ -191,7 +201,7 @@ span {
       animation: 5s animatedLogoDiv forwards;
       animation-delay: 1.5s;
     }
-  
+
     img {
       width: 100%;
       max-width: 150px;
@@ -202,7 +212,7 @@ span {
       animation-delay: 1.5s;
     }
   }
-  
+
   .center {
     display: inline-table !important;
   }
@@ -211,7 +221,7 @@ span {
     display: none !important;
     justify-content: flex-end;
     align-items: center;
-    
+
     .burger {
       transform: scale(1);
       transition: 0.4s all;
@@ -223,7 +233,7 @@ span {
         transform: scale(1.1);
         transition: 0.2s all;
       }
-      
+
       &:active {
         transform: scale(1);
         transition: 0.2s all;
@@ -238,16 +248,16 @@ span {
         background-color: transparent;
         cursor: pointer;
         transition: 0.6s all;
-  
+
         &:hover,
         &:focus {
-          background-color: rgba(0,0,0,0.05);
+          background-color: rgba(0, 0, 0, 0.05);
           transition: 0.2s all;
         }
       }
     }
   }
-  
+
   @media screen and (max-width: 1000px) {
     .center {
       display: none !important;
@@ -269,11 +279,11 @@ span {
   background-color: linear-gradient(-45deg, black, #9e01ff, rgb(255, 94, 0), #9e01ff);
   background-size: 500%;
   background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: animated_text_gradient 10s infinite;
-	-moz-animation: animated_text_gradient 10s infinite;
-	-webkit-animation: animated_text_gradient 10s infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animated_text_gradient 10s infinite;
+  -moz-animation: animated_text_gradient 10s infinite;
+  -webkit-animation: animated_text_gradient 10s infinite;
 }
 
 .slide {
@@ -375,7 +385,7 @@ span {
       .bg-color {
         font-weight: 700;
         color: #9bc3cf !important;
-        background-color: rgba(170,170,170,0.1);
+        background-color: rgba(170, 170, 170, 0.1);
       }
     }
   }
@@ -423,7 +433,7 @@ span {
       border-radius: 10px;
       background-color: transparent;
       transition: 0.6s all;
-      
+
       h3 {
         font-weight: 400;
         font-size: 30px;
@@ -433,7 +443,7 @@ span {
         padding: 5px 10px;
         display: flex;
         align-items: center;
-        
+
         &.align-center {
           text-align: center !important;
         }
@@ -446,7 +456,6 @@ span {
       }
     }
 
-    
     .platina-banner {
       box-shadow: 0px 0px 14px rgb(122, 158, 194) !important;
       color: rgb(122, 158, 194);
@@ -512,8 +521,30 @@ span {
       }
     }
   }
-}
 
+  .location-image-map {
+    width: 100%;
+    min-height: 300px;
+    margin: 20px 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px lightgrey;
+    object-fit: cover;
+  }
+
+  .contacts-content-div {
+    margin: 80px 0px;
+    text-align: left;
+    line-height: 1.4;
+    font-weight: 500;
+    width: 100%;
+    max-width: 800px;
+    font-size: 20px;
+
+    @media only screen and (max-width: 650px) {
+      font-size: 14px !important;
+    }
+  }
+}
 
 :host ::ng-deep .mat-tab-group {
   .mat-tab-label-container {
@@ -526,7 +557,7 @@ span {
     position: absolute;
     background-color: black;
     transition: 0.2s;
-    
+
     &:hover {
       height: 100%;
     }
@@ -534,10 +565,10 @@ span {
 
   .mat-tab-list {
     .mat-ink-bar {
-        background-color: #ffee00 !important;
-        opacity: 1 !important;
+      background-color: #ffee00 !important;
+      opacity: 1 !important;
     }
-}
+  }
 
   .mat-tab-label-active .mat-tab-label-content {
     // color: color-theme.$primary-color !important;

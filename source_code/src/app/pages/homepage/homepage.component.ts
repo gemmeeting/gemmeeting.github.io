@@ -4,8 +4,6 @@ import { Observable, Subscription } from 'rxjs';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
 
-
-
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -38,7 +36,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
     },
     fullScreen: {
       enable: true,
-      zIndex: -10
+      zIndex: -10,
     },
     fpsLimit: 20,
     interactivity: {
@@ -111,16 +109,11 @@ export class HomepageComponent implements OnInit, OnDestroy {
 
   subscriptions = new Array();
 
-  constructor(
-    private breakpointObserver: BreakpointObserver,
-    private router: Router,
-    ) {
-      this.observableWidth = this.breakpointObserver
-      .observe('(min-width: 1000px)');
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {
+    this.observableWidth = this.breakpointObserver.observe('(min-width: 1000px)');
   }
-  
-  ngOnInit(): void {
 
+  ngOnInit(): void {
     setTimeout(() => {
       this.showMenu = true;
     }, 1000);
@@ -187,27 +180,25 @@ export class HomepageComponent implements OnInit, OnDestroy {
 
   // verifica o scroll atual do content segundo a route ativa, e da hide/show da topbar
   checkScrollHeight() {
-
     const processData = (element: HTMLElement) => {
       if (element) {
-        if ( element.scrollTop > this.previousScrollY ) {
+        if (element.scrollTop > this.previousScrollY) {
           this.hideTopBar = true;
-        } else if ( element.scrollTop < this.previousScrollY ) {
+        } else if (element.scrollTop < this.previousScrollY) {
           this.hideTopBar = false;
         }
-    
+
         this.previousScrollY = element.scrollTop;
       }
-    }
-    
-    const checkRoute = () => {
+    };
 
+    const checkRoute = () => {
       const activeScreenDiv = this.router.url?.replace('/#', '');
 
       if (this.previousScrollRoute !== activeScreenDiv) {
         this.previousScrollY = 0;
         this.hideTopBar = false;
-      } 
+      }
 
       this.previousScrollRoute = activeScreenDiv;
 
@@ -232,15 +223,14 @@ export class HomepageComponent implements OnInit, OnDestroy {
         const element = document.getElementById('content-sponsors');
         if (element) processData(element);
       }
+    };
 
-    }
-
-    window.addEventListener('wheel', (event) => {
+    window.addEventListener('wheel', event => {
       checkRoute();
     });
 
-    window.addEventListener('touchmove', (event) => {
+    window.addEventListener('touchmove', event => {
       checkRoute();
-    })
+    });
   }
 }
