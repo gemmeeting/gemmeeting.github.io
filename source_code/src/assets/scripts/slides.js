@@ -245,9 +245,8 @@ $(document).ready(function() { "use strict";
  *                                                        __/ |     
  *     Slide Appearance Manager                          |___/      
  */
-     
+
   function showSlide(requested){
-    
     requested = parseInt(requested);
     
     if ( window.isMobile && window.isSimplifiedMobile || window.isScroll ){
@@ -265,13 +264,6 @@ $(document).ready(function() { "use strict";
     unzoomImage();
     hideSidebar();
     window.allowSlide = 1;
-
-    let videoIntroElement = document.getElementById('intro-video');
-    if (currenSlideIndex <= 1) {
-      if (videoIntroElement) { videoIntroElement.play() }
-    } else {
-      if (videoIntroElement) { videoIntroElement.pause() } // pause when not in view to save resources
-    }
     
     //reset 
     $body.removeClass('sidebarShown lastSlide firstSlide hidePanel-top hidePanel-bottom');

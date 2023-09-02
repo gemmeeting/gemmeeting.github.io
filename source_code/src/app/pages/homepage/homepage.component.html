@@ -1,4 +1,3 @@
-		
 <!-- SVG Library -->
 <!-- <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   <symbol id="close" viewBox="0 0 30 30"><path d="M15 0c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm5.7 19.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3s-.5-.1-.7-.3l-4.3-4.3-4.3 4.3c-.2.2-.4.3-.7.3s-.5-.1-.7-.3c-.4-.4-.4-1 0-1.4l4.3-4.3-4.3-4.3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l4.3 4.3 4.3-4.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-4.3 4.3 4.3 4.3z"/></symbol>
@@ -33,10 +32,10 @@
   
 </svg> -->
 
-<div class="fullscreen-hamburger-wrapper" [ngClass]="{'close-hamburger-animation': animateHamburgerClosing}" *ngIf="hamburgerOpen">
+<div class="fullscreen-hamburger-wrapper" [ngClass]="{ 'close-hamburger-animation': animateHamburgerClosing }" *ngIf="hamburgerOpen">
   <div class="hamburger-content">
     <div class="animate-div wait100ms">
-      <div class="menu-item" (click)="menuClick('#home'); playvideo();" (keyup.enter)="menuClick('#home'); playvideo();">
+      <div class="menu-item" (click)="menuClick('#home')" (keyup.enter)="menuClick('#home')">
         <span [tabIndex]="3">As Jornadas</span>
       </div>
     </div>
@@ -79,17 +78,17 @@
 </div>
 
 <!-- Panel Top #05 -->
-<div class="panel top" [ngClass]="{'hidden-by-scroll': hideTopBar}">
+<div class="panel top" [ngClass]="{ 'hidden-by-scroll': hideTopBar }">
   <div class="sections desktop">
     <div class="left" style="display: flex; flex: 1 1 100px; width: auto">
       <div class="logo-div">
         <div class="logo-slideover-div"></div>
-        <img [tabIndex]="1" src="./assets/images/gemeeting-logo-only.png" alt="Gemeeting Logo" style="cursor: pointer;" (click)="menuClick('#home')" (keyup.enter)="menuClick('#home')"/>
+        <img [tabIndex]="1" src="./assets/images/gemeeting-logo-only.png" alt="Gemeeting Logo" style="cursor: pointer" (click)="menuClick('#home')" (keyup.enter)="menuClick('#home')" />
       </div>
     </div>
     <div class="center" style="flex: 2 2 100px">
       <ul class="menu" *ngIf="showMenu">
-        <li class="animate-div wait100ms"><a href="#home" (click)="playvideo()">As Jornadas</a></li>
+        <li class="animate-div wait100ms"><a href="#home">As Jornadas</a></li>
         <li class="animate-div wait200ms"><a href="#equipa">A Equipa</a></li>
         <li class="animate-div wait300ms"><a href="#programa">Programa</a></li>
         <li class="animate-div wait400ms"><a href="#inscricoes">Inscrições</a></li>
@@ -103,9 +102,9 @@
       <div class="burger">
         <div [tabIndex]="2" class="burger-icon animate-div fromTop" *ngIf="!hamburgerOpen" (click)="openHamburger()" (keyup.enter)="openHamburger()">
           <fa-icon style="font-size: 25px" icon="bars"></fa-icon>
-        </div>    
+        </div>
         <div [tabIndex]="2" class="burger-icon animate-div fromTop" *ngIf="hamburgerOpen" (click)="closeHamburger()" (keyup.enter)="closeHamburger()">
-          <fa-icon style="font-size: 25px" icon="times"></fa-icon>        
+          <fa-icon style="font-size: 25px" icon="times"></fa-icon>
         </div>
       </div>
     </div>
@@ -114,19 +113,19 @@
 
 <!-- Slide 1 (#34) -->
 <section class="slide fade-6 kenBurns" data-name="home">
-  <div class="content" (click)="playvideo()">
+  <div class="content">
     <div class="container">
       <div class="wrap" id="content-home">
         <div class="center-content-div ae-1 fromAbove">
-          <img src="./assets/images/gemmeeting-logo-full.png" alt="Gemeeting Logo" style="width: 100%; max-width: 450px; margin-bottom: 20px;">
+          <img src="./assets/images/gemmeeting-logo-full.png" alt="Gemeeting Logo" style="width: 100%; max-width: 450px; margin-bottom: 20px" />
           <div style="width: 100%" class="words-underlined no-underline">
-            <h3 class="ae-4 fromBottom align-center"><fa-icon icon="calendar-days" style="margin-right: 10px; font-size: 80%;"></fa-icon>28 e 29 de Setembro 2023</h3>
+            <h3 class="ae-4 fromBottom align-center"><fa-icon icon="calendar-days" style="margin-right: 10px; font-size: 80%"></fa-icon>28 e 29 de Setembro 2023</h3>
           </div>
-          <div style="width: 100%; margin-top: 20px;" class="words-underlined no-underline">
+          <div style="width: 100%; margin-top: 20px" class="words-underlined no-underline">
             <h3 class="ae-5 fromBottom align-center"><fa-icon icon="users" style="margin-right: 10px; font-size: 80%"></fa-icon>Formato Presencial</h3>
           </div>
-          <div style="width: 100%; margin-top: 20px;" class="words-underlined">
-            <h3 class="ae-6 fromBottom button-style link-style" (click)="openGoogleMapsLink()" matTooltip="Consultar localização no Google Maps" style="cursor: pointer;">
+          <div style="width: 100%; margin-top: 20px" class="words-underlined">
+            <h3 class="ae-6 fromBottom button-style link-style" (click)="openGoogleMapsLink()" matTooltip="Consultar localização no Google Maps" style="cursor: pointer">
               <fa-icon icon="location-dot" style="margin-right: 10px; font-size: 80%"></fa-icon>FACE Espinho
             </h3>
           </div>
@@ -134,9 +133,9 @@
       </div>
     </div>
   </div>
-  <video [loop]="true" [muted]="true" [autoplay]="true" preload="auto" [controls]="false" id="intro-video" class="background background-video">
-    <source src="./assets/videos/background.mp4" type="video/mp4"/>
-  </video>
+  <div class="background" id="intro-background-backup">
+    <img src="./assets/images/background/espinho-above.jpg" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2" />
+  </div>
 </section>
 
 <!-- Slide 2 (#60) -->
@@ -144,123 +143,124 @@
   <div class="content">
     <div class="container">
       <div class="wrap" id="content-equipa">
-        <div class="center-content-div ae-1 fromAbove" style="max-width: 1600px !important; padding-top: 10vh !important;">
+        <div class="center-content-div ae-1 fromAbove" style="max-width: 1600px !important; padding-top: 10vh !important">
           <div class="fix-10-12" style="max-width: 1600px !important">
-            <ul class="grid grid-83 noSpaces equal" style="display: flex; justify-content: center; align-items: center;">
-              <li class="col-4-12 ae-3 fromBottom" style="background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%;">
-                <div class="content-card-title ae-3" style="margin-bottom: 40px"><fa-icon icon="users" style="font-size: 80%; margin-right: 10px; vertical-align: top;" class="primary-text-color"></fa-icon>A Equipa <span class="primary-text-color">GEMMeeting</span></div>
-                <div class="content-card-title subtitle ae-3" style="margin-bottom: 40px"><fa-icon icon="user-tie" style="font-size: 80%; margin-right: 10px; vertical-align: top;" class="primary-text-color"></fa-icon>Presidência</div>
+            <ul class="grid grid-83 noSpaces equal" style="display: flex; justify-content: center; align-items: center">
+              <li class="col-4-12 ae-3 fromBottom" style="background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%">
+                <div class="content-card-title ae-3" style="margin-bottom: 40px">
+                  <fa-icon icon="users" style="font-size: 80%; margin-right: 10px; vertical-align: top" class="primary-text-color"></fa-icon>A Equipa <span class="primary-text-color">GEMMeeting</span>
+                </div>
+                <div class="content-card-title subtitle ae-3" style="margin-bottom: 40px"><fa-icon icon="user-tie" style="font-size: 80%; margin-right: 10px; vertical-align: top" class="primary-text-color"></fa-icon>Presidência</div>
                 <div class="equipa-photos-wrapper">
                   <div class="ae-3 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/2.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/2.jpg" />
                   </div>
                   <div class="ae-3 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/3.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/3.jpg" />
                   </div>
                 </div>
-                <div class="content-card-title subtitle" style="margin-bottom: 40px"><fa-icon icon="coins" style="font-size: 80%; margin-right: 10px; vertical-align: top;" class="primary-text-color"></fa-icon>Fundraising</div>
+                <div class="content-card-title subtitle" style="margin-bottom: 40px"><fa-icon icon="coins" style="font-size: 80%; margin-right: 10px; vertical-align: top" class="primary-text-color"></fa-icon>Fundraising</div>
                 <div class="equipa-photos-wrapper">
                   <div class="ae-4 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/22.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/22.jpg" />
                   </div>
                   <div class="ae-4 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/23.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/23.jpg" />
                   </div>
                   <div class="ae-4 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/24.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/24.jpg" />
                   </div>
                   <div class="ae-4 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/25.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/25.jpg" />
                   </div>
                   <div class="ae-4 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/26.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/26.jpg" />
                   </div>
                   <div class="ae-4 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/27.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/27.jpg" />
                   </div>
                 </div>
-                <div class="content-card-title subtitle ae-4" style="margin-bottom: 40px"><fa-icon icon="bullhorn" style="font-size: 80%; margin-right: 10px; vertical-align: top;" class="primary-text-color"></fa-icon>Comunicação</div>
+                <div class="content-card-title subtitle ae-4" style="margin-bottom: 40px"><fa-icon icon="bullhorn" style="font-size: 80%; margin-right: 10px; vertical-align: top" class="primary-text-color"></fa-icon>Comunicação</div>
                 <div class="equipa-photos-wrapper">
                   <div class="ae-5 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/5.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/5.jpg" />
                   </div>
                   <div class="ae-5 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/6.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/6.jpg" />
                   </div>
                   <div class="ae-5 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/8.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/8.jpg" />
                   </div>
                   <div class="ae-5 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/7.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/7.jpg" />
                   </div>
                   <div class="ae-5 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/9.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/9.jpg" />
                   </div>
                 </div>
-                <div class="content-card-title subtitle ae-6" style="margin-bottom: 40px"><fa-icon icon="boxes-stacked" style="font-size: 80%; margin-right: 10px; vertical-align: top;" class="primary-text-color"></fa-icon>Logística</div>
+                <div class="content-card-title subtitle ae-6" style="margin-bottom: 40px"><fa-icon icon="boxes-stacked" style="font-size: 80%; margin-right: 10px; vertical-align: top" class="primary-text-color"></fa-icon>Logística</div>
                 <div class="equipa-photos-wrapper">
                   <div class="ae-7 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/11.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/11.jpg" />
                   </div>
                   <div class="ae-7 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/12.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/12.jpg" />
                   </div>
                   <div class="ae-7 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/13.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/13.jpg" />
                   </div>
                   <div class="ae-7 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/14.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/14.jpg" />
                   </div>
                   <div class="ae-7 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/15.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/15.jpg" />
                   </div>
                 </div>
-                <div class="content-card-title subtitle ae-08" style="margin-bottom: 40px"><fa-icon icon="universal-access" style="font-size: 80%; margin-right: 10px; vertical-align: top;" class="primary-text-color"></fa-icon>Cultural</div>
+                <div class="content-card-title subtitle ae-08" style="margin-bottom: 40px"><fa-icon icon="universal-access" style="font-size: 80%; margin-right: 10px; vertical-align: top" class="primary-text-color"></fa-icon>Cultural</div>
                 <div class="equipa-photos-wrapper">
                   <div class="ae-9 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/17.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/17.jpg" />
                   </div>
                   <div class="ae-9 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/18.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/18.jpg" />
                   </div>
                   <div class="ae-9 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/19.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/19.jpg" />
                   </div>
                   <div class="ae-9 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/20.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/20.jpg" />
                   </div>
                 </div>
-                <div class="content-card-title subtitle" style="margin-bottom: 40px"><fa-icon icon="flask" style="font-size: 80%; margin-right: 10px; vertical-align: top;" class="primary-text-color"></fa-icon>Científico</div>
+                <div class="content-card-title subtitle" style="margin-bottom: 40px"><fa-icon icon="flask" style="font-size: 80%; margin-right: 10px; vertical-align: top" class="primary-text-color"></fa-icon>Científico</div>
                 <div class="equipa-photos-wrapper">
                   <div class="ae-9 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/29.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/29.jpg" />
                   </div>
                   <div class="ae-9 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/30.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/30.jpg" />
                   </div>
                   <div class="ae-9 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/31.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/31.jpg" />
                   </div>
                   <div class="ae-9 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/32.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/32.jpg" />
                   </div>
                   <div class="ae-9 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/33.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/33.jpg" />
                   </div>
                   <div class="ae-9 equipa-photos-div">
-                    <img class="equipa-photo-img" src="./assets/images/users-images/34.jpg">
+                    <img class="equipa-photo-img" src="./assets/images/users-images/34.jpg" />
                   </div>
                 </div>
               </li>
             </ul>
           </div>
-
         </div>
       </div>
     </div>
   </div>
   <div class="background">
-    <img src="./assets/images/background/sky_h_azul_1.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
+    <img src="./assets/images/background/sky_h_azul_1.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2" />
   </div>
 </section>
 
@@ -269,13 +269,12 @@
   <div class="content">
     <div class="container">
       <div class="wrap" id="content-programa">
-        <div class="center-content-div ae-2 fromAbove" style="max-width: 1600px !important;">
+        <div class="center-content-div ae-2 fromAbove" style="max-width: 1600px !important">
           <div class="fix-10-12" style="color: black; max-width: 1600px !important">
             <div class="dual-table-wrapper">
               <div class="ae-3 content-div">
-                <div class="title"><fa-icon icon="calendar-day" style="font-size: 80%; margin-right: 10px; vertical-align: top;" class="primary-text-color"></fa-icon>28 setembro</div>
+                <div class="title"><fa-icon icon="calendar-day" style="font-size: 80%; margin-right: 10px; vertical-align: top" class="primary-text-color"></fa-icon>28 setembro</div>
                 <div class="mytable-wrapper">
-
                   <table class="mytable">
                     <tr class="slim-table-row">
                       <th>08:00</th>
@@ -293,7 +292,7 @@
                       <th>10:00 - 11:00</th>
                       <td>Sessão Plenária</td>
                       <td>
-                        <strong>Abordagem de Patologia Anorretal</strong><br>
+                        <strong>Abordagem de Patologia Anorretal</strong><br />
                         <span style="font-size: 9px">Dr. João Carlos Silva</span>
                       </td>
                     </tr>
@@ -304,11 +303,9 @@
                     <tr class="slim-table-row">
                       <th>11:45 - 12:45</th>
                       <td colspan="2">
-                        <strong>
-                          Apresentação de Pósteres
-                        </strong>
-                        <div style="height: 1px; width: 100%; margin: 10px 0px;"></div>
-                        <strong>GEMM Talk</strong><br>
+                        <strong> Apresentação de Pósteres </strong>
+                        <div style="height: 1px; width: 100%; margin: 10px 0px"></div>
+                        <strong>GEMM Talk</strong><br />
                         <span style="font-size: 9px">Dr.ª Helena Beça, Dr.ª Joana Monteiro</span>
                       </td>
                     </tr>
@@ -320,10 +317,9 @@
                       <th>14:45 - 16:15</th>
                       <td>Mesa Redonda</td>
                       <td>
-                        <strong>Fibromialgia</strong><br>
+                        <strong>Fibromialgia</strong><br />
                         <span style="font-size: 9px">
-                          Dr.ª Celina Morais (MGF), Dr.ª Patrícia Pinto
-                          (Reumatologia), <br>
+                          Dr.ª Celina Morais (MGF), Dr.ª Patrícia Pinto (Reumatologia), <br />
                           Inês Pereira (Psicologia).
                           <strong>Moderação:</strong> Prof. Doutora Luísa Sá
                         </span>
@@ -337,21 +333,21 @@
                       <th rowspan="3">16:30 - 18:00</th>
                       <td>Workshop 1</td>
                       <td>
-                        <strong>Risco Cardiovascular e Dislipidemia - Casos Clínicos</strong><br>
+                        <strong>Risco Cardiovascular e Dislipidemia - Casos Clínicos</strong><br />
                         <span style="font-size: 9px">Dr.ª Carolina Teixeira</span>
                       </td>
                     </tr>
                     <tr class="slim-table-row">
                       <td>Workshop 2</td>
                       <td>
-                        <strong>Comunicação - Desafios na Consulta</strong><br>
+                        <strong>Comunicação - Desafios na Consulta</strong><br />
                         <span style="font-size: 9px">Dr.ª Márcia Cordeiro</span>
                       </td>
                     </tr>
                     <tr class="slim-table-row">
                       <td>Workshop 3</td>
                       <td>
-                        <strong>Dispositivos Inalatórios</strong><br>
+                        <strong>Dispositivos Inalatórios</strong><br />
                         <span style="font-size: 9px">Dr. Bruno Silva</span>
                       </td>
                     </tr>
@@ -359,9 +355,8 @@
                 </div>
               </div>
               <div class="ae-6 content-div">
-                <div class="title"><fa-icon icon="calendar-day" style="font-size: 80%; margin-right: 10px; vertical-align: top;" class="primary-text-color"></fa-icon>29 setembro</div>
+                <div class="title"><fa-icon icon="calendar-day" style="font-size: 80%; margin-right: 10px; vertical-align: top" class="primary-text-color"></fa-icon>29 setembro</div>
                 <div class="mytable-wrapper">
-
                   <table class="mytable">
                     <tr class="slim-table-row">
                       <th>08:30</th>
@@ -374,7 +369,7 @@
                     <tr class="slim-table-row">
                       <td>Sessão Paralela</td>
                       <td>
-                        <strong>Psicofármacos: Como Personalizar o Tratamento?</strong><br>
+                        <strong>Psicofármacos: Como Personalizar o Tratamento?</strong><br />
                         <span style="font-size: 9px">Dr. Nuno Trovão</span>
                       </td>
                     </tr>
@@ -390,9 +385,9 @@
                       <th>11:00 - 12:45</th>
                       <td>Mesa Redonda</td>
                       <td>
-                        <strong>Sistemas de Saúde em MGF: Diferentes Realidades</strong><br>
+                        <strong>Sistemas de Saúde em MGF: Diferentes Realidades</strong><br />
                         <span style="font-size: 9px">
-                          Dr.ª Cátia Matos (Dinamarca), Dr.ª Sara Miranda (Nova Iorque, EUA), <br>
+                          Dr.ª Cátia Matos (Dinamarca), Dr.ª Sara Miranda (Nova Iorque, EUA), <br />
                           Dr.ª Ana Luísa Neves (Inglaterra).
                           <strong>Moderação:</strong> Prof. Doutor Paulo Santos
                         </span>
@@ -410,21 +405,21 @@
                       <th rowspan="3">14:30 - 16:00</th>
                       <td>Workshop 4</td>
                       <td>
-                        <strong>Dermatologia em Imagens Flash</strong><br>
+                        <strong>Dermatologia em Imagens Flash</strong><br />
                         <span style="font-size: 9px">Dr. César Magalhães</span>
                       </td>
                     </tr>
                     <tr class="slim-table-row">
                       <td>Workshop 5</td>
                       <td>
-                        <strong>Terapêuticas Injetáveis na Diabetes</strong><br>
+                        <strong>Terapêuticas Injetáveis na Diabetes</strong><br />
                         <span style="font-size: 9px">Dr.ª Ana Sá Sousa, Dr. Henrique Carmona</span>
                       </td>
                     </tr>
                     <tr class="slim-table-row">
                       <td>Workshop 6</td>
                       <td>
-                        <strong>Exame Prático Final</strong><br>
+                        <strong>Exame Prático Final</strong><br />
                         <span style="font-size: 9px">Dr.ª Daniela Saraiva, Dr.ª Inês Almeida, Dr.ª Teresa Andrade</span>
                       </td>
                     </tr>
@@ -432,16 +427,15 @@
                 </div>
               </div>
             </div>
-          </div> 
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="background">
-    <img src="./assets/images/background/sky_h_azul_2.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
+    <img src="./assets/images/background/sky_h_azul_2.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2" />
   </div>
 </section>
-
 
 <!-- Slide 3 (#27) -->
 <section class="slide fade-6 kenBurns" data-name="inscricoes">
@@ -450,20 +444,21 @@
       <div class="wrap">
         <div class="center-content-div ae-2 fromAbove">
           <div class="fix-10-12">
-            <ul class="grid grid-83 noSpaces equal" style="display: flex; justify-content: center; align-items: center;">
-              <li class="col-4-12 ae-3 fromBottom" style="background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%;">
-                <div style="display: flex; flex-direction: column;">
-                  <div class="content-card-title"><fa-icon icon="ticket" style="font-size: 80%; margin-right: 10px; vertical-align: top;" class="primary-text-color"></fa-icon>Inscrições</div>
-                  <div class="ae-5 fromBottom" style="font-size: 22px; margin-top: 50px; text-align: center; line-height: 1.4; font-weight: 500;">
-                    <br>
-                    <fa-icon icon="circle" style="font-size: 6px; margin-right: 10px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Abertura de Inscrições:</strong> <span style="color: rgb(122, 158, 194)"> 26/05/2023</span> às <span style="color: rgb(122, 158, 194)"> 21h00</span>
+            <ul class="grid grid-83 noSpaces equal" style="display: flex; justify-content: center; align-items: center">
+              <li class="col-4-12 ae-3 fromBottom" style="background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%">
+                <div style="display: flex; flex-direction: column">
+                  <div class="content-card-title"><fa-icon icon="file-pen" style="font-size: 80%; margin-right: 10px; vertical-align: top" class="primary-text-color"></fa-icon>Inscrições</div>
+                  <div class="ae-5 fromBottom" style="font-size: 20px; margin-top: 50px; text-align: center; line-height: 1.4; font-weight: 500">
+                    <br />
+                    <fa-icon icon="circle" style="font-size: 6px; margin-right: 10px; vertical-align: middle" class="primary-text-color"></fa-icon><strong>Abertura de Inscrições:</strong>
+                    <span style="color: rgb(122, 158, 194)"> 26/05/2023</span> às <span style="color: rgb(122, 158, 194)"> 21h00</span>
                   </div>
                 </div>
-                <div style="width: 100%; margin-top: 60px; display: flex; justify-content: center;" class="ae-6 fromBottom">
+                <div style="width: 100%; margin-top: 60px; display: flex; justify-content: center" class="ae-6 fromBottom">
                   <div class="words-underlined">
                     <div class="link-style">
                       <h3 class="ae-7 fromBottom button-style" (click)="openInscricoesLink()" style="cursor: pointer; font-weight: 600; font-size: 24px; margin: 0px !important">
-                        <fa-icon icon="user-pen" style="margin-right: 5px; font-size: 80%;"></fa-icon>
+                        <fa-icon icon="user-pen" style="margin-right: 5px; font-size: 80%"></fa-icon>
                         Inscreve-te
                       </h3>
                     </div>
@@ -471,13 +466,13 @@
                 </div>
               </li>
             </ul>
-          </div> 
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="background">
-    <img src="./assets/images/background/sky_h_azul_1.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
+    <img src="./assets/images/background/sky_h_azul_1.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2" />
   </div>
 </section>
 
@@ -488,90 +483,90 @@
       <div class="wrap" id="content-abstracts">
         <div class="center-content-div ae-2 fromAbove">
           <div class="fix-10-12">
-            <ul class="grid grid-83 noSpaces equal ae-3" style="display: flex; justify-content: center; align-items: center;">
-              <li class="col-4-12 ae-3 fromBottom" style="background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%;">
-                <div style="display: flex; flex-direction: column;">
-                  <div class="content-card-title"><fa-icon icon="file-pen" style="margin-right: 10px;" class="primary-text-color"></fa-icon>Normas de Submissão</div>
-                  <div class="ae-6 fromBottom" style="margin-top: 40px; text-align: left; font-weight: 500;">
-                    <p class="normas-submissao-header">Os Resumos das Comunicações Orais e Pósteres deverão ser submetidos na plataforma disponível no website, obedecendo
-                      às seguintes regras:</p>
-                      <div style="max-height: 50vh; overflow-y: auto; border-radius: 10px; box-shadow: inset 0px 0px 6px lightgrey; padding: 10px; box-sizing: border-box; margin-top: 20px">
-                        <ol class="list-normas-submissao">
-                          <li><span class="primary-text-color">1.</span> Devem ser preenchidos <strong>todos</strong> os campos do formulário.</li>
-                          <li><span class="primary-text-color">2.</span> O <strong>apresentador não terá de estar obrigatoriamente inscrito no GEMMeeting</strong> para poder submeter o seu resumo. 
-                            Após a divulgação dos trabalhos seleccionados, o apresentador terá 7 dias para se inscrever.
-                          </li>
-                          <li><span class="primary-text-color">3.</span> Na escolha do/a apresentador/a, deve ser tido em conta que 
-                            todas as apresentações serão realizadas presencialmente no local de realização do Congresso. 
-                          </li>
-                          <li><span class="primary-text-color">4.</span> Apenas se autoriza a submissão de trabalhos de
-                            médicos e/ou estudantes de Medicina.
-                          </li>
-                          <li><span class="primary-text-color">5.</span> É obrigatório escrever o <strong>nome de todos os autores</strong> do trabalho final, no campo do formulário
-                            indicado, sob pena de não ser emitido o certificado para os nomes não discriminados. Não serão aceites modificações
-                            dos autores após submissão do resumo.
-                          </li>
-                          <li><span class="primary-text-color">6.</span> Não será permitida a submissão de qualquer resumo em cujos autores se incluam membros da Comissão Organizadora do
-                            GEMMeeting 2023.
-                          </li>
-                          <li><span class="primary-text-color">7.</span> Nos campos do título, palavras-chave e resumo <strong>não</strong> poderão existir quaisquer dados que permitam a
-                            identificação dos autores ou do seu local de trabalho, sob pena de exclusão do trabalho.</li>
-                          <li><span class="primary-text-color">8.</span> O resumo deve ter um limite máximo de <strong>2500 caracteres</strong> (incluindo espaços).</li>
-                          <li><span class="primary-text-color">9.</span> Devem ser incluídas 2 a 5 palavras-chave.</li>
-                          <li><span class="primary-text-color">10.</span> Deverá ser especificada a <strong>modalidade</strong> de apresentação pretendida (Comunicação Oral ou Póster), bem
-                            como a <strong>área temática</strong> em que o trabalho se enquadra. Não será permitido que o resumo do mesmo
-                            trabalho seja submetido simultaneamente para apresentação como Comunicação Oral e Póster.</li>
-                          <li><span class="primary-text-color">11.</span>  Cada autor poderá submeter <strong>até</strong> <strong>dois trabalhos, de diferentes tipologias, como primeiro
-                              autor</strong>, quer seja em formato de Póster ou Comunicação Oral. Caso o autor submeta mais do que um resumo da
-                            mesma tipologia, será validado o primeiro resumo submetido da mesma tipologia, excluindo-se os restantes.
-                          </li>
-                          <li><span class="primary-text-color">12.</span> Consoante a temática escolhida, os autores deverão respeitar a seguinte estrutura:<br>
-                            <div style="margin-left: 15px"><strong>Investigação</strong> – Introdução e objetivo/s, Metodologia, Resultados e Discussão.<br></div>
-                            <div style="margin-left: 15px"><strong>Revisão de Tema</strong> – Introdução e objetivo/s, Metodologia, Resultados e Discussão.<br></div>
-                            <div style="margin-left: 15px"><strong>Relato de Caso</strong> – Enquadramento, Descrição de Caso e Discussão.<br></div>
-                            <div style="margin-left: 15px"><strong>Melhoria Contínua da Qualidade</strong> – Justificação, Objetivo/s, Métodos, Resultados (mínimo duas avaliações) e Discussão.<br></div>
-                            <div style="margin-left: 15px">
-                              <strong>Relato de Prática</strong> - Relatos de experiências da prática médica diária, não exclusiva nem obrigatoriamente relacionados com questões clínicas e/ou técnico-científicas, 
-                              por exemplo relatos de boas práticas, atividades na comunidade, atividades e relações interpares e interprofissionais, relatos de intercâmbios ou estágios com particularidades 
-                              que mereçam ser divulgadas. A estrutura de apresentação deverá ser: Enquadramento, Objetivo/s, Descrição, Discussão.
-                            </div>
-                            <div style="margin-left: 15px">
-                              <strong>Protocolos</strong> - Apresentação e discussão de protocolos de investigação ou melhoria contínua da qualidade, em fase de Projeto ou ainda não concluídos. 
-                              A estrutura de apresentação deverá ser: Introdução, Objetivo/s, Métodos, e Discussão.
-                            </div>
-                          </li>
-                          <li><span class="primary-text-color">13.</span> Os resumos dos trabalhos serão submetidos a uma seleção prévia pelo Júri, constituído por seis médicos especialistas 
-                            em MGF, de acordo com os critérios estabelecidos pelo mesmo. O Júri não terá acesso aos dados presentes nos campos identificativos dos autores. Os candidatos 
-                            serão sempre informados dos resultados (aceite ou não aceite) por via eletrónica.
-                          </li>
-                          <li><span class="primary-text-color">14.</span> O Júri poderá recusar qualquer resumo que não se enquadre na área temática a que se propõe ou que não tenha pertinência/qualidade 
-                            para apresentação. O Júri é soberano e as suas decisões não são passíveis de recurso.
-                          </li>
-                          <li><span class="primary-text-color">15.</span><strong> Qualquer resumo que não respeite as regras supracitadas será automaticamente recusado.</strong></li>
-                          <li><span class="primary-text-color">16.</span> Só serão aceites submissões de resumos até às 23h59 do dia 09/07/2023 (inclusive).</li>
-                          <li><span class="primary-text-color">17.</span> Os candidatos serão informados dos resultados por e-mail, até ao dia 21/08/2023 (inclusive).</li>
-                          <li><span class="primary-text-color">18.</span> À Comissão Organizadora do GEMMeeting 2023 reserva-se o direito de publicar os resumos dos trabalhos aceites no Livro de Resumos 
-                            e no website oficial do evento. Ao submeterem os seus resumos, os/as autores/as dão, assim, o seu consentimento para o efeito.
-                          </li>
-                          <li><span class="primary-text-color">19.</span> Em caso de dúvidas, as mesmas poderão ser remetidas para: <a class="link-style" href="mailto:gemmeetingtrabalhos@gmail.com">gemmeetingtrabalhos@gmail.com</a></li>
-                          <br>
-                        </ol>
-                      </div>
+            <ul class="grid grid-83 noSpaces equal ae-3" style="display: flex; justify-content: center; align-items: center">
+              <li class="col-4-12 ae-3 fromBottom" style="background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%">
+                <div style="display: flex; flex-direction: column">
+                  <div class="content-card-title"><fa-icon icon="file-pen" style="margin-right: 10px" class="primary-text-color"></fa-icon>Normas de Submissão</div>
+                  <div class="ae-6 fromBottom" style="margin-top: 40px; text-align: left; font-weight: 500">
+                    <p class="normas-submissao-header">Os Resumos das Comunicações Orais e Pósteres deverão ser submetidos na plataforma disponível no website, obedecendo às seguintes regras:</p>
+                    <div style="max-height: 50vh; overflow-y: auto; border-radius: 10px; box-shadow: inset 0px 0px 6px lightgrey; padding: 10px; box-sizing: border-box; margin-top: 20px">
+                      <ol class="list-normas-submissao">
+                        <li><span class="primary-text-color">1.</span> Devem ser preenchidos <strong>todos</strong> os campos do formulário.</li>
+                        <li>
+                          <span class="primary-text-color">2.</span> O <strong>apresentador não terá de estar obrigatoriamente inscrito no GEMMeeting</strong> para poder submeter o seu resumo. Após a divulgação dos trabalhos seleccionados,
+                          o apresentador terá 7 dias para se inscrever.
+                        </li>
+                        <li><span class="primary-text-color">3.</span> Na escolha do/a apresentador/a, deve ser tido em conta que todas as apresentações serão realizadas presencialmente no local de realização do Congresso.</li>
+                        <li><span class="primary-text-color">4.</span> Apenas se autoriza a submissão de trabalhos de médicos e/ou estudantes de Medicina.</li>
+                        <li>
+                          <span class="primary-text-color">5.</span> É obrigatório escrever o <strong>nome de todos os autores</strong> do trabalho final, no campo do formulário indicado, sob pena de não ser emitido o certificado para os
+                          nomes não discriminados. Não serão aceites modificações dos autores após submissão do resumo.
+                        </li>
+                        <li><span class="primary-text-color">6.</span> Não será permitida a submissão de qualquer resumo em cujos autores se incluam membros da Comissão Organizadora do GEMMeeting 2023.</li>
+                        <li>
+                          <span class="primary-text-color">7.</span> Nos campos do título, palavras-chave e resumo <strong>não</strong> poderão existir quaisquer dados que permitam a identificação dos autores ou do seu local de trabalho,
+                          sob pena de exclusão do trabalho.
+                        </li>
+                        <li><span class="primary-text-color">8.</span> O resumo deve ter um limite máximo de <strong>2500 caracteres</strong> (incluindo espaços).</li>
+                        <li><span class="primary-text-color">9.</span> Devem ser incluídas 2 a 5 palavras-chave.</li>
+                        <li>
+                          <span class="primary-text-color">10.</span> Deverá ser especificada a <strong>modalidade</strong> de apresentação pretendida (Comunicação Oral ou Póster), bem como a <strong>área temática</strong> em que o trabalho
+                          se enquadra. Não será permitido que o resumo do mesmo trabalho seja submetido simultaneamente para apresentação como Comunicação Oral e Póster.
+                        </li>
+                        <li>
+                          <span class="primary-text-color">11.</span> Cada autor poderá submeter <strong>até</strong> <strong>dois trabalhos, de diferentes tipologias, como primeiro autor</strong>, quer seja em formato de Póster ou
+                          Comunicação Oral. Caso o autor submeta mais do que um resumo da mesma tipologia, será validado o primeiro resumo submetido da mesma tipologia, excluindo-se os restantes.
+                        </li>
+                        <li>
+                          <span class="primary-text-color">12.</span> Consoante a temática escolhida, os autores deverão respeitar a seguinte estrutura:<br />
+                          <div style="margin-left: 15px"><strong>Investigação</strong> – Introdução e objetivo/s, Metodologia, Resultados e Discussão.<br /></div>
+                          <div style="margin-left: 15px"><strong>Revisão de Tema</strong> – Introdução e objetivo/s, Metodologia, Resultados e Discussão.<br /></div>
+                          <div style="margin-left: 15px"><strong>Relato de Caso</strong> – Enquadramento, Descrição de Caso e Discussão.<br /></div>
+                          <div style="margin-left: 15px"><strong>Melhoria Contínua da Qualidade</strong> – Justificação, Objetivo/s, Métodos, Resultados (mínimo duas avaliações) e Discussão.<br /></div>
+                          <div style="margin-left: 15px">
+                            <strong>Relato de Prática</strong> - Relatos de experiências da prática médica diária, não exclusiva nem obrigatoriamente relacionados com questões clínicas e/ou técnico-científicas, por exemplo relatos de boas
+                            práticas, atividades na comunidade, atividades e relações interpares e interprofissionais, relatos de intercâmbios ou estágios com particularidades que mereçam ser divulgadas. A estrutura de apresentação deverá
+                            ser: Enquadramento, Objetivo/s, Descrição, Discussão.
+                          </div>
+                          <div style="margin-left: 15px">
+                            <strong>Protocolos</strong> - Apresentação e discussão de protocolos de investigação ou melhoria contínua da qualidade, em fase de Projeto ou ainda não concluídos. A estrutura de apresentação deverá ser:
+                            Introdução, Objetivo/s, Métodos, e Discussão.
+                          </div>
+                        </li>
+                        <li>
+                          <span class="primary-text-color">13.</span> Os resumos dos trabalhos serão submetidos a uma seleção prévia pelo Júri, constituído por seis médicos especialistas em MGF, de acordo com os critérios estabelecidos pelo
+                          mesmo. O Júri não terá acesso aos dados presentes nos campos identificativos dos autores. Os candidatos serão sempre informados dos resultados (aceite ou não aceite) por via eletrónica.
+                        </li>
+                        <li>
+                          <span class="primary-text-color">14.</span> O Júri poderá recusar qualquer resumo que não se enquadre na área temática a que se propõe ou que não tenha pertinência/qualidade para apresentação. O Júri é soberano e
+                          as suas decisões não são passíveis de recurso.
+                        </li>
+                        <li><span class="primary-text-color">15.</span><strong> Qualquer resumo que não respeite as regras supracitadas será automaticamente recusado.</strong></li>
+                        <li><span class="primary-text-color">16.</span> Só serão aceites submissões de resumos até às 23h59 do dia 09/07/2023 (inclusive).</li>
+                        <li><span class="primary-text-color">17.</span> Os candidatos serão informados dos resultados por e-mail, até ao dia 21/08/2023 (inclusive).</li>
+                        <li>
+                          <span class="primary-text-color">18.</span> À Comissão Organizadora do GEMMeeting 2023 reserva-se o direito de publicar os resumos dos trabalhos aceites no Livro de Resumos e no website oficial do evento. Ao
+                          submeterem os seus resumos, os/as autores/as dão, assim, o seu consentimento para o efeito.
+                        </li>
+                        <li><span class="primary-text-color">19.</span> Em caso de dúvidas, as mesmas poderão ser remetidas para: <a class="link-style" href="mailto:gemmeetingtrabalhos@gmail.com">gemmeetingtrabalhos@gmail.com</a></li>
+                        <br />
+                      </ol>
+                    </div>
                   </div>
                 </div>
                 <ol class="ae-8 fromBottom list-normas-submissao" style="margin-top: 40px">
-                  <li><fa-icon icon="circle" style="font-size: 6px; margin-right: 10px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>DATAS IMPORTANTES:</strong></li>
+                  <li><fa-icon icon="circle" style="font-size: 6px; margin-right: 10px; vertical-align: middle" class="primary-text-color"></fa-icon><strong>DATAS IMPORTANTES:</strong></li>
                   <li>
-                    <div style="margin-left: 18px"><strong>Início de submissão de resumos:</strong> <span style="color: rgb(122, 158, 194)"> 26/05/2023 às 21h00</span><br></div>
-                    <div style="margin-left: 18px"><strong>Data-limite para submissão de resumos:</strong> <span style="color: rgb(122, 158, 194)"> 09/07/2023 até às 23h59</span><br></div>
-                    <div style="margin-left: 18px"><strong>Comunicação dos resultados aos autores:</strong> <span style="color: rgb(122, 158, 194)"> 21/08/2023</span><br></div>
+                    <div style="margin-left: 18px"><strong>Início de submissão de resumos:</strong> <span style="color: rgb(122, 158, 194)"> 26/05/2023 às 21h00</span><br /></div>
+                    <div style="margin-left: 18px"><strong>Data-limite para submissão de resumos:</strong> <span style="color: rgb(122, 158, 194)"> 09/07/2023 até às 23h59</span><br /></div>
+                    <div style="margin-left: 18px"><strong>Comunicação dos resultados aos autores:</strong> <span style="color: rgb(122, 158, 194)"> 21/08/2023</span><br /></div>
                   </li>
                 </ol>
-                <div style="width: 100%; margin: 20px 0px 10px 0px; display: flex; justify-content: center; align-items: center;" class="ae-6 fromBottom">
+                <div style="width: 100%; margin: 20px 0px 10px 0px; display: flex; justify-content: center; align-items: center" class="ae-6 fromBottom">
                   <div class="words-underlined">
                     <div class="link-style">
                       <h3 class="ae-7 fromBottom button-style" (click)="openSubmeterResumoLink()" style="cursor: pointer; font-weight: 600; font-size: 20px; margin: 0px !important">
-                        <fa-icon icon="file-lines" style="margin-right: 5px; font-size: 80%;"></fa-icon>
+                        <fa-icon icon="file-lines" style="margin-right: 5px; font-size: 80%"></fa-icon>
                         Submeter Resumo
                       </h3>
                     </div>
@@ -585,7 +580,7 @@
     </div>
   </div>
   <div class="background">
-    <img src="./assets/images/background/sky_h_azul_2.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
+    <img src="./assets/images/background/sky_h_azul_2.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2" />
   </div>
 </section>
 
@@ -596,23 +591,21 @@
       <div class="wrap" id="content-faqs">
         <div class="center-content-div ae-2 fromAbove">
           <div class="fix-10-12">
-            <ul class="grid grid-83 noSpaces equal ae-3" style="display: flex; justify-content: center; align-items: center;">
-              <li class="col-4-12 ae-3 fromBottom" style="background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%;">
-                <div style="display: flex; flex-direction: column;">
-                  <div class="content-card-title"><fa-icon icon="question-circle" style="margin-right: 10px;" class="primary-text-color"></fa-icon>Perguntas Frequentes (FAQs)</div>
-                  
+            <ul class="grid grid-83 noSpaces equal ae-3" style="display: flex; justify-content: center; align-items: center">
+              <li class="col-4-12 ae-3 fromBottom" style="background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%">
+                <div style="display: flex; flex-direction: column">
+                  <div class="content-card-title"><fa-icon icon="question-circle" style="margin-right: 10px" class="primary-text-color"></fa-icon>Perguntas Frequentes (FAQs)</div>
+
                   <div class="ae-9" style="width: 100%; display: flex; justify-content: flex-end; margin-top: 20px; margin-bottom: 10px">
-                    <button *ngIf="!expandAllFaqs" mat-stroked-button (click)="expandRetractAllFaqs()"><fa-icon icon="up-right-and-down-left-from-center" style="margin-right: 10px; color: #a9d3fa;"></fa-icon>Expandir Tudo</button>
+                    <button *ngIf="!expandAllFaqs" mat-stroked-button (click)="expandRetractAllFaqs()"><fa-icon icon="up-right-and-down-left-from-center" style="margin-right: 10px; color: #a9d3fa"></fa-icon>Expandir Tudo</button>
                     <button *ngIf="expandAllFaqs" mat-stroked-button (click)="expandRetractAllFaqs()"><fa-icon icon="down-left-and-up-right-to-center" style="margin-right: 10px; color: #a9d3fa"></fa-icon>Colapsar Tudo</button>
                   </div>
 
-                  <div class="ae-8 fromBottom" style="text-align: left; font-weight: 500;">
+                  <div class="ae-8 fromBottom" style="text-align: left; font-weight: 500">
                     <mat-accordion>
                       <mat-expansion-panel [expanded]="expandAllFaqs">
                         <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <span class="primary-text-color" style="margin-right: 10px">1. </span> Onde e quando vai decorrer o GEMMeeting 2023?
-                          </mat-panel-title>
+                          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">1. </span> Onde e quando vai decorrer o GEMMeeting 2023? </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
                           O GEMMeeting 2023 decorrerá nos dias <strong>28 e 29 de setembro de 2023</strong>, em formato <strong>exclusivamente presencial</strong>, no <strong>Fórum de Arte e Cultura (FACE) de Espinho</strong>.
@@ -623,12 +616,20 @@
                     <mat-accordion>
                       <mat-expansion-panel [expanded]="expandAllFaqs">
                         <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <span class="primary-text-color" style="margin-right: 10px">2.</span> Qual é o programa do congresso?
-                          </mat-panel-title>
+                          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">2.</span> Qual é o programa do congresso? </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <div style="font-size: 16px; line-height: 1.4">Poderá consultar o programa <a href="#programa" class="link-style">clicando/tocando aqui</a>.</div>
+                      </mat-expansion-panel>
+                    </mat-accordion>
+
+                    <mat-accordion>
+                      <mat-expansion-panel [expanded]="expandAllFaqs">
+                        <mat-expansion-panel-header>
+                          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">3.</span> A quem se destina? </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
-                          Poderá consultar o programa <a href="#programa" class="link-style">clicando/tocando aqui</a>.
+                          O evento é direcionado a médicos especialistas e internos de Medicina Geral e Familiar. No entanto, todos os profissionais de saúde são bem-vindos, incluindo médicos especialistas e internos de outras
+                          especialidades, médicos indiferenciados, internos de formação geral, estudantes de medicina ou enfermeiros.
                         </div>
                       </mat-expansion-panel>
                     </mat-accordion>
@@ -636,13 +637,11 @@
                     <mat-accordion>
                       <mat-expansion-panel [expanded]="expandAllFaqs">
                         <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <span class="primary-text-color" style="margin-right: 10px">3.</span> A quem se destina?
-                          </mat-panel-title>
+                          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">4.</span> Como me posso inscrever? </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
-                          O evento é direcionado a médicos especialistas e internos de Medicina Geral e Familiar. No entanto, todos os profissionais de saúde são bem-vindos, incluindo médicos especialistas e internos de outras especialidades, 
-                          médicos indiferenciados, internos de formação geral, estudantes de medicina ou enfermeiros.
+                          Pode inscrever-se <a href="https://gemmeeting.eventkey.pt/geral/detalheformulario.aspx?codigo=2&evento=2" target="_blank" class="link-style">clicando/tocando aqui</a>. Será redirecionado para uma página da
+                          Eventkey, e deverá preencher o formulário e seguir as instruções. Após inscrição no evento receberá um email de confirmação da mesma.
                         </div>
                       </mat-expansion-panel>
                     </mat-accordion>
@@ -650,44 +649,28 @@
                     <mat-accordion>
                       <mat-expansion-panel [expanded]="expandAllFaqs">
                         <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <span class="primary-text-color" style="margin-right: 10px">4.</span> Como me posso inscrever?
-                          </mat-panel-title>
+                          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">5.</span> Qual o preço da inscrição e o que está incluído? </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
-                          Pode inscrever-se <a href="https://gemmeeting.eventkey.pt/geral/detalheformulario.aspx?codigo=2&evento=2" target="_blank" class="link-style">clicando/tocando aqui</a>. Será redirecionado para uma página da Eventkey, 
-                          e deverá preencher o formulário e seguir as instruções. Após inscrição no evento receberá um email de confirmação da mesma.
-                        </div>
-                      </mat-expansion-panel>
-                    </mat-accordion>
-
-                    <mat-accordion>
-                      <mat-expansion-panel [expanded]="expandAllFaqs">
-                        <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <span class="primary-text-color" style="margin-right: 10px">5.</span> Qual o preço da inscrição e o que está incluído?
-                          </mat-panel-title>
-                        </mat-expansion-panel-header>
-                        <div style="font-size: 16px; line-height: 1.4;">
-                          A inscrição tem um custo único de 30 euros e dá acesso a: <br>
-                          <div style="display: flex; justify-content: flex-start; align-items: center;">
-                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>
+                          A inscrição tem um custo único de 30 euros e dá acesso a: <br />
+                          <div style="display: flex; justify-content: flex-start; align-items: center">
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle" class="primary-text-color"></fa-icon>
                             <span>Mesas redondas, sessões plenárias, sessões paralelas, GEMM Talks e apresentações de trabalhos;</span>
                           </div>
-                          <div style="display: flex; justify-content: flex-start; align-items: center;">
-                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>
+                          <div style="display: flex; justify-content: flex-start; align-items: center">
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle" class="primary-text-color"></fa-icon>
                             <span>m coffee-wake, dois coffee-breaks e dois almoços contemplados no programa;</span>
                           </div>
-                          <div style="display: flex; justify-content: flex-start; align-items: center;">
-                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>
+                          <div style="display: flex; justify-content: flex-start; align-items: center">
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle" class="primary-text-color"></fa-icon>
                             <span>Um workshop (WS) à escolha (vagas limitadas a 25 participantes por WS);</span>
                           </div>
-                          <div style="display: flex; justify-content: flex-start; align-items: center;">
-                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>
+                          <div style="display: flex; justify-content: flex-start; align-items: center">
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle" class="primary-text-color"></fa-icon>
                             <span>Certificado de presença, após validação das presenças;</span>
                           </div>
-                          <div style="display: flex; justify-content: flex-start; align-items: center;">
-                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>
+                          <div style="display: flex; justify-content: flex-start; align-items: center">
+                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle" class="primary-text-color"></fa-icon>
                             <span>Oportunidade de apresentação de trabalhos em formato de comunicação oral ou póster, mediante submissão e seleção dos mesmos.</span>
                           </div>
                         </div>
@@ -697,13 +680,10 @@
                     <mat-accordion>
                       <mat-expansion-panel [expanded]="expandAllFaqs">
                         <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <span class="primary-text-color" style="margin-right: 10px">6.</span> Como é feita a seleção para os workshops?
-                          </mat-panel-title>
+                          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">6.</span> Como é feita a seleção para os workshops? </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
-                          Cada participante poderá participar em um WS, que será escolhido consoante disponibilidade de vaga no processo de inscrição. 
-                          Há um limite de 25 vagas por WS, que serão preenchidas por ordem de inscrição.
+                          Cada participante poderá participar em um WS, que será escolhido consoante disponibilidade de vaga no processo de inscrição. Há um limite de 25 vagas por WS, que serão preenchidas por ordem de inscrição.
                         </div>
                       </mat-expansion-panel>
                     </mat-accordion>
@@ -711,13 +691,11 @@
                     <mat-accordion>
                       <mat-expansion-panel [expanded]="expandAllFaqs">
                         <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <span class="primary-text-color" style="margin-right: 10px">7.</span> Como será realizado o controlo de presenças?
-                          </mat-panel-title>
+                          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">7.</span> Como será realizado o controlo de presenças? </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
-                          O controlo de presenças será efetuado sempre no secretariado do evento, e decorrerá em quatro momentos: no check-in no evento na manhã do dia 28/09, no início da tarde do dia 28/09, início da manhã do dia 29/09 e início da tarde do dia 29/09. 
-                          Para cada WS, será realizado um controlo de presenças de acordo com a lista dos inscritos no mesmo.
+                          O controlo de presenças será efetuado sempre no secretariado do evento, e decorrerá em quatro momentos: no check-in no evento na manhã do dia 28/09, no início da tarde do dia 28/09, início da manhã do dia 29/09 e
+                          início da tarde do dia 29/09. Para cada WS, será realizado um controlo de presenças de acordo com a lista dos inscritos no mesmo.
                         </div>
                       </mat-expansion-panel>
                     </mat-accordion>
@@ -725,14 +703,11 @@
                     <mat-accordion>
                       <mat-expansion-panel [expanded]="expandAllFaqs">
                         <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <span class="primary-text-color" style="margin-right: 10px">8.</span> Como posso obter o certificado de presença?
-                          </mat-panel-title>
+                          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">8.</span> Como posso obter o certificado de presença? </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
-                          Para obter o certificado de presença do GEMMeeting 2023, será necessário presença em pelo menos três dos quatro controlos de presença do evento (ver ponto 7.)
-                          Será emitido um certificado de presença adicional para a participação em WS, conforme as presenças registadas.
-                          Os certificados de presença no GEMMeeting 2023 e no WS serão enviados para o e-mail associado à inscrição, após validação das presenças.
+                          Para obter o certificado de presença do GEMMeeting 2023, será necessário presença em pelo menos três dos quatro controlos de presença do evento (ver ponto 7.) Será emitido um certificado de presença adicional para
+                          a participação em WS, conforme as presenças registadas. Os certificados de presença no GEMMeeting 2023 e no WS serão enviados para o e-mail associado à inscrição, após validação das presenças.
                         </div>
                       </mat-expansion-panel>
                     </mat-accordion>
@@ -740,16 +715,15 @@
                     <mat-accordion>
                       <mat-expansion-panel [expanded]="expandAllFaqs">
                         <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <span class="primary-text-color" style="margin-right: 10px">9.</span> Como posso submeter o meu resumo?
-                          </mat-panel-title>
+                          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">9.</span> Como posso submeter o meu resumo? </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
-                          Poderá realizar a submissão do seu resumo aqui, onde pode encontrar o nosso regulamento e formulário de submissão dos trabalhos.
-                            Posteriormente será divulgada informação acerca dos prémios para os vencedores nas nossas páginas de Facebook e Instagram. <br> <br>
-                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Início de submissão de resumos:</strong> 26/05/2023 às 21h00. <br>
-                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Data-limite para submissão de resumos:</strong> 09/07/2023 às 23h59. <br>
-                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Comunicação dos resultados aos/às autores/as:</strong> 21/08/2023 até às 23h59, 
+                          Poderá realizar a submissão do seu resumo aqui, onde pode encontrar o nosso regulamento e formulário de submissão dos trabalhos. Posteriormente será divulgada informação acerca dos prémios para os vencedores nas
+                          nossas páginas de Facebook e Instagram. <br />
+                          <br />
+                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle" class="primary-text-color"></fa-icon><strong>Início de submissão de resumos:</strong> 26/05/2023 às 21h00. <br />
+                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle" class="primary-text-color"></fa-icon><strong>Data-limite para submissão de resumos:</strong> 09/07/2023 às 23h59. <br />
+                          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle" class="primary-text-color"></fa-icon><strong>Comunicação dos resultados aos/às autores/as:</strong> 21/08/2023 até às 23h59,
                           divulgados via e-mail para o endereço eletrónico indicado no formulário de submissão.
                         </div>
                       </mat-expansion-panel>
@@ -758,9 +732,7 @@
                     <mat-accordion>
                       <mat-expansion-panel [expanded]="expandAllFaqs">
                         <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <span class="primary-text-color" style="margin-right: 10px">10.</span> Quando decorrerão as apresentação de trabalhos selecionados?
-                          </mat-panel-title>
+                          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">10.</span> Quando decorrerão as apresentação de trabalhos selecionados? </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
                           A apresentação dos posters selecionados será efetuada na manhã do dia 28/09/2023 e a apresentação das comunicações orais na manhã do dia 29/09/2023. Estas serão realizadas presencialmente.
@@ -771,24 +743,30 @@
                     <mat-accordion>
                       <mat-expansion-panel [expanded]="expandAllFaqs">
                         <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <span class="primary-text-color" style="margin-right: 10px">11.</span> Como chegar ao local do evento?
-                          </mat-panel-title>
+                          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">11.</span> Como chegar ao local do evento? </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
-                          O FACE de Espinho é facilmente acessível de carro. Existe estacionamento gratuito no local e nas imediações.
-                          Também poderá chegar ao local do evento através de transportes públicos, sendo o ponto de ligação mais próximo a estação de comboios de Espinho, que se encontra a cerca de 10 minutos a pé.
-                        </div>
-                        
-                        <div style="display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; margin-bottom: 10px; margin-top: 20px">
-                          <fa-icon icon="location-pin" style="font-size: 20px; margin-right: 10px" class="primary-text-color"></fa-icon>
-                          <a class="link-style" style="cursor: pointer; font-size: 16px;" (click)="openGoogleMapsLink()">Ver o FACE Espinho no Google Maps</a>
+                          O <strong>FACE Espinho</strong> é facilmente acessível de carro. Existe estacionamento gratuito no local e nas imediações. Também poderá chegar ao local do evento através de transportes públicos, sendo o ponto de
+                          ligação mais próximo a
+                          <a class="words-underlined link-style" style="display: inline-block" href="https://www.cp.pt/passageiros/pt/consultar-horarios/estacoes/espinho" target="_blank" matTooltip="Consultar a estação"
+                            >estação de comboios</a
+                          >
+                          de Espinho, que se encontra a cerca de 6-7 minutos a pé (~ 500 m).
                         </div>
 
-                        <div style="display: flex; width: 100%; justify-content: center; align-items: center; margin-bottom: 20px;">
-                          <img (click)="openGoogleMapsLink()" src="./assets/images/google_maps_face.png" 
-                          alt="Localização do FACE Espinho no Google Maps" style="width: 100%; margin: 20px; border-radius: 10px; box-shadow: 0px 0px 8px lightgrey; object-fit: cover; cursor: pointer"
-                          matTooltip="Ver o FACE Espinho no Google Maps">
+                        <div style="display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; margin-bottom: 10px; margin-top: 20px">
+                          <fa-icon icon="location-pin" style="font-size: 20px; margin-right: 10px" class="primary-text-color"></fa-icon>
+                          <a class="link-style" style="cursor: pointer; font-size: 16px" (click)="openGoogleMapsLink()">Ver o FACE Espinho no Google Maps</a>
+                        </div>
+
+                        <div style="display: flex; width: 100%; justify-content: center; align-items: center; margin-bottom: 20px">
+                          <img
+                            class="location-image-map"
+                            (click)="openGoogleMapsLink()"
+                            src="./assets/images/google_maps_face.png"
+                            alt="Localização do FACE Espinho no Google Maps"
+                            style="cursor: pointer; margin: 20px !important;"
+                            matTooltip="Ver o FACE Espinho no Google Maps" />
                         </div>
                       </mat-expansion-panel>
                     </mat-accordion>
@@ -796,9 +774,7 @@
                     <mat-accordion>
                       <mat-expansion-panel [expanded]="expandAllFaqs">
                         <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <span class="primary-text-color" style="margin-right: 10px">12.</span> Como decorrerão os almoços?
-                          </mat-panel-title>
+                          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">12.</span> Como decorrerão os almoços? </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
                           O almoço está incluído no valor da inscrição no evento e será servido no espaço do evento. Caso não deseje almoçar no evento, existem também diversos restaurantes nas imediações.
@@ -831,14 +807,14 @@
                           <span>Pode entrar em contacto com a comissão organizadora através de e-mail ou redes sociais:</span>
 
                           <div style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px; margin-top: 20px">
-                            <img src="./assets/images/facebook.webp" alt="" style="height: 20px; margin-right: 12px; margin-left: 3px;">
+                            <img src="./assets/images/facebook.webp" alt="" style="height: 20px; margin-right: 12px; margin-left: 3px" />
                             <a class="link-style" href="https://www.facebook.com/gemmeeting" target="_blank">@gemmeeting</a>
                           </div>
-                          <div style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
-                            <img src="./assets/images/instagram.webp" alt="" style="height: 20px; margin-right: 12px; margin-left: 3px;">
+                          <div style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px">
+                            <img src="./assets/images/instagram.webp" alt="" style="height: 20px; margin-right: 12px; margin-left: 3px" />
                             <a class="link-style" href="https://www.instagram.com/gemmeeting23/" target="_blank">@gemmeeting23</a>
                           </div>
-                          <div style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
+                          <div style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px">
                             <fa-icon icon="envelope" style="font-size: 20px; margin-right: 10px" class="primary-text-color"></fa-icon>
                             <a class="link-style" href="mailto:gemmeeting@gmail.com">gemmeeting@gmail.com</a>
                           </div>
@@ -955,7 +931,7 @@
     </div>
   </div>
   <div class="background">
-    <img src="./assets/images/background/sky_h_azul_1.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
+    <img src="./assets/images/background/sky_h_azul_1.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2" />
   </div>
 </section>
 
@@ -974,40 +950,47 @@
                 <img src="../../../assets/images/sponsors/grunenthal.png">
               </div>
             </div> -->
-            <div class="ae-4 gold-banner" style="width: 100%; box-shadow: 0px 0px 6px lightgrey; background-color: white; min-height: 100px; padding: 20px; box-sizing: border-box; border-radius: 10px; overflow: hidden; margin: 10px 0px;">
-              <div style="font-weight: 700;">
-                Patrocínios
-              </div>
+            <div class="ae-3 gold-banner" style="width: 100%; box-shadow: 0px 0px 6px lightgrey; background-color: white; min-height: 100px; padding: 30px 20px; box-sizing: border-box; border-radius: 10px; overflow: hidden; margin: 10px 0px">
+              <div class="content-card-title"><fa-icon icon="medal" style="margin-right: 10px;" class="primary-text-color"></fa-icon>Patrocínios</div>
               <div class="sponsors-images-div">
+                <div class="ae-5 image-div">
+                  <img class="hover-scale" src="./assets/images/sponsors/tecnifar.png" target="_blank" (click)="openSponsorLink('https://tecnifar.pt/')" />
+                </div>
+                <div class="ae-5 image-div">
+                  <img class="hover-scale" src="./assets/images/sponsors/materfarma.png" target="_blank" (click)="openSponsorLink('https://www.materfarma.pt/')" />
+                </div>
                 <div class="ae-6 image-div">
-                  <img class="hover-scale" src="./assets/images/sponsors/tecnifar.png" target="_blank" (click)="openSponsorLink('https://tecnifar.pt/')">
+                  <img class="hover-scale" src="./assets/images/sponsors/Boehringer_Ingelheim_Logo.png" target="_blank" (click)="openSponsorLink('https://www.boehringer-ingelheim.pt/')" />
+                </div>
+                <div class="ae-6 image-div">
+                  <img class="hover-scale" src="./assets/images/sponsors/eli-lilly.png" target="_blank" (click)="openSponsorLink('https://www.lilly.pt/')" />
                 </div>
                 <div class="ae-7 image-div">
-                  <img class="hover-scale" src="./assets/images/sponsors/materfarma.png" target="_blank" (click)="openSponsorLink('https://www.materfarma.pt/')">
+                  <img class="hover-scale" src="./assets/images/sponsors/tecnimede.png" target="_blank" (click)="openSponsorLink('https://www.tecnimede.com/')" />
+                </div>
+                <div class="ae-7 image-div">
+                  <img class="hover-scale" src="./assets/images/sponsors/baldacci.png" target="_blank" (click)="openSponsorLink('https://www.baldacci.pt/')" />
                 </div>
                 <div class="ae-8 image-div">
-                  <img class="hover-scale" src="./assets/images/sponsors/Boehringer_Ingelheim_Logo.png" target="_blank" (click)="openSponsorLink('https://www.boehringer-ingelheim.pt/')">
+                  <img class="hover-scale" src="./assets/images/sponsors/grunenthal.png" target="_blank" (click)="openSponsorLink('https://www.grunenthal.pt/')" />
+                </div>
+                <div class="ae-8 image-div">
+                  <img class="hover-scale" src="./assets/images/sponsors/servier.png" target="_blank" (click)="openSponsorLink('https://www.servier.pt/')" />
                 </div>
                 <div class="ae-9 image-div">
-                  <img class="hover-scale" src="./assets/images/sponsors/eli-lilly.png" target="_blank" (click)="openSponsorLink('https://www.lilly.pt/')">
+                  <img class="hover-scale" src="./assets/images/sponsors/60lidel.png" target="_blank" (click)="openSponsorLink('https://www.lidel.pt/')" />
+                </div>
+                <div class="ae-9 image-div">
+                  <img class="hover-scale" src="./assets/images/sponsors/organon.png" target="_blank" (click)="openSponsorLink('https://www.organon.com/')" />
                 </div>
                 <div class="ae-10 image-div">
-                  <img class="hover-scale" src="./assets/images/sponsors/tecnimede.png" target="_blank" (click)="openSponsorLink('https://www.tecnimede.com/')">
+                  <img class="hover-scale" src="./assets/images/sponsors/viatris_milan.jpg" target="_blank" (click)="openSponsorLink('https://www.viatris.pt/')" />
                 </div>
                 <div class="ae-10 image-div">
-                  <img class="hover-scale" src="./assets/images/sponsors/baldacci.png" target="_blank" (click)="openSponsorLink('https://www.baldacci.pt/')">
+                  <img class="hover-scale" src="./assets/images/sponsors/lundbeck.png" target="_blank" (click)="openSponsorLink('https://www.lundbeck.com/pt')" />
                 </div>
-                <div class="ae-10 image-div">
-                  <img class="hover-scale" src="./assets/images/sponsors/grunenthal.png" target="_blank" (click)="openSponsorLink('https://www.grunenthal.pt/')">
-                </div>
-                <div class="ae-10 image-div">
-                  <img class="hover-scale" src="./assets/images/sponsors/servier.png" target="_blank" (click)="openSponsorLink('https://www.servier.pt/')">
-                </div>
-                <div class="ae-10 image-div">
-                  <img class="hover-scale" src="./assets/images/sponsors/60lidel.png" target="_blank" (click)="openSponsorLink('https://www.lidel.pt/')">
-                </div>
-                <div class="ae-10 image-div">
-                  <img class="hover-scale" src="./assets/images/sponsors/lundbeck.png" target="_blank" (click)="openSponsorLink('https://www.lundbeck.com/pt')">
+                <div class="ae-10 image-div" style="max-width: 140px !important">
+                  <img class="hover-scale" src="./assets/images/sponsors/ipp.jpg" target="_blank" (click)="openSponsorLink('https://www.inspsic.pt/')" />
                 </div>
               </div>
             </div>
@@ -1027,52 +1010,63 @@
                 <img src="../../../assets/images/sponsors/organon.png">
               </div>
             </div> -->
-          </div>  
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="background">
-    <img src="./assets/images/background/sky_h_azul_2.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
+    <img src="./assets/images/background/sky_h_azul_2.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2" />
   </div>
 </section>
 
 <!-- Slide 7 -->
 <section class="slide fade-6 kenBurns" data-name="contactos">
   <div class="content">
-    <div class="container" style="flex-direction: column !important;">
+    <div class="container" style="flex-direction: column !important">
       <div class="wrap">
         <div class="center-content-div ae-2 fromAbove">
           <div class="fix-10-12">
-            <ul class="grid grid-83 noSpaces equal ae-3" style="display: flex; justify-content: center; align-items: center;">
-              <li class="col-4-12 ae-3 fromBottom" style=" background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                  <div class="content-card-title"><fa-icon icon="phone" style="font-size: 80%; margin-right: 10px; vertical-align: top;" class="primary-text-color"></fa-icon>Contactos</div>
-                  <div style="font-size: 22px; margin: 80px 0px; text-align: left; line-height: 1.4; font-weight: 500; width: 100%; max-width: 800px">
-                    <div class="ae-4" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
-                      <img src="./assets/images/facebook.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
+            <ul class="grid grid-83 noSpaces equal ae-3" style="display: flex; justify-content: center; align-items: center">
+              <li class="col-4-12 ae-3 fromBottom" style="background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%">
+                <div style="display: flex; flex-direction: column; align-items: center">
+                  <div class="content-card-title"><fa-icon icon="phone" style="font-size: 80%; margin-right: 10px; vertical-align: top" class="primary-text-color"></fa-icon>Contactos</div>
+                  <div class="contacts-content-div">
+                    <div class="ae-4" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px">
+                      <img src="./assets/images/facebook.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px" />
                       <a class="link-style" href="https://www.facebook.com/gemmeeting">@gemmeeting</a>
                     </div>
-                    <div class="ae-5" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
-                      <img src="./assets/images/instagram.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
+                    <div class="ae-5" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px">
+                      <img src="./assets/images/instagram.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px" />
                       <a class="link-style" href="https://www.instagram.com/gemmeeting23/">@gemmeeting23</a>
                     </div>
-                    <div class="ae-6" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
+                    <div class="ae-6" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px">
                       <fa-icon icon="envelope" style="font-size: 24px; margin-right: 10px" class="primary-text-color"></fa-icon>
                       <a class="link-style" href="mailto:gemmeeting@gmail.com">gemmeeting@gmail.com</a>
                     </div>
-                    <div class="ae-7" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center;" matTooltip="Localização do evento. Clique para abrir e obter direções no Google Maps.">
+
+                    <div class="ae-7" style="display: flex; width: 100%; justify-content: center; align-items: center; margin-top: 20px">
+                      <img
+                        class="location-image-map"
+                        (click)="openGoogleMapsLink()"
+                        src="./assets/images/google_maps_face.png"
+                        alt="Localização do FACE Espinho no Google Maps"
+                        style="cursor: pointer"
+                        matTooltip="Ver o FACE Espinho no Google Maps"
+                        matTooltipPosition="above" />
+                    </div>
+                    <div class="ae-8" style="display: flex; flex-wrap: nowrap; justify-content: center; align-items: center">
                       <fa-icon icon="location-pin" style="font-size: 24px; margin-right: 10px" class="primary-text-color"></fa-icon>
                       <a class="link-style" href="#" (click)="openGoogleMapsLink()">FACE Espinho, R. 41, Av. São João de Deus, 4500-386 Espinho</a>
                     </div>
                   </div>
                 </div>
-                
-                <div style="width: 100%; display: flex; justify-content: center;" class="ae-6 fromBottom">
+
+                <div style="width: 100%; display: flex; justify-content: center" class="ae-9 fromBottom">
                   <div class="words-underlined">
                     <div class="link-style">
-                      <h3 class="ae-7 fromBottom button-style" (click)="openInscricoesLink()" style="cursor: pointer; font-weight: 600; font-size: 24px; margin: 0px !important">
-                        <fa-icon icon="user-pen" style="margin-right: 5px; font-size: 80%;"></fa-icon>
+                      <h3 class="ae-10 fromBottom button-style" (click)="openInscricoesLink()" style="cursor: pointer; font-weight: 600; font-size: 24px; margin: 0px !important">
+                        <fa-icon icon="user-pen" style="margin-right: 5px; font-size: 80%"></fa-icon>
                         Inscreve-te
                       </h3>
                     </div>
@@ -1080,20 +1074,21 @@
                 </div>
               </li>
             </ul>
-          </div> 
+          </div>
         </div>
       </div>
 
-      <div style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center;">
-        <span style="font-size: 10px; color: darkslategrey;">Criado por <a href="https://www.linkedin.com/in/eduardoxcorreia/" style="text-decoration: underline;" matTooltip="Visitar perfil">Eduardo Correia</a> para GEMmeeting | © Copyright GEMmeeting 2023</span>
+      <div style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center">
+        <span style="font-size: 10px; color: darkslategrey"
+          >Criado por <a href="https://www.linkedin.com/in/eduardoxcorreia/" style="text-decoration: underline" matTooltip="Visitar perfil">Eduardo Correia</a> para GEMmeeting | © Copyright GEMmeeting 2023</span
+        >
       </div>
     </div>
   </div>
   <div class="background">
-    <img src="./assets/images/background/sky_h_azul_1.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2;">
+    <img src="./assets/images/background/sky_h_azul_1.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.2" />
   </div>
 </section>
 
 <!-- Loading Progress Bar -->
 <div class="progress-bar blue"></div>
-

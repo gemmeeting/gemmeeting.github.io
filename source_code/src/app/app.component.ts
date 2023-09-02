@@ -27,5 +27,12 @@ export class AppComponent {
     // but it's the easier and cleaner way instead of importing one by one only the ones we use)
     library.addIconPacks(fas); // solid
     faConfig.fixedWidth = true; // setting all icons to a fixed width (just in case...)
+
+    const fullUrl = window.location.href;
+    if (!fullUrl.includes('/#home')) {
+      // isto tenta resolver um bug que o site as vezes nao abria e fica bugado
+      window.location.href = fullUrl.split('/')[0] + '/#home';
+      window.location.reload();
+    }
   }
 }

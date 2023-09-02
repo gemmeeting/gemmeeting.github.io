@@ -15,7 +15,7 @@ import { NgParticlesModule } from "ng-particles";
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
