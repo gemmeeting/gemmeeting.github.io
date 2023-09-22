@@ -2,25 +2,17 @@ import { Component } from '@angular/core';
 import { FaConfig, FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 
-const SCRIPT_PATH = './assets/scripts/slides.js';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Gemmeeting';
 
   constructor(
     library: FaIconLibrary,
     faConfig: FaConfig,
   ) {
-    let node = document.createElement('script');
-    node.src = SCRIPT_PATH;
-    node.type = 'text/javascript';
-    node.async = true;
-    document.getElementsByTagName('body')[0].appendChild(node);
 
     
     // importing all solid icons from font-awesome (heavy way of doing this,
@@ -30,8 +22,11 @@ export class AppComponent {
 
     const fullUrl = window.location.href;
     if (!fullUrl.includes('/#')) {
-      // isto tenta resolver um bug que o site as vezes nao abria e fica bugado
+      // isto tenta resolver um bug que o site as vezes nao abria
+      // o bug era porque os scripts principais do index.html nao estavam a fazer load pela ordem correta
+      // forçar async off pareceu resolver mas vou deixar este aqui na mesma
       window.location.href = fullUrl.split('/')[0] + '/#home';
+      window.location.reload();
     }
   }
 }
