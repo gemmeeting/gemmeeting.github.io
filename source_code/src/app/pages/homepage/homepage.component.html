@@ -1,37 +1,3 @@
-<!-- SVG Library -->
-<!-- <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-  <symbol id="close" viewBox="0 0 30 30"><path d="M15 0c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm5.7 19.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3s-.5-.1-.7-.3l-4.3-4.3-4.3 4.3c-.2.2-.4.3-.7.3s-.5-.1-.7-.3c-.4-.4-.4-1 0-1.4l4.3-4.3-4.3-4.3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l4.3 4.3 4.3-4.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-4.3 4.3 4.3 4.3z"/></symbol>
-  
-  <symbol id="close-small" viewBox="0 0 11 11"><path d="M6.914 5.5l3.793-3.793c.391-.391.391-1.023 0-1.414s-1.023-.391-1.414 0l-3.793 3.793-3.793-3.793c-.391-.391-1.023-.391-1.414 0s-.391 1.023 0 1.414l3.793 3.793-3.793 3.793c-.391.391-.391 1.023 0 1.414.195.195.451.293.707.293s.512-.098.707-.293l3.793-3.793 3.793 3.793c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023 0-1.414l-3.793-3.793z"/></symbol>
-
-  <symbol id="arrow-left" viewBox="0 0 29 56"><path d="M28.7.3c.4.4.4 1 0 1.4l-26.3 26.3 26.3 26.3c.4.4.4 1 0 1.4-.4.4-1 .4-1.4 0l-27-27c-.4-.4-.4-1 0-1.4l27-27c.3-.3 1-.4 1.4 0z"/></symbol>
-  
-  <symbol id="arrow-right" viewBox="0 0 29 56"><path d="M.3 55.7c-.4-.4-.4-1 0-1.4l26.3-26.3-26.3-26.3c-.4-.4-.4-1 0-1.4.4-.4 1-.4 1.4 0l27 27c.4.4.4 1 0 1.4l-27 27c-.3.3-1 .4-1.4 0z"/></symbol>
-
-  <symbol id="back" viewBox="0 0 20 20"><path d="M2.3 10.7l5 5c.4.4 1 .4 1.4 0s.4-1 0-1.4l-3.3-3.3h11.6c.6 0 1-.4 1-1s-.4-1-1-1h-11.6l3.3-3.3c.4-.4.4-1 0-1.4-.2-.2-.4-.3-.7-.3s-.5.1-.7.3l-5 5c-.2.2-.3.5-.3.7 0 .2.1.5.3.7z"/></symbol>
-  
-  <symbol id="menu" viewBox="0 0 18 18"><path d="M16 5h-14c-.6 0-1-.4-1-1 0-.5.4-1 1-1h14c.5 0 1 .4 1 1s-.4 1-1 1zm-14 5h14c.5 0 1-.4 1-1 0-.5-.4-1-1-1h-14c-.6 0-1 .4-1 1s.4 1 1 1zm14 3h-14c-.5 0-1 .4-1 1 0 .5.4 1 1 1h14c.5 0 1-.4 1-1s-.4-1-1-1z"/></symbol>
-  
-  <symbol id="share" viewBox="0 0 18 18"><path d="M16 8c-.6 0-1 .4-1 1v6h-12v-6c0-.6-.4-1-1-1s-1 .4-1 1v6c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-6c0-.6-.4-1-1-1zm-2.3-2.3c.4-.4.4-1 0-1.4l-4-4c-.4-.4-1-.4-1.4 0l-4 4c-.4.4-.4 1 0 1.4s1 .4 1.4 0l2.3-2.3v7.6c0 .6.4 1 1 1s1-.4 1-1v-7.6l2.3 2.3c.4.4 1 .4 1.4 0z"/></symbol>
-
-  <symbol id="arrow-down" viewBox="0 0 24 24"><path d="M12 18c-.2 0-.5-.1-.7-.3l-11-10c-.4-.4-.4-1-.1-1.4.4-.4 1-.4 1.4-.1l10.4 9.4 10.3-9.4c.4-.4 1-.3 1.4.1.4.4.3 1-.1 1.4l-11 10c-.1.2-.4.3-.6.3z"/></symbol>
-  
-  <symbol id="arrow-up" viewBox="0 0 24 24"><path d="M11.9 5.9c.2 0 .5.1.7.3l11 10c.4.4.4 1 .1 1.4-.4.4-1 .4-1.4.1l-10.4-9.4-10.3 9.4c-.4.4-1 .3-1.4-.1-.4-.4-.3-1 .1-1.4l11-10c.1-.2.4-.3.6-.3z"/></symbol>
-  
-  <symbol id="arrow-top" viewBox="0 0 18 18"><path d="M15.7 7.3l-6-6c-.4-.4-1-.4-1.4 0l-6 6c-.4.4-.4 1 0 1.4.4.4 1 .4 1.4 0l4.3-4.3v11.6c0 .6.4 1 1 1s1-.4 1-1v-11.6l4.3 4.3c.2.2.4.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4z"/></symbol>
-  
-  <symbol id="play" viewBox="0 0 30 30"><path d="M7 30v-30l22 15z"/></symbol>
-  
-  <symbol id="chat" viewBox="0 0 18 18"><path d="M5,17c-0.2,0-0.3,0-0.4-0.1C4.2,16.7,4,16.4,4,16v-2H2c-1.1,0-2-0.9-2-2V3c0-1.1,0.9-2,2-2h14c1.1,0,2,0.9,2,2v9 c0,1.1-0.9,2-2,2H9.3l-3.7,2.8C5.4,16.9,5.2,17,5,17z M2,12h3.5C5.8,12,6,12.2,6,12.5V14l2.4-1.8C8.6,12.1,8.8,12,9,12h7V3H2V12z M13,7H5C4.4,7,4,6.6,4,6s0.4-1,1-1h8c0.6,0,1,0.4,1,1S13.6,7,13,7z M13,10H5c-0.6,0-1-0.4-1-1s0.4-1,1-1h8c0.6,0,1,0.4,1,1 S13.6,10,13,10z"/></symbol>
-
-  <symbol id="mail" viewBox="0 0 18 18"><path d="M16 2h-14c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-10c0-1.1-.9-2-2-2zm0 2v.5l-7 4.3-7-4.4v-.4h14zm-14 10v-7.2l6.5 4c.1.1.3.2.5.2s.4-.1.5-.2l6.5-4v7.2h-14z"/></symbol>
-
-  <symbol id="sound-on" viewBox="0 0 18 18"><path d="M8.5,0.1C8.1-0.1,7.7,0,7.4,0.2L3.7,3H2C0.9,3,0,3.9,0,5v6c0,1.1,0.9,2,2,2h1.7l3.7,2.8C7.6,15.9,7.8,16,8,16 c0.2,0,0.3,0,0.4-0.1C8.8,15.7,9,15.4,9,15V1C9,0.6,8.8,0.3,8.5,0.1z M7,13l-2.4-1.8C4.4,11.1,4.2,11,4,11l-2,0l0-6h2 c0.2,0,0.4-0.1,0.6-0.2L7,3V13z M11.7,9.9l0.7,1.9C13.9,11.2,15,9.7,15,8c0-1.7-1.1-3.2-2.7-3.8l-0.7,1.9C12.5,6.4,13,7.2,13,8C13,8.9,12.5,9.6,11.7,9.9z M12.2,1.1l-0.3,2C14.3,3.5,16,5.6,16,8s-1.8,4.5-4.2,4.9l0.3,2C15.6,14.3,18,11.4,18,8C18,4.6,15.6,1.7,12.2,1.1z"/></symbol>
-  
-  <symbol id="sound-off" viewBox="0 0 18 18"><path d="M15.9,8l1.8-1.8c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-1.8,1.8l-1.8-1.8c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4L13.1,8l-1.8,1.8 c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l1.8-1.8l1.8,1.8c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3 c0.4-0.4,0.4-1,0-1.4L15.9,8z M8.5,0.1C8.1-0.1,7.7,0,7.4,0.2L3.7,3H2C0.9,3,0,3.9,0,5v6c0,1.1,0.9,2,2,2h1.7l3.7,2.8C7.6,15.9,7.8,16,8,16 c0.2,0,0.3,0,0.4-0.1C8.8,15.7,9,15.4,9,15V1C9,0.6,8.8,0.3,8.5,0.1z M7,13l-2.4-1.8C4.4,11.1,4.2,11,4,11l-2,0l0-6h2 c0.2,0,0.4-0.1,0.6-0.2L7,3V13z"/></symbol>
-  
-</svg> -->
-
 <div class="fullscreen-hamburger-wrapper" [ngClass]="{ 'close-hamburger-animation': animateHamburgerClosing }" *ngIf="hamburgerOpen">
   <div class="hamburger-content">
     <div class="animate-div wait100ms">
@@ -822,106 +788,6 @@
                       </mat-expansion-panel>
                     </mat-accordion>
                   </div>
-
-                  <!-- <div class="ae-6 fromBottom" style="text-align: left; font-weight: 500;">
-                      <div style="max-height: 50vh; overflow-y: auto; border-radius: 10px; box-shadow: inset 0px 0px 6px lightgrey; padding: 10px; box-sizing: border-box; margin-top: 20px">
-                        
-                        <ol class="list-normas-submissao">
-                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">1.</span> Onde e quando vai decorrer o GEMMeeting 2023?</li>
-                          <li style="margin-left: 16px">O GEMMeeting 2023 decorrerá nos dias <strong>28 e 29 de setembro de 2023</strong>, em formato <strong>exclusivamente presencial</strong>, no <strong>Fórum de Arte e Cultura (FACE) de Espinho</strong>.</li>
-
-                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">2.</span> Qual é o programa do congresso?</li>
-                          <li style="margin-left: 16px">Poderá consultar o programa <a href="https://gemmeeting.pt/#programa" target="_blank" class="link-style">clicando/tocando aqui</a>.</li>
-
-                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">3.</span> A quem se destina?</li>
-                          <li style="margin-left: 16px">
-                            O evento é direcionado a médicos especialistas e internos de Medicina Geral e Familiar. No entanto, todos os profissionais de saúde são bem-vindos, incluindo médicos especialistas e internos de outras especialidades, 
-                            médicos indiferenciados, internos de formação geral, estudantes de medicina ou enfermeiros.
-                          </li>
-
-                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">4.</span> Como me posso inscrever?</li>
-                          <li style="margin-left: 16px">
-                            Pode inscrever-se <a href="https://gemmeeting.eventkey.pt/geral/detalheformulario.aspx?codigo=2&evento=2" target="_blank" class="link-style">clicando/tocando aqui</a>. Será redirecionado para uma página da Eventkey, 
-                            e deverá preencher o formulário e seguir as instruções. Após inscrição no evento receberá um email de confirmação da mesma.
-                          </li>
-
-                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">5.</span> Qual o preço da inscrição e o que está incluído?</li>
-                          <li style="margin-left: 16px">
-                            A inscrição tem um custo único de 30 euros e dá acesso a: <br>
-                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Mesas redondas, sessões plenárias, sessões paralelas, GEMM Talks e apresentações de trabalhos; <br>
-                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Um coffee-wake, dois coffee-breaks e dois almoços contemplados no programa; <br>
-                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Um workshop (WS) à escolha (vagas limitadas a 25 participantes por WS); <br>
-                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Certificado de presença, após validação das presenças; <br>
-                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon>Oportunidade de apresentação de trabalhos em formato de comunicação oral ou póster, mediante submissão e seleção dos mesmos.
-                          </li>
-
-                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">6.</span> Como é feita a seleção para os workshops?</li>
-                          <li style="margin-left: 16px">
-                            Cada participante poderá participar em um WS, que será escolhido consoante disponibilidade de vaga no processo de inscrição. 
-                            Há um limite de 25 vagas por WS, que serão preenchidas por ordem de inscrição.
-                          </li>
-
-                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">7.</span> Como será realizado o controlo de presenças?</li>
-                          <li style="margin-left: 16px">
-                            O controlo de presenças será efetuado sempre no secretariado do evento, e decorrerá em quatro momentos: no check-in no evento na manhã do dia 28/09, no início da tarde do dia 28/09, início da manhã do dia 29/09 e início da tarde do dia 29/09. 
-                            Para cada WS, será realizado um controlo de presenças de acordo com a lista dos inscritos no mesmo.
-                          </li>
-
-                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">8.</span> Como posso obter o certificado de presença?</li>
-                          <li style="margin-left: 16px">
-                            Para obter o certificado de presença do GEMMeeting 2023, será necessário presença em pelo menos três dos quatro controlos de presença do evento (ver ponto 7.)
-                            Será emitido um certificado de presença adicional para a participação em WS, conforme as presenças registadas.
-                            Os certificados de presença no GEMMeeting 2023 e no WS serão enviados para o e-mail associado à inscrição, após validação das presenças.
-                          </li>
-
-                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">9.</span> Como posso submeter o meu resumo?</li>
-                          <li style="margin-left: 16px">
-                            Poderá realizar a submissão do seu resumo aqui, onde pode encontrar o nosso regulamento e formulário de submissão dos trabalhos.
-                            Posteriormente será divulgada informação acerca dos prémios para os vencedores nas nossas páginas de Facebook e Instagram. <br> <br>
-                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Início de submissão de resumos:</strong> 26/05/2023 às 21h00. <br>
-                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Data-limite para submissão de resumos:</strong> 09/07/2023 às 23h59. <br>
-                            <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle;" class="primary-text-color"></fa-icon><strong>Comunicação dos resultados aos/às autores/as:</strong> 21/08/2023 até às 23h59, 
-                            divulgados via e-mail para o endereço eletrónico indicado no formulário de submissão.
-                          </li>
-
-                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">10.</span> Quando decorrerão as apresentação de trabalhos selecionados?</li>
-                          <li style="margin-left: 27px">
-                            A apresentação dos posters selecionados será efetuada na manhã do dia 28/09/2023 e a apresentação das comunicações orais na manhã do dia 29/09/2023. Estas serão realizadas presencialmente.
-                          </li>
-
-                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">11.</span> Como chegar ao local do evento?</li>
-                          <li style="margin-left: 27px">
-                            O FACE de Espinho é facilmente acessível de carro. Existe estacionamento gratuito no local e nas imediações.
-                            Também poderá chegar ao local do evento através de transportes públicos, sendo o ponto de ligação mais próximo a estação de comboios de Espinho, que se encontra a cerca de 10 minutos a pé.
-                          </li>
-
-                          <li style="font-weight: 700; margin-top: 20px"><span class="primary-text-color">12.</span> Como decorrerão os almoços?</li>
-                          <li style="margin-left: 25px">
-                            O almoço está incluído no valor da inscrição no evento e será servido no espaço do evento. Caso não deseje almoçar no evento, existem também diversos restaurantes nas imediações.
-                          </li>
-
-                          <li style="font-weight: 700; margin-top: 20px"><fa-icon icon="question-circle" style="margin-right: 5px;" class="primary-text-color"></fa-icon> Tem outras dúvidas/perguntas não mencionadas?</li>
-                          <li style="margin-left: 25px">
-                            <span>Pode entrar em contacto com a comissão organizadora através de e-mail ou redes sociais:</span>
-
-                            <div class="ae-4" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px; margin-top: 20px">
-                              <img src="../../../assets/images/facebook.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
-                              <a class="link-style" href="https://www.facebook.com/gemmeeting">@gemmeeting</a>
-                            </div>
-                            <div class="ae-5" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
-                              <img src="../../../assets/images/instagram.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px;">
-                              <a class="link-style" href="https://www.instagram.com/gemmeeting23/">@gemmeeting23</a>
-                            </div>
-                            <div class="ae-6" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
-                              <fa-icon icon="envelope" style="font-size: 24px; margin-right: 10px" class="primary-text-color"></fa-icon>
-                              <a class="link-style" href="mailto:gemmeeting@gmail.com">gemmeeting@gmail.com</a>
-                            </div>
-
-                          </li>
-                          <br>
-                        </ol>
-                      </div>
-                  </div> -->
                 </div>
               </li>
             </ul>
@@ -942,14 +808,6 @@
       <div class="wrap spaceWrap" id="content-sponsors">
         <div class="center-content-div ae-2 fromAbove" style="max-width: 1400px !important">
           <div class="fix-10-12" style="max-width: 1400px !important">
-            <!-- <div class="ae-3 platina-banner" style="width: 100%; box-shadow: 0px 0px 6px lightgrey; background-color: white; min-height: 100px; padding: 20px; box-sizing: border-box; border-radius: 10px; overflow: hidden; margin: 10px 0px;">
-              <div style="font-weight: 700;">
-                Platina
-              </div>
-              <div class="sponsors-images-div">
-                <img src="../../../assets/images/sponsors/grunenthal.png">
-              </div>
-            </div> -->
             <div class="ae-3 gold-banner" style="width: 100%; box-shadow: 0px 0px 6px lightgrey; background-color: white; min-height: 100px; padding: 30px 20px; box-sizing: border-box; border-radius: 10px; overflow: hidden; margin: 10px 0px">
               <div class="content-card-title"><fa-icon icon="medal" style="margin-right: 10px;" class="primary-text-color"></fa-icon>Patrocínios</div>
               <div class="sponsors-images-div">
@@ -998,27 +856,14 @@
                 <div class="ae-7 image-div">
                   <img class="hover-scale" src="./assets/images/sponsors/bial.jpg" target="_blank" (click)="openSponsorLink('https://www.bial.com/pt/')" />
                 </div>
-                <div class="ae-8 image-div" style="max-width: 140px !important">
+                <div class="ae-8 image-div" style="max-width: 150px !important">
                   <img class="hover-scale" src="./assets/images/sponsors/ipp.jpg" target="_blank" (click)="openSponsorLink('https://www.inspsic.pt/')" />
+                </div>
+                <div class="ae-9 image-div">
+                  <img class="hover-scale" src="./assets/images/sponsors/apmgf.png" target="_blank" (click)="openSponsorLink('https://apmgf.pt/')" />
                 </div>
               </div>
             </div>
-            <!-- <div class="ae-5 silver-banner" style="width: 100%; box-shadow: 0px 0px 6px lightgrey; background-color: white; min-height: 100px; padding: 20px; box-sizing: border-box; border-radius: 10px; overflow: hidden; margin: 10px 0px;">
-              <div style="font-weight: 700;">
-                Silver
-              </div>
-              <div class="sponsors-images-div">
-                <img src="../../../assets/images/sponsors/angelini.png">
-              </div>
-            </div> -->
-            <!-- <div class="ae-6 bronze-banner" style="width: 100%; box-shadow: 0px 0px 6px lightgrey; background-color: white; min-height: 100px; padding: 20px; box-sizing: border-box; border-radius: 10px; overflow: hidden; margin: 10px 0px;">
-              <div style="font-weight: 700;">
-                Bronze
-              </div>
-              <div class="sponsors-images-div">
-                <img src="../../../assets/images/sponsors/organon.png">
-              </div>
-            </div> -->
           </div>
         </div>
       </div>
