@@ -32,7 +32,7 @@
     </div>
     <div class="animate-div wait700ms">
       <div class="menu-item" (click)="menuClick('#sponsors')" (keyup.enter)="menuClick('#sponsors')">
-        <span [tabIndex]="9" style="color: rgb(220,150,0) !important">Patrocínios</span>
+        <span [tabIndex]="9">Patrocínios</span>
       </div>
     </div>
     <div class="animate-div wait800ms">
@@ -60,7 +60,7 @@
         <li class="animate-div wait400ms"><a href="#inscricoes">Inscrições</a></li>
         <li class="animate-div wait500ms"><a href="#abstracts">Resumos</a></li>
         <li class="animate-div wait600ms"><a href="#faqs">FAQs</a></li>
-        <li class="animate-div wait700ms"><a href="#sponsors" style="color: rgb(220,150,0) !important">Patrocínios</a></li>
+        <li class="animate-div wait700ms"><a href="#sponsors">Patrocínios</a></li>
         <li class="animate-div wait800ms"><a href="#contactos">Contactos</a></li>
       </ul>
     </div>
@@ -859,7 +859,10 @@
                 <div class="ae-8 image-div" style="max-width: 150px !important">
                   <img class="hover-scale" src="./assets/images/sponsors/ipp.jpg" target="_blank" (click)="openSponsorLink('https://www.inspsic.pt/')" />
                 </div>
-                <div class="ae-9 image-div">
+              </div>
+              <div class="ae-9 content-card-title" style="font-size: 70%"><fa-icon icon="circle" style="margin-right: 7px; font-size: 7px; vertical-align: top;" class="primary-text-color"></fa-icon>Com o patrocínio científico:</div>
+              <div class="sponsors-images-div" style="padding-top: 5px">
+                <div class="ae-10 image-div">
                   <img class="hover-scale" src="./assets/images/sponsors/apmgf.png" target="_blank" (click)="openSponsorLink('https://apmgf.pt/')" />
                 </div>
               </div>
