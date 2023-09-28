@@ -731,7 +731,7 @@
                             (click)="openGoogleMapsLink()"
                             src="./assets/images/google_maps_face.png"
                             alt="Localização do FACE Espinho no Google Maps"
-                            style="cursor: pointer; margin: 20px !important;"
+                            style="cursor: pointer; margin: 20px !important"
                             matTooltip="Ver o FACE Espinho no Google Maps" />
                         </div>
                       </mat-expansion-panel>
@@ -751,13 +751,10 @@
                     <mat-accordion>
                       <mat-expansion-panel [expanded]="expandAllFaqs">
                         <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <span class="primary-text-color" style="margin-right: 10px">13.</span> Posso cancelar a minha inscrição?
-                          </mat-panel-title>
+                          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">13.</span> Posso cancelar a minha inscrição? </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
-                          Os cancelamentos de inscrições efetuados até dia 03/09/2023 serão reembolsados na totalidade. 
-                          A partir dessa data, não haverá lugar a reembolso. <strong>Os reembolsos serão processados após o evento.</strong>
+                          Os cancelamentos de inscrições efetuados até dia 03/09/2023 serão reembolsados na totalidade. A partir dessa data, não haverá lugar a reembolso. <strong>Os reembolsos serão processados após o evento.</strong>
                         </div>
                       </mat-expansion-panel>
                     </mat-accordion>
@@ -765,9 +762,7 @@
                     <mat-accordion>
                       <mat-expansion-panel [expanded]="expandAllFaqs">
                         <mat-expansion-panel-header>
-                          <mat-panel-title style="font-weight: 700;">
-                              <fa-icon icon="question-circle" style="margin-right: 5px;" class="primary-text-color"></fa-icon> Tem outras dúvidas/perguntas não mencionadas?
-                          </mat-panel-title>
+                          <mat-panel-title style="font-weight: 700"> <fa-icon icon="question-circle" style="margin-right: 5px" class="primary-text-color"></fa-icon> Tem outras dúvidas/perguntas não mencionadas? </mat-panel-title>
                         </mat-expansion-panel-header>
                         <div style="font-size: 16px; line-height: 1.4">
                           <span>Pode entrar em contacto com a comissão organizadora através de e-mail ou redes sociais:</span>
@@ -808,8 +803,10 @@
       <div class="wrap spaceWrap" id="content-sponsors">
         <div class="center-content-div ae-2 fromAbove" style="max-width: 1400px !important">
           <div class="fix-10-12" style="max-width: 1400px !important">
-            <div class="ae-3 gold-banner" style="width: 100%; box-shadow: 0px 0px 6px lightgrey; background-color: white; min-height: 100px; padding: 30px 20px; box-sizing: border-box; border-radius: 10px; overflow: hidden; margin: 10px 0px">
-              <div class="content-card-title"><fa-icon icon="medal" style="margin-right: 10px;" class="primary-text-color"></fa-icon>Patrocínios</div>
+            <div
+              class="ae-3 gold-banner"
+              style="width: 100%; box-shadow: 0px 0px 6px lightgrey; background-color: white; min-height: 100px; padding: 30px 20px; box-sizing: border-box; border-radius: 10px; overflow: hidden; margin: 10px 0px">
+              <div class="content-card-title"><fa-icon icon="medal" style="margin-right: 10px" class="primary-text-color"></fa-icon>Patrocínios</div>
               <div class="sponsors-images-div">
                 <div class="ae-5 image-div">
                   <img class="hover-scale" src="./assets/images/sponsors/tecnifar.png" target="_blank" (click)="openSponsorLink('https://tecnifar.pt/')" />
@@ -856,20 +853,20 @@
                 <div class="ae-7 image-div">
                   <img class="hover-scale" src="./assets/images/sponsors/bial.jpg" target="_blank" (click)="openSponsorLink('https://www.bial.com/pt/')" />
                 </div>
-                <div class="ae-8 image-div" style="max-width: 150px !important">
+                <div class="ae-8 image-div">
+                  <img class="hover-scale" src="./assets/images/sponsors/sim.png" target="_blank" (click)="openSponsorLink('https://www.simedicos.pt/pt/')" />
+                </div>
+                <div class="ae-9 image-div" style="max-width: 130px !important">
+                  <img class="hover-scale" src="./assets/images/sponsors/ocean_medical.png" target="_blank" (click)="openSponsorLink('https://www.ocean-medical.com/')" />
+                </div>
+                <div class="ae-10 image-div" style="max-width: 150px !important">
                   <img class="hover-scale" src="./assets/images/sponsors/ipp.jpg" target="_blank" (click)="openSponsorLink('https://www.inspsic.pt/')" />
                 </div>
               </div>
-              <div class="ae-7 content-card-title" style="font-size: 70%"><fa-icon icon="circle" style="margin-right: 7px; font-size: 7px; vertical-align: top;" class="primary-text-color"></fa-icon>Com o patrocínio científico:</div>
+              <div class="ae-9 content-card-title" style="font-size: 70%"><fa-icon icon="circle" style="margin-right: 7px; font-size: 7px; vertical-align: top" class="primary-text-color"></fa-icon>Com o patrocínio científico:</div>
               <div class="sponsors-images-div" style="padding-top: 5px">
-                <div class="ae-8 image-div">
+                <div class="ae-10 image-div">
                   <img class="hover-scale" src="./assets/images/sponsors/apmgf.png" target="_blank" (click)="openSponsorLink('https://apmgf.pt/')" />
-                </div>
-                <div class="ae-9 image-div">
-                  <img class="hover-scale" src="./assets/images/sponsors/sim.png" target="_blank" (click)="openSponsorLink('https://www.simedicos.pt/pt/')" />
-                </div>
-                <div class="ae-10 image-div" style="max-width: 130px !important">
-                  <img class="hover-scale" src="./assets/images/sponsors/ocean_medical.png" target="_blank" (click)="openSponsorLink('https://www.ocean-medical.com/')" />
                 </div>
               </div>
             </div>
