@@ -1,9 +1,9 @@
-@use "./custom-colors-theme" as color-theme;
+@use './custom-colors-theme' as color-theme;
 
 // ##################### START OF ANGULAR MATERIAL SPECIFIC CONFIGS
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import "@angular/material/theming";
+@import '@angular/material/theming';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -12,19 +12,19 @@
 @include mat-core();
 
 $fontConfig: (
-    display-4: mat-typography-level(112px, 112px, 300, "Montserrat", -0.0134em),
-    display-3: mat-typography-level(56px, 56px, 400, "Montserrat", -0.0089em),
-    display-2: mat-typography-level(45px, 48px, 400, "Montserrat", 0em),
-    display-1: mat-typography-level(34px, 40px, 400, "Montserrat", 0.0074em),
-    headline: mat-typography-level(24px, 32px, 400, "Montserrat", 0em),
-    title: mat-typography-level(20px, 32px, 500, "Montserrat", 0.0075em),
-    subheading-2: mat-typography-level(16px, 28px, 400, "Montserrat", 0.0094em),
-    subheading-1: mat-typography-level(15px, 24px, 500, "Montserrat", 0.0067em),
-    body-2: mat-typography-level(14px, 24px, 500, "Montserrat", 0.0179em),
-    body-1: mat-typography-level(14px, 20px, 400, "Montserrat", 0.0179em),
-    button: mat-typography-level(14px, 14px, 500, "Montserrat", 0em),
-    caption: mat-typography-level(12px, 20px, 400, "Montserrat", 0.0333em),
-    input: mat-typography-level(inherit, 1.125, 400, "Montserrat", 0em),
+  display-4: mat-typography-level(112px, 112px, 300, 'Montserrat', -0.0134em),
+  display-3: mat-typography-level(56px, 56px, 400, 'Montserrat', -0.0089em),
+  display-2: mat-typography-level(45px, 48px, 400, 'Montserrat', 0em),
+  display-1: mat-typography-level(34px, 40px, 400, 'Montserrat', 0.0074em),
+  headline: mat-typography-level(24px, 32px, 400, 'Montserrat', 0em),
+  title: mat-typography-level(20px, 32px, 500, 'Montserrat', 0.0075em),
+  subheading-2: mat-typography-level(16px, 28px, 400, 'Montserrat', 0.0094em),
+  subheading-1: mat-typography-level(15px, 24px, 500, 'Montserrat', 0.0067em),
+  body-2: mat-typography-level(14px, 24px, 500, 'Montserrat', 0.0179em),
+  body-1: mat-typography-level(14px, 20px, 400, 'Montserrat', 0.0179em),
+  button: mat-typography-level(14px, 14px, 500, 'Montserrat', 0em),
+  caption: mat-typography-level(12px, 20px, 400, 'Montserrat', 0.0333em),
+  input: mat-typography-level(inherit, 1.125, 400, 'Montserrat', 0em),
 );
 
 // Foreground config
@@ -50,50 +50,50 @@ $dark-primary: mat-palette($mat-blue-grey);
 $dark-accent: mat-palette($mat-amber, A200, A100, A400);
 $dark-warn: mat-palette($mat-deep-orange);
 $dark-theme: mat-dark-theme(
-    (
+  (
     color: (
-        primary: $dark-primary,
-        accent: $dark-accent,
-        warn: $dark-warn,
+      primary: $dark-primary,
+      accent: $dark-accent,
+      warn: $dark-warn,
     ),
-    )
+  )
 );
 
 $mat-light-theme-foreground: (
-    base: black,
-    divider: $dark-dividers,
-    dividers: $dark-dividers,
-    disabled: $dark-disabled-text,
-    disabled-button: rgba($dark-text, 0.26),
-    disabled-text: $dark-disabled-text,
-    elevation: black,
-    secondary-text: $dark-accent-text,
-    hint-text: $dark-disabled-text,
-    accent-text: $dark-accent-text,
-    icon: $dark-accent-text,
-    icons: $dark-accent-text,
-    text: $dark-primary-text,
-    slider-min: $dark-primary-text,
-    slider-off: rgba($dark-text, 0.26),
-    slider-off-active: $dark-disabled-text,
+  base: black,
+  divider: $dark-dividers,
+  dividers: $dark-dividers,
+  disabled: $dark-disabled-text,
+  disabled-button: rgba($dark-text, 0.26),
+  disabled-text: $dark-disabled-text,
+  elevation: black,
+  secondary-text: $dark-accent-text,
+  hint-text: $dark-disabled-text,
+  accent-text: $dark-accent-text,
+  icon: $dark-accent-text,
+  icons: $dark-accent-text,
+  text: $dark-primary-text,
+  slider-min: $dark-primary-text,
+  slider-off: rgba($dark-text, 0.26),
+  slider-off-active: $dark-disabled-text,
 );
 
 $mat-light-theme-background: (
-    background: $light-background,
-    status-bar: $light-bg-darker-20,
-    app-bar: $light-bg-darker-5,
-    hover: $dark-bg-alpha-4,
-    card: $light-bg-lighter-5,
-    dialog: $light-bg-lighter-5,
-    tooltip: $dark-bg-tooltip,
-    disabled-button: $dark-bg-alpha-12,
-    raised-button: $light-bg-lighter-5,
-    focused-button: $dark-focused,
-    selected-button: $light-bg-darker-20,
-    selected-disabled-button: $light-bg-darker-30,
-    disabled-button-toggle: $light-bg-darker-10,
-    unselected-chip: $light-bg-darker-10,
-    disabled-list-option: $light-bg-darker-10,
+  background: $light-background,
+  status-bar: $light-bg-darker-20,
+  app-bar: $light-bg-darker-5,
+  hover: $dark-bg-alpha-4,
+  card: $light-bg-lighter-5,
+  dialog: $light-bg-lighter-5,
+  tooltip: $dark-bg-tooltip,
+  disabled-button: $dark-bg-alpha-12,
+  raised-button: $light-bg-lighter-5,
+  focused-button: $dark-focused,
+  selected-button: $light-bg-darker-20,
+  selected-disabled-button: $light-bg-darker-30,
+  disabled-button-toggle: $light-bg-darker-10,
+  unselected-chip: $light-bg-darker-10,
+  disabled-list-option: $light-bg-darker-10,
 );
 
 // Compute font config
@@ -102,89 +102,89 @@ $mat-light-theme-background: (
 // Theme Config
 
 body {
-    --primary-color: color-theme.$primary-color; // these variables are defined at ./custom-colors-theme.scss
-    --primary-lighter-color: color-theme.$primary-color-light;
-    --primary-darker-color: color-theme.$primary-color-darkest;
-    --text-primary-color: #{$light-primary-text};
-    --text-primary-lighter-color: #{$dark-primary-text};
-    --text-primary-darker-color: #{$light-primary-text};
+  --primary-color: color-theme.$primary-color; // these variables are defined at ./custom-colors-theme.scss
+  --primary-lighter-color: color-theme.$primary-color-light;
+  --primary-darker-color: color-theme.$primary-color-darkest;
+  --text-primary-color: #{$light-primary-text};
+  --text-primary-lighter-color: #{$dark-primary-text};
+  --text-primary-darker-color: #{$light-primary-text};
 }
 
 $mat-primary: (
-    main: color-theme.$primary-color,
-    lighter: color-theme.$primary-color-light,
-    darker: color-theme.$primary-color-darkest,
-    200: color-theme.$primary-color,
-    // For slide toggle,
-    contrast:
-        (
-            main: $light-primary-text,
-            lighter: $dark-primary-text,
-            darker: $light-primary-text,
-        ),
+  main: color-theme.$primary-color,
+  lighter: color-theme.$primary-color-light,
+  darker: color-theme.$primary-color-darkest,
+  200: color-theme.$primary-color,
+  // For slide toggle,
+  contrast:
+    (
+      main: $light-primary-text,
+      lighter: $dark-primary-text,
+      darker: $light-primary-text,
+    ),
 );
 $mat-primary-darkmode: (
-    main: lighten(color-theme.$primary-color, 10%),
-    lighter: lighten(color-theme.$primary-color-light, 10%),
-    darker: lighten(color-theme.$primary-color-darkest, 10%),
-    200: lighten(color-theme.$primary-color, 10%),
-    // For slide toggle,
-    contrast:
-        (
-            main: $light-primary-text,
-            lighter: $dark-primary-text,
-            darker: $light-primary-text,
-        ),
+  main: lighten(color-theme.$primary-color, 10%),
+  lighter: lighten(color-theme.$primary-color-light, 10%),
+  darker: lighten(color-theme.$primary-color-darkest, 10%),
+  200: lighten(color-theme.$primary-color, 10%),
+  // For slide toggle,
+  contrast:
+    (
+      main: $light-primary-text,
+      lighter: $dark-primary-text,
+      darker: $light-primary-text,
+    ),
 );
 $theme-primary: mat-palette($mat-primary, main, lighter, darker);
 $theme-primary-darkmode: mat-palette($mat-primary-darkmode, main, lighter, darker);
 
 body {
-    --accent-color: #797979;
-    --accent-lighter-color: #d7d7d7;
-    --accent-darker-color: #5c5c5c;
-    --text-accent-color: #{$light-primary-text};
-    --text-accent-lighter-color: #{$dark-primary-text};
-    --text-accent-darker-color: #{$light-primary-text};
+  --accent-color: #797979;
+  --accent-lighter-color: #d7d7d7;
+  --accent-darker-color: #5c5c5c;
+  --text-accent-color: #{$light-primary-text};
+  --text-accent-lighter-color: #{$dark-primary-text};
+  --text-accent-darker-color: #{$light-primary-text};
 }
 
 $mat-accent: (
-    main: #797979,
-    lighter: #d7d7d7,
-    darker: #5c5c5c,
-    200: #797979,
-    // For slide toggle,
-    contrast:
-        (
-            main: $light-primary-text,
-            lighter: $dark-primary-text,
-            darker: $light-primary-text,
-        ),
+  main: #797979,
+  lighter: #d7d7d7,
+  darker: #5c5c5c,
+  200: #797979,
+  // For slide toggle,
+  contrast:
+    (
+      main: $light-primary-text,
+      lighter: $dark-primary-text,
+      darker: $light-primary-text,
+    ),
 );
 $theme-accent: mat-palette($mat-accent, main, lighter, darker);
 $theme-accent-darkmode: mat-palette($mat-accent, main, lighter, darker);
 
 body {
-    --warn-color: #{color-theme.$error-color};
-    --warn-lighter-color: lighten(color-theme.$error-color, 20%);
-    --warn-darker-color: #{color-theme.$error-color};
-    --text-warn-color: #{$light-primary-text};
-    --text-warn-lighter-color: #{$dark-primary-text};
-    --text-warn-darker-color: #{$light-primary-text};
+  --warn-color: #{color-theme.$error-color};
+  --warn-lighter-color: lighten(color-theme.$error-color, 20%);
+  --warn-darker-color: #{color-theme.$error-color};
+  --text-warn-color: #{$light-primary-text};
+  --text-warn-lighter-color: #{$dark-primary-text};
+  --text-warn-darker-color: #{$light-primary-text};
 }
 
 $mat-warn: (
-    main: #{color-theme.$error-color},
-    lighter: lighten(color-theme.$error-color, 20%),
-    darker: #{color-theme.$error-color},
-    200: #{color-theme.$error-color},
-    // For slide toggle,
-    contrast:
-        (
-        main: $light-primary-text,
-        lighter: $dark-primary-text,
-        darker: $light-primary-text,
-        ),
+  main: #{color-theme.$error-color},
+  lighter: lighten(color-theme.$error-color, 20%),
+  darker: #{color-theme.$error-color},
+  200: #{color-theme.$error-color},
+  // For slide toggle,
+  contrast:
+    (
+      main: $light-primary-text,
+      lighter: $dark-primary-text,
+      darker: $light-primary-text,
+    ),
 );
 $theme-warn: mat-palette($mat-warn, main, lighter, darker);
 
@@ -193,13 +193,13 @@ $theme-dark: mat-dark-theme($theme-primary-darkmode, $theme-accent-darkmode, $th
 
 // Theme Init
 .light-theme {
-    @include angular-material-theme($theme);
-    transition: all 0.4s ease;
+  @include angular-material-theme($theme);
+  transition: all 0.4s ease;
 }
 
 .dark-theme {
-    @include angular-material-theme($theme-dark);
-    transition: all 0.4s ease;
+  @include angular-material-theme($theme-dark);
+  transition: all 0.4s ease;
 }
 
 // Specific component overrides, pieces that are not in line with the general theming
@@ -209,419 +209,449 @@ $theme-dark: mat-dark-theme($theme-primary-darkmode, $theme-accent-darkmode, $th
 .mat-stroked-button,
 .mat-flat-button,
 .mat-button {
-    border: none !important;
-    margin: 2px !important;
-    height: 38px;
-    width: 180px; // default button width
-    min-width: fit-content !important;
-    padding: 0px 10px !important;
-    font-size: 14px;
-    display: flex !important;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    vertical-align: baseline;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2) !important;
-    transition: 0.6s box-shadow;
+  border: none !important;
+  margin: 2px !important;
+  height: 38px;
+  width: 180px; // default button width
+  min-width: fit-content !important;
+  padding: 0px 10px !important;
+  font-size: 14px;
+  display: flex !important;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  vertical-align: baseline;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2) !important;
+  transition: 0.6s box-shadow;
 
-    &:hover,
-    &:focus,
-    &:focus-within {
-        background-color: white !important;
-        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2) !important;
-        transition: 0.3s box-shadow;
-    }
+  &:hover,
+  &:focus,
+  &:focus-within {
+    background-color: white !important;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2) !important;
+    transition: 0.3s box-shadow;
+  }
 }
 
 .mat-button,
 .mat-button-wrapper {
-    fa-icon,
-    .ng-fa-icon {
-        vertical-align: middle !important;
-    }
+  fa-icon,
+  .ng-fa-icon {
+    vertical-align: middle !important;
+  }
 }
 
 .mat-snack-bar-container {
-    background: rgba(255, 255, 255, 0.9) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
 
-    .mat-simple-snack-bar-content {
-        font-weight: 600 !important;
-        color: #2c2c2c;
-        white-space: pre-wrap;
+  .mat-simple-snack-bar-content {
+    font-weight: 600 !important;
+    color: #2c2c2c;
+    white-space: pre-wrap;
+  }
+
+  .mat-simple-snackbar-action {
+    .mat-button {
+      width: 60px !important;
+      color: orange;
+      margin-right: 10px !important;
     }
-    
-    .mat-simple-snackbar-action {
-        .mat-button {
-            width: 60px !important;
-            color: orange;
-            margin-right: 10px !important;
-        }
-    }
+  }
 }
 
 .mat-checkbox,
 .mat-slide-toggle {
-    padding: 3px 8px;
-    background-color: transparent;
-    border-radius: 6px;
-    transition: 0.4s background-color;
-    width: fit-content !important;
-    
-    &:hover,
-    &:focus {
-        background-color: rgba(0,0,0,0.05);
-        transition: 0.1s background-color;
-    }
+  padding: 3px 8px;
+  background-color: transparent;
+  border-radius: 6px;
+  transition: 0.4s background-color;
+  width: fit-content !important;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: 0.1s background-color;
+  }
 }
 
 .dark-theme {
-    .mat-checkbox,
-    .mat-slide-toggle {
-        &:hover,
-        &:focus {
-            background-color: rgba(255,255,255,0.05) !important;
-        }
+  .mat-checkbox,
+  .mat-slide-toggle {
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.05) !important;
     }
+  }
 }
 
 .mat-radio-button {
-    margin: 3px;
-    padding: 5px 8px;
-    border-radius: 6px;
-    background-color: transparent;
-    transition: 0.4s background-color;
+  margin: 3px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  background-color: transparent;
+  transition: 0.4s background-color;
 
-    &:hover,
-    &:focus {
-        background-color: rgba(0,0,0,0.05);
-        transition: 0.1s background-color;
-    }
+  &:hover,
+  &:focus {
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: 0.1s background-color;
+  }
 }
 
 .dark-theme {
-    .mat-radio-button {
-        &:hover,
-        &:focus {
-            background-color: rgba(255,255,255,0.05) !important;
-        }
+  .mat-radio-button {
+    &:hover,
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.05) !important;
     }
+  }
 }
 
 .mat-radio-button.mat-radio-disabled .mat-radio-label-content,
 .mat-checkbox.mat-checkbox-disabled .mat-checkbox-label {
-    color: color-theme.$black-text !important;
+  color: color-theme.$black-text !important;
 }
 
 .dark-theme {
-    .mat-radio-button.mat-radio-disabled .mat-radio-label-content,
-    .mat-checkbox.mat-checkbox-disabled .mat-checkbox-label {
-        color: color-theme.$black-text-darkmode !important;
-    }
+  .mat-radio-button.mat-radio-disabled .mat-radio-label-content,
+  .mat-checkbox.mat-checkbox-disabled .mat-checkbox-label {
+    color: color-theme.$black-text-darkmode !important;
+  }
 }
 
 .mat-checkbox-layout {
-    white-space: normal !important; // fix angular checkbox labels not being responsive to width
+  white-space: normal !important; // fix angular checkbox labels not being responsive to width
 }
 
 .mat-radio-label-content {
-    white-space: normal !important;
+  white-space: normal !important;
 }
 
 .mat-standard-chip {
-    padding: 0.5em 0.85em;
-    min-height: 2.5em;
+  padding: 0.5em 0.85em;
+  min-height: 2.5em;
 }
 
 .mat-card {
-    margin: 10px 2px;
+  margin: 10px 2px;
 }
 
 .mat-card-actions {
-    margin-bottom: 0px !important;
+  margin-bottom: 0px !important;
 }
 
 .mat-tab-group {
-    .mat-tab-label-container {
-        background-color: white !important;
-    }
+  .mat-tab-label-container {
+    background-color: transparent !important;
+  }
 
-    .mat-tab-header,
-    .mat-tab-navbar {
-        margin: 2px !important;
-        box-sizing: border-box !important;
-        border-radius: 5px !important;
-        border: none !important;
-        box-shadow: 0px 0px 3px rgba(0,0,0,0.15);
-        transition: 0.4s all;
+  .mat-tab-label::before {
+    content: '';
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    background-color: black;
+    transition: 0.2s;
 
-        &:hover,
-        &:focus,
-        &:focus-within {
-            box-shadow: 0px 0px 6px rgba(0,0,0,0.25);
-            transition: 0.1s all;
-        }
+    &:hover {
+      height: 100%;
     }
+  }
 
-    .mat-tab-list {
-        .mat-ink-bar {
-            border-radius: 3px;
-            height: calc(100% - 4px) !important;
-            margin: 2px !important;
-            box-sizing: border-box !important;
-            opacity: 0.15 !important;
-            background-color: color-theme.$primary-color !important;
-            z-index: -1;
-        }
-    }
+  .mat-tab-header,
+  .mat-tab-navbar {
+    margin: 2px !important;
+    box-sizing: border-box !important;
+    border-radius: 5px !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: 0.4s all;
 
-    .mat-tab-label {
-        opacity: 0.6;
-        background-color: transparent;
-        transition: 0.4s all;
-    
-        &:hover {
-            background-color: rgba(0,0,0,0.05);
-            transition: 0.1s all;
-        }
+    &:hover,
+    &:focus,
+    &:focus-within {
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+      transition: 0.1s all;
     }
+  }
+
+  .mat-tab-list {
+    .mat-ink-bar {
+      border-radius: 3px;
+      height: calc(100% - 4px) !important;
+      margin: 2px !important;
+      box-sizing: border-box !important;
+      opacity: 1 !important;
+      background-color: #ffee00 !important;
+      z-index: -1;
+    }
+  }
+
+  .mat-tab-label-active .mat-tab-label-content {
+    color: black;
+    transition: 0.3s color;
+  }
+
+  .mat-tab-label {
+    font-size: 22px;
+    position: relative;
+    opacity: 1 !important;
+    margin: 0px 20px;
+    font-weight: 500;
+    color: lightgrey;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+      transition: 0.1s all;
+    }
+  }
 }
 
 .dark-theme {
-    .mat-tab-group {
-        .mat-tab-label-container {
-            background-color: rgb(65, 65, 65) !important;
-        }
-        .mat-tab-list {
-            .mat-ink-bar {
-                opacity: 0.3 !important;
-            }
-            
-            .mat-tab-label {
-                opacity: 0.8 !important;
-            
-                &:hover {
-                    background-color: rgba(255,255,255,0.05) !important;
-                }
-            }
-        }
+  .mat-tab-group {
+    .mat-tab-label-container {
+      background-color: rgb(65, 65, 65) !important;
     }
+    .mat-tab-list {
+      .mat-ink-bar {
+        opacity: 0.3 !important;
+      }
+
+      .mat-tab-label {
+        opacity: 0.8 !important;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.05) !important;
+        }
+      }
+    }
+  }
 }
 
 .mat-accordion {
-    .mat-expansion-panel {
-        margin: 10px 2px !important;
-        box-shadow: 0px 0px 3px rgba(0,0,0,0.15);
-        transition: 0.4s all !important;
-        &:hover,
-        &:focus {
-            box-shadow: 0px 0px 8px rgba(0,0,0,0.25);
-            transition: 0.1s all !important;
-        }
-        .mat-expansion-panel-header {
-            line-height: 1.2 !important;
-            transition: 0.4s all !important;
-
-            @media screen and (max-width: 750px) {
-                font-size: 80% !important;
-            }
-
-            &:hover,
-            &:focus {
-                transition: 0.1s all !important;
-            }
-        }
-
-        .mat-expansion-panel-body > div {
-            @media screen and (max-width: 750px) {
-                font-size: 90% !important;
-            }
-        }
+  .mat-expansion-panel {
+    margin: 10px 2px !important;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+    transition: 0.4s all !important;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+      transition: 0.1s all !important;
     }
-    
-    .mat-expansion-panel:first-of-type {
-        border-top-right-radius: 6px !important;
-        border-top-left-radius: 6px !important;
+    .mat-expansion-panel-header {
+      line-height: 1.2 !important;
+      transition: 0.4s all !important;
+
+      @media screen and (max-width: 750px) {
+        font-size: 80% !important;
+      }
+
+      &:hover,
+      &:focus {
+        transition: 0.1s all !important;
+      }
     }
 
-    .mat-expansion-panel:last-of-type {
-        border-bottom-right-radius: 6px !important;
-        border-bottom-left-radius: 6px !important;
+    .mat-expansion-panel-body > div {
+      @media screen and (max-width: 750px) {
+        font-size: 90% !important;
+      }
     }
+  }
+
+  .mat-expansion-panel:first-of-type {
+    border-top-right-radius: 6px !important;
+    border-top-left-radius: 6px !important;
+  }
+
+  .mat-expansion-panel:last-of-type {
+    border-bottom-right-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
+  }
 }
 
 .dark-theme {
-    .mat-accordion {
-        .mat-expansion-panel {
-            box-shadow: 0px 0px 3px rgba(255,255,255,0.15) !important;
-            &:hover,
-            &:focus {
-                box-shadow: 0px 0px 8px rgba(255,255,255,0.25) !important;
-            }
-        }
+  .mat-accordion {
+    .mat-expansion-panel {
+      box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.15) !important;
+      &:hover,
+      &:focus {
+        box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.25) !important;
+      }
     }
+  }
 }
 
-.cdk-overlay-pane { // outer div for mat-select-panel, mat-menu-panel, mat-autocomplete-panel and others
-    min-width: fit-content; // forces these panels to at least try to fit all the content before wrapping
+.cdk-overlay-pane {
+  // outer div for mat-select-panel, mat-menu-panel, mat-autocomplete-panel and others
+  min-width: fit-content; // forces these panels to at least try to fit all the content before wrapping
 }
 
 .mat-select-panel,
 .mat-menu-panel,
 .mat-autocomplete-panel {
-    border-radius: 6px !important;
-    max-width: 80vw !important;
-    min-height: fit-content !important;
+  border-radius: 6px !important;
+  max-width: 80vw !important;
+  min-height: fit-content !important;
+  box-sizing: border-box;
+
+  .mat-menu-item[disabled] {
+    color: rgba(0, 32, 50, 0.38);
+  }
+
+  .mat-option,
+  .mat-menu-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.4s background-color;
     box-sizing: border-box;
+    font-size: 14px !important;
 
-    .mat-menu-item[disabled] {
-        color: rgba(0, 32, 50, 0.38);
+    span {
+      white-space: normal;
+      line-height: 1.6;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      box-sizing: border-box;
     }
-    
-    .mat-option,
-    .mat-menu-item {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        transition: 0.4s background-color;
-        box-sizing: border-box;
-        font-size: 14px !important;
 
-        span {
-            white-space: normal;
-            line-height: 1.6;
-            padding-top: 2px;
-            padding-bottom: 2px;
-            box-sizing: border-box;
-        }
-
-        &:hover {
-            transition: 0.1s background-color;
-        }
-
-        &:disabled {
-            color: inherit;
-            opacity: 0.5;
-        }
+    &:hover {
+      transition: 0.1s background-color;
     }
+
+    &:disabled {
+      color: inherit;
+      opacity: 0.5;
+    }
+  }
 }
 
 .mat-select-panel,
 .mat-autocomplete-panel {
-    .mat-option {
-        line-height: 1.6 !important;
-        padding: 10px 15px !important;
-        height: auto !important;
+  .mat-option {
+    line-height: 1.6 !important;
+    padding: 10px 15px !important;
+    height: auto !important;
 
-        .mat-option-text {
-            width: 100% !important;
-            max-width: 800px !important;
-            white-space: normal !important;
-        }
+    .mat-option-text {
+      width: 100% !important;
+      max-width: 800px !important;
+      white-space: normal !important;
     }
+  }
 }
 
 .mat-stepper-horizontal {
-    .mat-horizontal-stepper-header-container {
-        overflow: hidden;
-        border-radius: 10px;
-        height: 50px;
-        background-color: transparent;
-        transition: 0.4s background-color;
+  .mat-horizontal-stepper-header-container {
+    overflow: hidden;
+    border-radius: 10px;
+    height: 50px;
+    background-color: transparent;
+    transition: 0.4s background-color;
 
-        &:hover,
-        &:focus {
-            background-color: rgba(0,0,0,0.03);
-            transition: 0.1s background-color;
-        }
-
-        .mat-step-header {
-            overflow: hidden !important;
-            border-radius: 10px !important;
-            background-color: transparent;
-            transition: 0.4s background-color;
-
-            &:hover,
-            &:focus {
-                background-color: rgba(230,230,230);
-                transition: 0.1s background-color;
-            }
-        }
+    &:hover,
+    &:focus {
+      background-color: rgba(0, 0, 0, 0.03);
+      transition: 0.1s background-color;
     }
+
+    .mat-step-header {
+      overflow: hidden !important;
+      border-radius: 10px !important;
+      background-color: transparent;
+      transition: 0.4s background-color;
+
+      &:hover,
+      &:focus {
+        background-color: rgba(230, 230, 230);
+        transition: 0.1s background-color;
+      }
+    }
+  }
 }
 
 .mat-menu-content {
-    padding: 0px !important;
+  padding: 0px !important;
 }
 
 .mat-tooltip {
-    font-size: 12px !important;
-    color: color-theme.$black-text !important;
-    background-color: white !important;
-    box-shadow: 0px 0px 4px rgba(150,150,150,0.9) !important;
+  font-size: 12px !important;
+  color: color-theme.$black-text !important;
+  background-color: white !important;
+  box-shadow: 0px 0px 4px rgba(150, 150, 150, 0.9) !important;
 }
 
 .dark-theme {
-    .mat-tooltip {
-        color: color-theme.$black-text-darkmode !important;
-        background-color: black !important;
-        box-shadow: 0px 0px 4px rgba(255,255,255,0.2) !important;
-    }
+  .mat-tooltip {
+    color: color-theme.$black-text-darkmode !important;
+    background-color: black !important;
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+  }
 }
 
-.material-icons.md-18 { font-size: 18px; }
-.material-icons.md-24 { font-size: 24px; }
-.material-icons.md-36 { font-size: 36px; }
-.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-18 {
+  font-size: 18px;
+}
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
+}
 
 :host ::ng-deep .mat-form-field-appearance-outline.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
-    color: color-theme.$error-color-bright !important;
+  color: color-theme.$error-color-bright !important;
 }
 
 :host ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-label {
-    color: color-theme.$error-color-bright !important;
+  color: color-theme.$error-color-bright !important;
 }
 
 :host ::ng-deep .mat-form-field.mat-focused.mat-form-field-invalid .mat-form-field-ripple {
-    background-color: color-theme.$error-color-bright;
+  background-color: color-theme.$error-color-bright;
 }
 
 :host ::ng-deep .mat-form-field.mat-form-field-invalid .mat-form-field-underline {
-    background-color: color-theme.$error-color-bright !important;
+  background-color: color-theme.$error-color-bright !important;
 }
 
 :host ::ng-deep .mat-form-field .mat-form-field-required-marker {
-    color: color-theme.$error-color-bright !important;
+  color: color-theme.$error-color-bright !important;
 }
 
 .mat-error {
-    color: color-theme.$error-color-bright;
+  color: color-theme.$error-color-bright;
 }
 
 .mat-form-field {
+  &:hover .mat-icon-button,
+  &:focus .mat-icon-button,
+  &:focus-within .mat-icon-button {
+    opacity: 1;
+    transition: 0.2s opacity;
+  }
 
-    &:hover .mat-icon-button,
-    &:focus .mat-icon-button,
-    &:focus-within .mat-icon-button {
-        opacity: 1;
-        transition: 0.2s opacity;
+  .mat-icon-button {
+    // used, for example, on "clear" X buttons inside selection inputs
+    opacity: 0.4;
+    transition: 0.4s opacity;
+
+    .mat-icon {
+      font-size: 20px !important;
+      transition: 0.4s color;
     }
 
-    .mat-icon-button { // used, for example, on "clear" X buttons inside selection inputs
-        opacity: 0.4;
-        transition: 0.4s opacity;
-
-        .mat-icon {
-            font-size: 20px !important;
-            transition: 0.4s color;
-        }
-
-        &:hover,
-        &:focus {
-            color: color-theme.$primary-color;
-            transition: 0.1s color;
-        }
+    &:hover,
+    &:focus {
+      color: color-theme.$primary-color;
+      transition: 0.1s color;
     }
+  }
 }

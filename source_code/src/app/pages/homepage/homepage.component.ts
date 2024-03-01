@@ -3,6 +3,7 @@ import { MoveDirection, ClickMode, HoverMode, OutMode, ISourceOptions } from 'ts
 import { Observable, Subscription } from 'rxjs';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-homepage',
@@ -19,8 +20,6 @@ export class HomepageComponent implements OnInit, OnDestroy {
 
   hamburgerOpen = false;
   animateHamburgerClosing = false;
-
-  expandAllFaqs = false;
 
   // menu scroll show hide
   previousScrollY = 0;
@@ -135,16 +134,6 @@ export class HomepageComponent implements OnInit, OnDestroy {
     }
   }
 
-  openGoogleMapsLink() {
-    window.open('https://goo.gl/maps/kQ6cybC1yVkzgogZ8', '_blank');
-  }
-
-  openSponsorLink(sponsorLinkString: string): void {
-    if (sponsorLinkString) {
-      window.open(sponsorLinkString, '_blank');
-    }
-  }
-
   openHamburger(): void {
     this.hamburgerOpen = true;
   }
@@ -166,16 +155,8 @@ export class HomepageComponent implements OnInit, OnDestroy {
     this.closeHamburger();
   }
 
-  openInscricoesLink(): void {
-    window.open('https://gemmeeting.eventkey.pt/geral/inseririnscricao.aspx?evento=2&formulario=2&chave=0000186665&login=false', '_blank');
-  }
-
-  openSubmeterResumoLink(): void {
-    window.open('https://gemmeeting.eventkey.pt/geral/inserirresumo.aspx?evento=2&formulario=4&chave=0000283DB8&login=false', '_blank');
-  }
-
-  expandRetractAllFaqs(): void {
-    this.expandAllFaqs = !this.expandAllFaqs;
+  openGoogleMapsLink() {
+    window.open(environment.googleMapsLocationLink, '_blank');
   }
 
   // verifica o scroll atual do content segundo a route ativa, e da hide/show da topbar
