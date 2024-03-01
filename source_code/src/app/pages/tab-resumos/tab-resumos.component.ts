@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-tab-resumos',
@@ -7,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class TabResumosComponent {
   openSubmeterResumoLink(): void {
-    window.open('https://gemmeeting.eventkey.pt/geral/inserirresumo.aspx?evento=2&formulario=4&chave=0000283DB8&login=false', '_blank');
+    window.open(environment.submitResumosLink, '_blank');
   }
 }
