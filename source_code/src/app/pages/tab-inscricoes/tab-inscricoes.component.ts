@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-tab-inscricoes',
@@ -7,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TabInscricoesComponent {
   openInscricoesLink(): void {
-    window.open('https://gemmeeting.eventkey.pt/geral/inseririnscricao.aspx?evento=2&formulario=2&chave=0000186665&login=false', '_blank');
+    window.open(environment.inscricoesLink, '_blank');
+  }
+
+  openSubmitAbstractLink(): void {
+    window.open(environment.submitResumosLink, '_blank');
   }
 }
