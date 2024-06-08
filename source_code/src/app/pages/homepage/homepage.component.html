@@ -52,7 +52,7 @@
         <img [tabIndex]="1" src="./assets/images/gemeeting-logo-only.png" alt="Gemeeting Logo" style="cursor: pointer" (click)="menuClick('#home')" (keyup.enter)="menuClick('#home')" />
       </div>
     </div>
-    <div class="center" style="flex: 2 2 100px">
+    <div class="center" style="display: flex; justify-content: flex-end">
       <ul class="menu" *ngIf="showMenu">
         <li class="animate-div wait100ms"><a href="#home">As Jornadas</a></li>
         <li class="animate-div wait200ms"><a href="#equipa">A Equipa</a></li>
@@ -168,7 +168,7 @@
 <section class="slide fade-6 kenBurns" data-name="inscricoes">
   <div class="content">
     <div class="container">
-      <div class="wrap">
+      <div class="wrap max-height">
         <div class="center-content-div ae-2 fromAbove">
           <div class="fix-10-12">
             <ul class="grid grid-83 noSpaces equal" style="display: flex; justify-content: center; align-items: center">
@@ -190,7 +190,7 @@
 <section class="slide fade-6 kenBurns" data-name="abstracts">
   <div class="content">
     <div class="container">
-      <div class="wrap" id="content-abstracts">
+      <div class="wrap max-height" id="content-abstracts">
         <div class="center-content-div ae-2 fromAbove">
           <div class="fix-10-12">
             <ul class="grid grid-83 noSpaces equal ae-3" style="display: flex; justify-content: center; align-items: center">
@@ -262,7 +262,7 @@
 <section class="slide fade-6 kenBurns" data-name="contactos">
   <div class="content">
     <div class="container" style="flex-direction: column !important">
-      <div class="wrap">
+      <div class="wrap max-height">
         <div class="center-content-div ae-2 fromAbove">
           <div class="fix-10-12">
             <ul class="grid grid-83 noSpaces equal ae-3" style="display: flex; justify-content: center; align-items: center">

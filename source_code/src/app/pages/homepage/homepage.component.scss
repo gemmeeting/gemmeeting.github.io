@@ -17,11 +17,10 @@
   height: 100vh;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   display: flex;
   justify-content: center;
-  align-items: center;
   opacity: 0;
   animation: 0.3s ease-out zoomInFadeIn forwards;
 
@@ -36,7 +35,6 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     opacity: 0;
     animation: 0.3s ease-out slideDownFadeIn 0.1s forwards !important;
@@ -170,7 +168,7 @@
     }
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1250px) {
     .center {
       display: none !important;
     }

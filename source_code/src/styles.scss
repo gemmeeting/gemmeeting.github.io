@@ -204,9 +204,14 @@ span {
 
 .link-style {
   text-decoration: none;
-  transition: 0.6s all;
   transform: scale(1);
   position: relative;
+  transition: 0.6s all;
+
+  &:active {
+    transform: scale(0.95);
+    transition: 0.1s transform;
+  }
 
   // animate underline
   &::before {
@@ -223,10 +228,11 @@ span {
     transition: 0.4s ease all;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus-within:before {
     height: 100%;
     background-color: rgb(255, 238, 0);
-    transition: 0.1s ease all;
+    transition: 0.1s all;
   }
 }
 
@@ -294,7 +300,7 @@ span {
 }
 
 .primary-text-color {
-  color: #ffae00;
+  color: #eba000;
 }
 
 .content {
