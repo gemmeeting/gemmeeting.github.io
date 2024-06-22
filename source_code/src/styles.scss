@@ -243,9 +243,9 @@ span {
 
 .mytable {
   width: 100%;
-  border-radius: 5px;
-  box-sizing: border-box;
+  border-radius: 15px;
   overflow: hidden;
+  box-sizing: border-box;
   border-spacing: 0px;
 
   .slim-title-row,
@@ -255,9 +255,9 @@ span {
 
   th {
     text-align: center;
-    outline: 1px solid white;
+    border: 2px solid white;
     padding: 0px 10px;
-    background-color: #ededed;
+    background-color: rgb(255, 228, 122);
 
     fa-icon {
       color: #299cb4;
@@ -275,11 +275,19 @@ span {
 
   td {
     padding: 10px;
+    background-color: rgb(245, 245, 245);
+    border: 2px solid white;
   }
 
   tr {
     height: 50px;
     transition: 0.2s background-color;
+  }
+
+  .primary-color-cell {
+    // background-color: rgb(225, 235, 240);
+    background-color: rgb(216, 234, 243);
+    font-weight: 600;
   }
 }
 
@@ -325,6 +333,18 @@ span {
 
   .button-style {
     font-size: 28px;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 22px;
+    }
+
+    &.smaller {
+      font-size: 24px;
+
+      @media only screen and (max-width: 600px) {
+        font-size: 16px;
+      }
+    }
   }
 
   .center-content-div {
