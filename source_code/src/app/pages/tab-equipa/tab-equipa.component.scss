@@ -1,42 +1,28 @@
+.content-card-title {
+  font-size: 32px;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 18px;
+  }
+}
+
 .equipa-photos-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  gap: 10px;
 
   .equipa-photos-div {
-    flex: 0 0 220px;
-    margin: 5px;
+    flex: 1 1 100%;
+    max-width: 1200px;
     background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    box-shadow: 0px 0px 6px lightgrey;
-    z-index: 0;
-    transition: 0.4s all;
-
-    &:hover,
-    &:active,
-    &:focus,
-    &:focus-within {
-      z-index: 100;
-      transform: scale(1.6);
-      box-shadow: 8px 8px 18px grey;
-      transition: 0.4s ease all;
-    }
 
     .equipa-photo-img {
-      border-radius: 10px;
-      overflow: hidden;
       object-fit: contain;
-      width: 220px;
-      height: 220px;
-      transform: scale(1);
+      width: 100%;
     }
   }
 }
