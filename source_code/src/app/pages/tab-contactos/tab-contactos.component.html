@@ -3,32 +3,32 @@
   <div class="contacts-content-div">
     <div class="ae-4" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px">
       <img src="./assets/images/facebook.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px" />
-      <a class="link-style" href="https://www.facebook.com/gemmeeting">@gemmeeting</a>
+      <a class="link-style" href="https://www.facebook.com/gemmeeting">{{ '@gemmeeting' }}</a>
     </div>
     <div class="ae-5" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px">
       <img src="./assets/images/instagram.webp" alt="" style="height: 24px; margin-right: 12px; margin-left: 3px" />
-      <a class="link-style" href="https://www.instagram.com/gemmeeting23/">@gemmeeting23</a>
+      <a class="link-style" href="https://www.instagram.com/gemmeeting23/">{{ '@gemmeeting23' }}</a>
     </div>
     <div class="ae-6" style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px">
       <fa-icon icon="envelope" style="font-size: 24px; margin-right: 10px" class="primary-text-color"></fa-icon>
-      <a class="link-style" href="mailto:gemmeeting@gmail.com">gemmeeting@gmail.com</a>
+      <a class="link-style" href="mailto:gemmeeting@gmail.com">{{ 'gemmeeting@gmail.com' }}</a>
     </div>
 
     <div class="ae-7" style="display: flex; width: 100%; justify-content: center; align-items: center; margin-top: 20px">
-      <img class="location-image-map" src="./assets/images/google_maps_blurred.png" />
-      <!-- <img
+      <!-- <img class="location-image-map" src="./assets/images/google_maps_blurred.png" /> -->
+      <img
         class="location-image-map"
         (click)="openGoogleMapsLink()"
         src="./assets/images/google_maps_face.png"
         alt="Localização do FACE Espinho no Google Maps"
         style="cursor: pointer"
         matTooltip="Ver o FACE Espinho no Google Maps"
-        matTooltipPosition="above" /> -->
+        matTooltipPosition="above" />
     </div>
     <div class="ae-8" style="display: flex; flex-wrap: nowrap; justify-content: center; align-items: center">
       <fa-icon icon="location-pin" style="font-size: 24px; margin-right: 10px" class="primary-text-color"></fa-icon>
-      <span href="#">(Localização a anunciar em breve)</span>
-      <!-- <a class="link-style" href="#" (click)="openGoogleMapsLink()">FACE Espinho, R. 41, Av. São João de Deus, 4500-386 Espinho</a> -->
+      <!-- <span href="#">(Localização a anunciar em breve)</span> -->
+      <a class="link-style" href="#" (click)="openGoogleMapsLink()">FACE Espinho, R. 41, Av. São João de Deus, 4500-386 Espinho</a>
     </div>
   </div>
 </div>
