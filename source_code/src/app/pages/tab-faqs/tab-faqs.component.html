@@ -23,7 +23,7 @@
         <mat-expansion-panel-header>
           <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">2.</span> Qual é o programa do congresso? </mat-panel-title>
         </mat-expansion-panel-header>
-        <div style="font-size: 16px; line-height: 1.4">Poderá consultar o programa <a href="#programa" class="link-style">clicando/tocando aqui</a>.</div>
+        <div style="font-size: 16px; line-height: 1.4">Poderá consultar o programa <a href="#programa" class="link-style underline">clicando aqui</a>.</div>
       </mat-expansion-panel>
     </mat-accordion>
 
@@ -34,7 +34,7 @@
         </mat-expansion-panel-header>
         <div style="font-size: 16px; line-height: 1.4">
           O evento é direcionado a médicos especialistas e internos de Medicina Geral e Familiar. No entanto, todos os profissionais de saúde são bem-vindos, incluindo médicos especialistas e internos de outras especialidades, médicos
-          indiferenciados, internos de formação geral, estudantes de medicina ou enfermeiros.
+          indiferenciados, internos de formação geral e estudantes de medicina.
         </div>
       </mat-expansion-panel>
     </mat-accordion>
@@ -45,8 +45,8 @@
           <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">4.</span> Como me posso inscrever? </mat-panel-title>
         </mat-expansion-panel-header>
         <div style="font-size: 16px; line-height: 1.4">
-          Pode inscrever-se <a href="https://gemmeeting.eventkey.pt/geral/detalheformulario.aspx?codigo=2&evento=2" target="_blank" class="link-style">clicando/tocando aqui</a>. Será redirecionado para uma página da Eventkey, e deverá
-          preencher o formulário e seguir as instruções. Após inscrição no evento receberá um email de confirmação da mesma.
+          Pode inscrever-se <a (click)="openInscricoesLink()" class="link-style underline">clicando aqui</a>. Será redirecionado para uma página da Eventkey, e deverá preencher o formulário e seguir as instruções. Após inscrição no evento
+          receberá um email de confirmação da mesma.
         </div>
       </mat-expansion-panel>
     </mat-accordion>
@@ -64,7 +64,7 @@
           </div>
           <div style="display: flex; justify-content: flex-start; align-items: center">
             <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle" class="primary-text-color"></fa-icon>
-            <span>m coffee-wake, dois coffee-breaks e dois almoços contemplados no programa;</span>
+            <span>Três coffee-breaks e dois almoços contemplados no programa;</span>
           </div>
           <div style="display: flex; justify-content: flex-start; align-items: center">
             <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle" class="primary-text-color"></fa-icon>
@@ -99,8 +99,8 @@
           <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">7.</span> Como será realizado o controlo de presenças? </mat-panel-title>
         </mat-expansion-panel-header>
         <div style="font-size: 16px; line-height: 1.4">
-          O controlo de presenças será efetuado sempre no secretariado do evento, e decorrerá em quatro momentos: no check-in no evento na manhã do dia 28/09, no início da tarde do dia 28/09, início da manhã do dia 29/09 e início da tarde
-          do dia 29/09. Para cada WS, será realizado um controlo de presenças de acordo com a lista dos inscritos no mesmo.
+          O controlo de presenças será efetuado sempre no secretariado do evento, e decorrerá em dois momentos, sendo necessário um controlo de presenças por dia. Para cada WS será realizado um controlo de presenças de acordo com a lista
+          dos participantes inscritos no mesmo.
         </div>
       </mat-expansion-panel>
     </mat-accordion>
@@ -111,8 +111,8 @@
           <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">8.</span> Como posso obter o certificado de presença? </mat-panel-title>
         </mat-expansion-panel-header>
         <div style="font-size: 16px; line-height: 1.4">
-          Para obter o certificado de presença do GEMMeeting 2023, será necessário presença em pelo menos três dos quatro controlos de presença do evento (ver ponto 7.) Será emitido um certificado de presença adicional para a participação
-          em WS, conforme as presenças registadas. Os certificados de presença no GEMMeeting 2023 e no WS serão enviados para o e-mail associado à inscrição, após validação das presenças.
+          Para obter o certificado de presença do GEMMeeting 2024, será necessário presença em ambos os dias de congresso (ver ponto 6). Será emitido um certificado de presença adicional para a participação em WS, conforme as presenças
+          registadas. Os certificados de presença no GEMMeeting 2024 e no WS serão enviados para o e-mail associado à inscrição, após validação das presenças.
         </div>
       </mat-expansion-panel>
     </mat-accordion>
@@ -120,16 +120,10 @@
     <mat-accordion>
       <mat-expansion-panel [expanded]="expandAllFaqs">
         <mat-expansion-panel-header>
-          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">9.</span> Como posso submeter o meu resumo? </mat-panel-title>
+          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">9.</span> Quando decorrerão as apresentação de trabalhos selecionados? </mat-panel-title>
         </mat-expansion-panel-header>
         <div style="font-size: 16px; line-height: 1.4">
-          Poderá realizar a submissão do seu resumo aqui, onde pode encontrar o nosso regulamento e formulário de submissão dos trabalhos. Posteriormente será divulgada informação acerca dos prémios para os vencedores nas nossas páginas de
-          Facebook e Instagram. <br />
-          <br />
-          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle" class="primary-text-color"></fa-icon><strong>Início de submissão de resumos:</strong> 26/05/2023 às 21h00. <br />
-          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle" class="primary-text-color"></fa-icon><strong>Data-limite para submissão de resumos:</strong> 09/07/2023 às 23h59. <br />
-          <fa-icon icon="circle" style="font-size: 6px; margin-right: 5px; vertical-align: middle" class="primary-text-color"></fa-icon><strong>Comunicação dos resultados aos/às autores/as:</strong> 21/08/2023 até às 23h59, divulgados via
-          e-mail para o endereço eletrónico indicado no formulário de submissão.
+          A apresentação dos posters selecionados será efetuada na manhã do dia 26/09/2024 e a apresentação das comunicações orais na manhã do dia 27/09/2024. Estas serão realizadas presencialmente.
         </div>
       </mat-expansion-panel>
     </mat-accordion>
@@ -137,24 +131,13 @@
     <mat-accordion>
       <mat-expansion-panel [expanded]="expandAllFaqs">
         <mat-expansion-panel-header>
-          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">10.</span> Quando decorrerão as apresentação de trabalhos selecionados? </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div style="font-size: 16px; line-height: 1.4">
-          A apresentação dos posters selecionados será efetuada na manhã do dia 28/09/2023 e a apresentação das comunicações orais na manhã do dia 29/09/2023. Estas serão realizadas presencialmente.
-        </div>
-      </mat-expansion-panel>
-    </mat-accordion>
-
-    <mat-accordion>
-      <mat-expansion-panel [expanded]="expandAllFaqs">
-        <mat-expansion-panel-header>
-          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">11.</span> Como chegar ao local do evento? </mat-panel-title>
+          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">10.</span> Como chegar ao local do evento? </mat-panel-title>
         </mat-expansion-panel-header>
         <div style="font-size: 16px; line-height: 1.4">
           O <strong>FACE Espinho</strong> é facilmente acessível de carro. Existe estacionamento gratuito no local e nas imediações. Também poderá chegar ao local do evento através de transportes públicos, sendo o ponto de ligação mais
           próximo a
           <a class="words-underlined link-style" style="display: inline-block" href="https://www.cp.pt/passageiros/pt/consultar-horarios/estacoes/espinho" target="_blank" matTooltip="Consultar a estação">estação de comboios</a>
-          de Espinho, que se encontra a cerca de 6-7 minutos a pé (~ 500 m).
+          de Espinho, que se encontra a menos de 10 minutos a pé (~ 500 m).
         </div>
 
         <div style="display: flex; flex-wrap: nowrap; justify-content: center; align-items: center; margin-bottom: 10px; margin-top: 20px">
@@ -177,19 +160,10 @@
     <mat-accordion>
       <mat-expansion-panel [expanded]="expandAllFaqs">
         <mat-expansion-panel-header>
-          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">12.</span> Como decorrerão os almoços? </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div style="font-size: 16px; line-height: 1.4">O almoço está incluído no valor da inscrição no evento e será servido no espaço do evento. Caso não deseje almoçar no evento, existem também diversos restaurantes nas imediações.</div>
-      </mat-expansion-panel>
-    </mat-accordion>
-
-    <mat-accordion>
-      <mat-expansion-panel [expanded]="expandAllFaqs">
-        <mat-expansion-panel-header>
-          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">13.</span> Posso cancelar a minha inscrição? </mat-panel-title>
+          <mat-panel-title style="font-weight: 700"> <span class="primary-text-color" style="margin-right: 10px">11.</span> Como irão decorrer os almoços? </mat-panel-title>
         </mat-expansion-panel-header>
         <div style="font-size: 16px; line-height: 1.4">
-          Os cancelamentos de inscrições efetuados até dia 03/09/2023 serão reembolsados na totalidade. A partir dessa data, não haverá lugar a reembolso. <strong>Os reembolsos serão processados após o evento.</strong>
+          Os almoços estão incluídos no valor da inscrição no evento e será servido no espaço do evento. Caso não deseje almoçar no evento, existem também diversos restaurantes nas imediações.
         </div>
       </mat-expansion-panel>
     </mat-accordion>
@@ -204,18 +178,29 @@
 
           <div style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px; margin-top: 20px">
             <img src="./assets/images/facebook.webp" alt="" style="height: 20px; margin-right: 12px; margin-left: 3px" />
-            <a class="link-style" href="https://www.facebook.com/gemmeeting" target="_blank">@gemmeeting</a>
+            <a class="link-style" href="https://www.facebook.com/gemmeeting" target="_blank">{{ '@gemmeeting' }}</a>
           </div>
           <div style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px">
             <img src="./assets/images/instagram.webp" alt="" style="height: 20px; margin-right: 12px; margin-left: 3px" />
-            <a class="link-style" href="https://www.instagram.com/gemmeeting23/" target="_blank">@gemmeeting23</a>
+            <a class="link-style" href="https://www.instagram.com/gemmeeting24/" target="_blank">{{ '@gemmeeting24' }}</a>
           </div>
           <div style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; margin-bottom: 20px">
             <fa-icon icon="envelope" style="font-size: 20px; margin-right: 10px" class="primary-text-color"></fa-icon>
-            <a class="link-style" href="mailto:gemmeeting@gmail.com">gemmeeting@gmail.com</a>
+            <a class="link-style" href="mailto:gemmeeting@gmail.com">{{ 'gemmeeting@gmail.com' }}</a>
           </div>
         </div>
       </mat-expansion-panel>
     </mat-accordion>
+  </div>
+</div>
+
+<div style="width: 100%; margin-top: 40px; display: flex; justify-content: center">
+  <div class="words-underlined">
+    <div class="link-style">
+      <h3 class="ae-7 fromBottom button-style smaller" (click)="downloadPDF()" style="cursor: pointer; font-weight: 600; margin: 0px !important">
+        <fa-icon icon="file-pdf" style="margin-right: 5px; font-size: 80%"></fa-icon>
+        Transferir FAQs (PDF)
+      </h3>
+    </div>
   </div>
 </div>

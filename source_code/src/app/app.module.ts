@@ -19,10 +19,11 @@ import { TabPatrociniosComponent } from './pages/tab-patrocinios/tab-patrocinios
 import { TabContactosComponent } from './pages/tab-contactos/tab-contactos.component';
 import { ContentNovidadesEmBreveComponent } from './pages/content-novidades-em-breve/content-novidades-em-breve.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
 
 @NgModule({
   declarations: [AppComponent, HomepageComponent, TabEquipaComponent, TabProgramaComponent, TabInscricoesComponent, TabResumosComponent, TabFaqsComponent, TabPatrociniosComponent, TabContactosComponent, ContentNovidadesEmBreveComponent],
-  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, FontAwesomeModule, SharedMainModule, NgParticlesModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, BrowserAnimationsModule, FontAwesomeModule, SharedMainModule, NgParticlesModule, HttpClientModule, NgxExtendedPdfViewerModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -26,6 +26,9 @@ export class HomepageComponent implements OnInit, OnDestroy {
   previousScrollRoute = '';
   hideTopBar = false;
 
+  // pdf wrapper
+  showIsLoadingPDF = false;
+
   /* or the classic JavaScript object */
   particlesOptions: ISourceOptions = {
     background: {

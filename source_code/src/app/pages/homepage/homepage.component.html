@@ -26,16 +26,21 @@
       </div>
     </div>
     <div class="animate-div wait600ms">
+      <div class="menu-item" (click)="menuClick('#posters')" (keyup.enter)="menuClick('#posters')">
+        <span [tabIndex]="7">Pósteres</span>
+      </div>
+    </div>
+    <div class="animate-div wait700ms">
       <div class="menu-item" (click)="menuClick('#faqs')" (keyup.enter)="menuClick('#faqs')">
         <span [tabIndex]="8">FAQs</span>
       </div>
     </div>
-    <div class="animate-div wait700ms">
+    <div class="animate-div wait800ms">
       <div class="menu-item" (click)="menuClick('#sponsors')" (keyup.enter)="menuClick('#sponsors')">
         <span [tabIndex]="9">Patrocínios</span>
       </div>
     </div>
-    <div class="animate-div wait800ms">
+    <div class="animate-div wait900ms">
       <div class="menu-item" (click)="menuClick('#contactos')" (keyup.enter)="menuClick('#contactos')">
         <span [tabIndex]="10">Contactos</span>
       </div>
@@ -59,6 +64,7 @@
         <li class="animate-div wait300ms"><a href="#programa">Programa</a></li>
         <li class="animate-div wait400ms"><a href="#inscricoes">Inscrições</a></li>
         <li class="animate-div wait500ms"><a href="#abstracts">Resumos</a></li>
+        <li class="animate-div wait500ms"><a href="#posters">Pósteres</a></li>
         <li class="animate-div wait600ms"><a href="#faqs">FAQs</a></li>
         <li class="animate-div wait700ms"><a href="#sponsors">Patrocínios</a></li>
         <li class="animate-div wait800ms"><a href="#contactos">Contactos</a></li>
@@ -206,17 +212,44 @@
   </div>
 </section>
 
+<section class="slide fade-6 kenBurns" data-name="posters">
+  <div class="content">
+    <div class="container">
+      <div class="wrap max-height" id="content-posters" style="min-height: 100%; padding: 80px 0px 5px 0px !important">
+        <div class="center-content-div ae-2 fromAbove" style="max-width: 100% !important">
+          <div class="fix-10-12" style="max-width: 100% !important">
+            <ul class="grid grid-83 noSpaces equal ae-3" style="display: flex; justify-content: center; align-items: center">
+              <li class="col-4-12 ae-3 fromBottom" style="background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%; padding: 20px 0px 0px 0px">
+                <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 40px">
+                  <div class="content-card-title"><fa-icon icon="file-alt" style="margin-right: 10px" class="primary-text-color"></fa-icon>Pósteres</div>
+                </div>
+                <div *ngIf="showIsLoadingPDF" class="ae-1 fromBottom" style="font-size: 16px; display: flex; gap: 10px; margin-bottom: 20px">
+                  <mat-spinner diameter="20" mode="indeterminate"></mat-spinner> <strong>A carregar leitor de PDF, aguarde...</strong>
+                </div>
+                <ngx-extended-pdf-viewer (pdfLoadingStarts)="showIsLoadingPDF = true" (pdfLoaded)="showIsLoadingPDF = false" src="./assets/pdfs/Posters_GEMMeeting2024.pdf" height="100%" zoom="page-width"></ngx-extended-pdf-viewer>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="background">
+    <img src="./assets/images/background/background_2024.png" alt="" style="object-fit: cover; width: 100%; height: 100%; opacity: 0.6" />
+  </div>
+</section>
+
 <!-- Slide 5 -->
 <section class="slide fade-6 kenBurns" data-name="faqs">
   <div class="content">
     <div class="container">
-      <div class="wrap" id="content-faqs">
+      <div class="wrap max-height" id="content-faqs">
         <div class="center-content-div ae-2 fromAbove">
           <div class="fix-10-12">
             <ul class="grid grid-83 noSpaces equal ae-3" style="display: flex; justify-content: center; align-items: center">
               <li class="col-4-12 ae-3 fromBottom" style="background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%">
-                <!-- <app-tab-faqs></app-tab-faqs> -->
-                <app-content-novidades-em-breve></app-content-novidades-em-breve>
+                <app-tab-faqs></app-tab-faqs>
+                <!-- <app-content-novidades-em-breve></app-content-novidades-em-breve> -->
               </li>
             </ul>
           </div>
@@ -233,21 +266,21 @@
 <section class="slide fade-6 kenBurns" data-name="sponsors">
   <div class="content">
     <div class="container">
-      <div class="wrap spaceWrap" id="content-sponsors">
+      <div class="wrap max-height" id="content-sponsors">
         <!-- temporario -->
-        <div class="fix-10-12">
+        <!-- <div class="fix-10-12">
           <ul class="grid grid-83 noSpaces equal ae-3" style="display: flex; justify-content: center; align-items: center">
             <li class="col-4-12 ae-3 fromAbove" style="background-color: white; box-shadow: 0px 0px 6px lightgrey; border-radius: 10px; margin: 5px; flex: 1 1 100%; min-height: 250px; max-width: 100%">
               <app-content-novidades-em-breve></app-content-novidades-em-breve>
             </li>
           </ul>
-        </div>
+        </div> -->
         <!-- temporario -->
-        <!-- <div class="center-content-div ae-2 fromAbove" style="max-width: 1400px !important">
+        <div class="center-content-div ae-2 fromAbove" style="max-width: 1400px !important">
           <div class="fix-10-12" style="max-width: 1400px !important">
             <app-tab-patrocinios></app-tab-patrocinios>
           </div>
-        </div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -270,12 +303,6 @@
             </ul>
           </div>
         </div>
-      </div>
-
-      <div style="position: absolute; bottom: 0; left: 0; width: 100%; text-align: center">
-        <span style="font-size: 10px; color: darkslategrey"
-          >Criado por <a href="https://www.linkedin.com/in/eduardoxcorreia/" style="text-decoration: underline" matTooltip="Visitar perfil">Eduardo Correia</a> para GEMmeeting | © Copyright GEMmeeting 2023</span
-        >
       </div>
     </div>
   </div>

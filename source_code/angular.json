@@ -26,7 +26,19 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets/images", "src/assets/videos", "src/assets/scripts", "src/assets/icons", "src/assets/pdfs"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets/images",
+              "src/assets/videos",
+              "src/assets/scripts",
+              "src/assets/icons",
+              "src/assets/pdfs",
+              {
+                "glob": "**/*",
+                "input": "node_modules/ngx-extended-pdf-viewer/assets/",
+                "output": "/assets/"
+              }
+            ],
             "stylePreprocessorOptions": {
               "includePaths": ["src/assets/styles", "src/assets/themes"]
             },
